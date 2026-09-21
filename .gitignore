@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Datasets - keep them on Google Drive
+**/data/*
+!**/data/.gitkeep
+
+# Secrets and personal files
+.env
+*.key
+*.pem
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
