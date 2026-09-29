@@ -1,0 +1,9 @@
+{
+ "data_dir": "task1_llm/data/tinystories",
+ "seed": 1337,
+ "n_train_stories": 100000,
+ "n_val_stories": 10000,
+ "train_chars": 89731480,
+ "val_chars": 8739080,
+ "vocab_size": 89
+}

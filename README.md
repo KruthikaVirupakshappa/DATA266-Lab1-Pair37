@@ -43,6 +43,12 @@ python task1_llm/kruthika/src/train.py
 
 Add `--epochs N` to change the number of epochs (default 10, set in `src/config.yaml`) and `--resume` to continue after a disconnect. Results go to `task1_llm/kruthika/metrics_report.csv` and `task1_llm/kruthika/outputs/<run_name>/` (loss curves, samples, histories). Best weights go to `task1_llm/kruthika/checkpoints/<run_name>_best.pt`.
 
+**Results** (run `gpt_L6_H6_D384`: 6 layers, 6 heads, 384 dims, 10.8M parameters, 10 epochs): validation loss 0.536, perplexity 1.71, 0.773 bits-per-character, 82.8% next-character accuracy. Details:
+- [results.md](task1_llm/kruthika/results.md): architecture, hyperparameters and all metrics
+- [failure_analysis.md](task1_llm/kruthika/failure_analysis.md): three failure cases
+- [metrics_report.csv](task1_llm/kruthika/metrics_report.csv)
+- raw log and manifest in `reproducibility/`
+
 ## Data
 
 Raw data is not committed. To fetch it:
