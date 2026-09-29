@@ -19,3 +19,6 @@ env/
 # Temporary files
 *.tmp
 *.temp
+
+# Resume checkpoints include optimizer state (too big for GitHub); best checkpoints are committed
+**/checkpoints/*_resume.pt
