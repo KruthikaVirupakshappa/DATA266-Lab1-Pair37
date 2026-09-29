@@ -3,6 +3,7 @@
 Usage (from the repo root):
     python task1_llm/kruthika/src/train.py            # settings from src/config.yaml
     python task1_llm/kruthika/src/train.py --resume   # continue after a disconnect
+    python task1_llm/kruthika/src/train.py --epochs 12  # change the number of epochs
 
 One "epoch" = as many randomly sampled training characters as the training split
 contains (steps_per_epoch = train_chars // (batch_size * block_size)).
@@ -152,9 +153,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="task1_llm/kruthika/src/config.yaml")
     ap.add_argument("--resume", action="store_true", help="continue from checkpoints/<run>_resume.pt")
+    ap.add_argument("--epochs", type=int, help="override train.epochs from the config")
     args = ap.parse_args()
 
     cfg = utils.load_config(args.config)
+    if args.epochs:
+        cfg["train"]["epochs"] = args.epochs  # recorded in the log and manifest
     dc, mc, tc, gc = cfg["data"], cfg["model"], cfg["train"], cfg["generate"]
     run = cfg["run_name"]
     T, B = dc["block_size"], tc["batch_size"]

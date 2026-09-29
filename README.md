@@ -35,13 +35,13 @@ Exit code `0` means every check passed. Each run writes a raw log to `reproducib
 
 ## Task 1 full training (kruthika)
 
-Trained on a Google Colab GPU with [task1_colab.ipynb](task1_llm/kruthika/src/task1_colab.ipynb). That notebook runs the smoke test and then:
+Trained on a Google Colab GPU with [task1_colab.ipynb](task1_llm/kruthika/src/task1_colab.ipynb). That notebook downloads the dataset and then runs:
 
 ```bash
 python task1_llm/kruthika/src/train.py
 ```
 
-Add `--resume` to continue after a disconnect. Results go to `task1_llm/kruthika/metrics_report.csv` and `task1_llm/kruthika/outputs/<run_name>/` (loss curves, samples, histories). Best weights go to `task1_llm/kruthika/checkpoints/<run_name>_best.pt`.
+Add `--epochs N` to change the number of epochs (default 10, set in `src/config.yaml`) and `--resume` to continue after a disconnect. Results go to `task1_llm/kruthika/metrics_report.csv` and `task1_llm/kruthika/outputs/<run_name>/` (loss curves, samples, histories). Best weights go to `task1_llm/kruthika/checkpoints/<run_name>_best.pt`.
 
 ## Data
 
