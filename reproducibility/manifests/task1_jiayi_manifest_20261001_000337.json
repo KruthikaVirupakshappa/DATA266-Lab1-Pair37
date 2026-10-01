@@ -1,0 +1,15 @@
+{
+  "task": "task1_llm",
+  "member": "jiayi",
+  "run_id": "20261001_000337",
+  "config_file": "task1_llm/jiayi/config.json",
+  "raw_log": "reproducibility/raw_logs/task1_jiayi_train_20261001_000337.log",
+  "best_checkpoint": "task1_llm/jiayi/checkpoints/task1_gpt_best_20261001_000337.pt",
+  "best_val_loss": 0.9295939312745802,
+  "metrics_report": "task1_llm/jiayi/metrics_report.csv",
+  "python_version": "3.13.15",
+  "pytorch_version": "2.11.0+cu128",
+  "cuda_version": "12.8",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "environment_file": "reproducibility/manifests/task1_jiayi_environment_20261001_000337.txt"
+}

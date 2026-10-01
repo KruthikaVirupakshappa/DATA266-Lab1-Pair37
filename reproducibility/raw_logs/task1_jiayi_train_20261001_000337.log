@@ -1,0 +1,49 @@
+[2026-10-01 00:04:10 PDT] Task 1 GPT Full Training
+[2026-10-01 00:04:10 PDT] Config file: task1_llm/jiayi/config.json
+[2026-10-01 00:04:10 PDT] Config: {"data": {"seq_len": 128, "train_size": 100000, "val_size": 10000}, "generation": {"max_new": 150, "prompt": "One day", "temperatures": [0.5, 0.8, 1.0]}, "model": {"d_model": 128, "num_heads": 4, "num_layers": 2}, "seed": 4253, "training": {"base_lr": 0.0003, "batch_size": 32, "epochs": 10, "min_lr_ratio": 0.1, "optimizer": "Adam", "warmup_fraction": 0.05}}
+[2026-10-01 00:04:10 PDT] Seed: 4253
+[2026-10-01 00:04:10 PDT] Device: cuda
+[2026-10-01 00:04:10 PDT] GPU: NVIDIA A100-SXM4-40GB
+[2026-10-01 00:04:10 PDT] Python version: 3.13.15
+[2026-10-01 00:04:10 PDT] PyTorch version: 2.11.0+cu128
+[2026-10-01 00:04:10 PDT] CUDA version: 12.8
+[2026-10-01 00:04:10 PDT] Vocab size: 152
+[2026-10-01 00:04:10 PDT] Sequence length: 128
+[2026-10-01 00:04:10 PDT] Batch size: 32
+[2026-10-01 00:04:10 PDT] Parameter count: 452248
+[2026-10-01 00:04:10 PDT] d_model: 128
+[2026-10-01 00:04:10 PDT] Number of heads: 4
+[2026-10-01 00:04:10 PDT] Number of layers: 2
+[2026-10-01 00:04:10 PDT] Epochs: 10
+[2026-10-01 00:04:10 PDT] Optimizer: Adam
+[2026-10-01 00:04:10 PDT] Base learning rate: 0.0003
+[2026-10-01 00:04:10 PDT] Total training steps: 219080
+[2026-10-01 00:04:10 PDT] Warmup steps: 10954
+[2026-10-01 00:04:10 PDT] Scheduler: linear warmup + cosine decay to 10% of base LR
+[2026-10-01 00:07:35 PDT] Saved new best checkpoint: epoch=1, val_loss=1.1545, path=task1_llm/jiayi/checkpoints/task1_gpt_best_20261001_000337.pt
+[2026-10-01 00:07:35 PDT] Epoch 1/10, Train Loss: 1.6223, Val Loss: 1.1545, Avg Grad Norm: 0.8783, Max Grad Norm: 2.9612, Train Time: 157.0s, Tokens/s: 571592
+[2026-10-01 00:10:16 PDT] Saved new best checkpoint: epoch=2, val_loss=1.0637, path=task1_llm/jiayi/checkpoints/task1_gpt_best_20261001_000337.pt
+[2026-10-01 00:10:16 PDT] Epoch 2/10, Train Loss: 1.0990, Val Loss: 1.0637, Avg Grad Norm: 0.9039, Max Grad Norm: 1.3981, Train Time: 156.6s, Tokens/s: 573075
+[2026-10-01 00:12:58 PDT] Saved new best checkpoint: epoch=3, val_loss=1.0252, path=task1_llm/jiayi/checkpoints/task1_gpt_best_20261001_000337.pt
+[2026-10-01 00:12:58 PDT] Epoch 3/10, Train Loss: 1.0406, Val Loss: 1.0252, Avg Grad Norm: 0.8435, Max Grad Norm: 1.2787, Train Time: 157.2s, Tokens/s: 570951
+[2026-10-01 00:15:40 PDT] Saved new best checkpoint: epoch=4, val_loss=0.9948, path=task1_llm/jiayi/checkpoints/task1_gpt_best_20261001_000337.pt
+[2026-10-01 00:15:40 PDT] Epoch 4/10, Train Loss: 1.0073, Val Loss: 0.9948, Avg Grad Norm: 0.8101, Max Grad Norm: 1.3010, Train Time: 157.3s, Tokens/s: 570481
+[2026-10-01 00:18:21 PDT] Saved new best checkpoint: epoch=5, val_loss=0.9740, path=task1_llm/jiayi/checkpoints/task1_gpt_best_20261001_000337.pt
+[2026-10-01 00:18:21 PDT] Epoch 5/10, Train Loss: 0.9824, Val Loss: 0.9740, Avg Grad Norm: 0.8004, Max Grad Norm: 1.2627, Train Time: 156.8s, Tokens/s: 572308
+[2026-10-01 00:21:03 PDT] Saved new best checkpoint: epoch=6, val_loss=0.9582, path=task1_llm/jiayi/checkpoints/task1_gpt_best_20261001_000337.pt
+[2026-10-01 00:21:03 PDT] Epoch 6/10, Train Loss: 0.9634, Val Loss: 0.9582, Avg Grad Norm: 0.8067, Max Grad Norm: 1.1619, Train Time: 156.8s, Tokens/s: 572357
+[2026-10-01 00:23:44 PDT] Saved new best checkpoint: epoch=7, val_loss=0.9461, path=task1_llm/jiayi/checkpoints/task1_gpt_best_20261001_000337.pt
+[2026-10-01 00:23:44 PDT] Epoch 7/10, Train Loss: 0.9493, Val Loss: 0.9461, Avg Grad Norm: 0.8237, Max Grad Norm: 1.1461, Train Time: 156.8s, Tokens/s: 572409
+[2026-10-01 00:26:25 PDT] Saved new best checkpoint: epoch=8, val_loss=0.9382, path=task1_llm/jiayi/checkpoints/task1_gpt_best_20261001_000337.pt
+[2026-10-01 00:26:25 PDT] Epoch 8/10, Train Loss: 0.9389, Val Loss: 0.9382, Avg Grad Norm: 0.8464, Max Grad Norm: 1.1475, Train Time: 156.7s, Tokens/s: 572563
+[2026-10-01 00:29:07 PDT] Saved new best checkpoint: epoch=9, val_loss=0.9319, path=task1_llm/jiayi/checkpoints/task1_gpt_best_20261001_000337.pt
+[2026-10-01 00:29:07 PDT] Epoch 9/10, Train Loss: 0.9317, Val Loss: 0.9319, Avg Grad Norm: 0.8693, Max Grad Norm: 1.2067, Train Time: 156.8s, Tokens/s: 572458
+[2026-10-01 00:31:48 PDT] Saved new best checkpoint: epoch=10, val_loss=0.9296, path=task1_llm/jiayi/checkpoints/task1_gpt_best_20261001_000337.pt
+[2026-10-01 00:31:48 PDT] Epoch 10/10, Train Loss: 0.9274, Val Loss: 0.9296, Avg Grad Norm: 0.8886, Max Grad Norm: 1.2422, Train Time: 156.5s, Tokens/s: 573516
+[2026-10-01 00:31:48 PDT] Peak GPU Memory: 123.55 MB
+[2026-10-01 00:31:48 PDT] Total Run Time: 1614.17 s
+[2026-10-01 00:31:48 PDT] Overall Training Tokens/s: 572170
+[2026-10-01 00:31:48 PDT] Best Validation Loss: 0.9296
+[2026-10-01 00:31:48 PDT] Best Checkpoint: task1_llm/jiayi/checkpoints/task1_gpt_best_20261001_000337.pt
+[2026-10-01 00:31:48 PDT] Non-finite training steps: 0
+[2026-10-01 00:31:48 PDT] Training completed successfully.
