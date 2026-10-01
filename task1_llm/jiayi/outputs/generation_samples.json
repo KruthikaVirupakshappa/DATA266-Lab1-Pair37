@@ -1,0 +1,134 @@
+[
+  {
+    "temperature": 0.5,
+    "sample": 1,
+    "seed": 4253,
+    "prompt": "One day",
+    "max_new": 150,
+    "generated_text": "One day, they found a big mean to the park. He was so excited to see the cat were so excited. He loved the bunny and was very sad that he had a loud noise. H",
+    "continuation": ", they found a big mean to the park. He was so excited to see the cat were so excited. He loved the bunny and was very sad that he had a loud noise. H",
+    "generation_time_sec": 0.2639497609998216,
+    "generation_tokens_per_sec": 568.2899633317015
+  },
+  {
+    "temperature": 0.5,
+    "sample": 2,
+    "seed": 4254,
+    "prompt": "One day",
+    "max_new": 150,
+    "generated_text": "One day, she saw a big boy named Timmy. Tim felt grew blocks and saw the street in the truck and put it on the forest, and the store was the truck was so kin",
+    "continuation": ", she saw a big boy named Timmy. Tim felt grew blocks and saw the street in the truck and put it on the forest, and the store was the truck was so kin",
+    "generation_time_sec": 0.25290453399975377,
+    "generation_tokens_per_sec": 593.1091769202764
+  },
+  {
+    "temperature": 0.5,
+    "sample": 3,
+    "seed": 4255,
+    "prompt": "One day",
+    "max_new": 150,
+    "generated_text": "One day, the bird said, \"That is too bear something else. It is a farmer soup and waiting with his friends. When the bee grass and a mountain. We were so tha",
+    "continuation": ", the bird said, \"That is too bear something else. It is a farmer soup and waiting with his friends. When the bee grass and a mountain. We were so tha",
+    "generation_time_sec": 0.2511867590001202,
+    "generation_tokens_per_sec": 597.1652351305994
+  },
+  {
+    "temperature": 0.5,
+    "sample": 4,
+    "seed": 4256,
+    "prompt": "One day",
+    "max_new": 150,
+    "generated_text": "One day, she saw a big dad and a farmer dead and said, \"Okay, Mommy. Let's play a tasty because it was time to go home.\"\n\nMommy and Dad said, \"That's dinner ",
+    "continuation": ", she saw a big dad and a farmer dead and said, \"Okay, Mommy. Let's play a tasty because it was time to go home.\"\n\nMommy and Dad said, \"That's dinner ",
+    "generation_time_sec": 0.2561946159994477,
+    "generation_tokens_per_sec": 585.4923977025472
+  },
+  {
+    "temperature": 0.8,
+    "sample": 1,
+    "seed": 4257,
+    "prompt": "One day",
+    "max_new": 150,
+    "generated_text": "One day, she saw a zipper red and wanted to share. They were very sad and was very sad and go home. They gave her a voice fun and soon it made her to wait. T",
+    "continuation": ", she saw a zipper red and wanted to share. They were very sad and was very sad and go home. They gave her a voice fun and soon it made her to wait. T",
+    "generation_time_sec": 0.2532227920000878,
+    "generation_tokens_per_sec": 592.3637395165756
+  },
+  {
+    "temperature": 0.8,
+    "sample": 2,
+    "seed": 4258,
+    "prompt": "One day",
+    "max_new": 150,
+    "generated_text": "One day, the whole saw Mom was would always very happy to play. She went inside and ran to the park, sometimes wanted to say so tire. Lily would like the boy",
+    "continuation": ", the whole saw Mom was would always very happy to play. She went inside and ran to the park, sometimes wanted to say so tire. Lily would like the boy",
+    "generation_time_sec": 0.2567706929994529,
+    "generation_tokens_per_sec": 584.1788182591368
+  },
+  {
+    "temperature": 0.8,
+    "sample": 3,
+    "seed": 4259,
+    "prompt": "One day",
+    "max_new": 150,
+    "generated_text": "One day, the swan said he wanted to pretend it. But her friends came to tell herself for something special. One day, she found a big truck in the trees. He t",
+    "continuation": ", the swan said he wanted to pretend it. But her friends came to tell herself for something special. One day, she found a big truck in the trees. He t",
+    "generation_time_sec": 0.2540960449996419,
+    "generation_tokens_per_sec": 590.3279604379966
+  },
+  {
+    "temperature": 0.8,
+    "sample": 4,
+    "seed": 4260,
+    "prompt": "One day",
+    "max_new": 150,
+    "generated_text": "One day, Emily was determined to catch his mom. They both said they had a magic was stuck day long to have him a new toy car.\n\nFrom that day on, Lily crawled",
+    "continuation": ", Emily was determined to catch his mom. They both said they had a magic was stuck day long to have him a new toy car.\n\nFrom that day on, Lily crawled",
+    "generation_time_sec": 0.25598638099927484,
+    "generation_tokens_per_sec": 585.9686730772795
+  },
+  {
+    "temperature": 1.0,
+    "sample": 1,
+    "seed": 4261,
+    "prompt": "One day",
+    "max_new": 150,
+    "generated_text": "One day, a family smiled and tell her walked around for a pencing from behaving colourful teel. One day, Jane was okay, his promised a beautiful gum hat. She",
+    "continuation": ", a family smiled and tell her walked around for a pencing from behaving colourful teel. One day, Jane was okay, his promised a beautiful gum hat. She",
+    "generation_time_sec": 0.25426224999955593,
+    "generation_tokens_per_sec": 589.9420775213858
+  },
+  {
+    "temperature": 1.0,
+    "sample": 2,
+    "seed": 4262,
+    "prompt": "One day",
+    "max_new": 150,
+    "generated_text": "One day, Lily's mom trying its something else in the air go completer and played together in the garden. One day, Lily's mommy said to Mia. He loved to play ",
+    "continuation": ", Lily's mom trying its something else in the air go completer and played together in the garden. One day, Lily's mommy said to Mia. He loved to play ",
+    "generation_time_sec": 0.257577862999824,
+    "generation_tokens_per_sec": 582.3481810628365
+  },
+  {
+    "temperature": 1.0,
+    "sample": 3,
+    "seed": 4263,
+    "prompt": "One day",
+    "max_new": 150,
+    "generated_text": "One day, which arrived, always clapped with her mommy came to help Billy turned over a face. Timmy was sad and remembered him around and saw a place where to",
+    "continuation": ", which arrived, always clapped with her mommy came to help Billy turned over a face. Timmy was sad and remembered him around and saw a place where to",
+    "generation_time_sec": 0.2561552749994007,
+    "generation_tokens_per_sec": 585.5823191630582
+  },
+  {
+    "temperature": 1.0,
+    "sample": 4,
+    "seed": 4264,
+    "prompt": "One day",
+    "max_new": 150,
+    "generated_text": "One day, Stia came of the sun an advimmering some wheat into a night of all coming fishing sweet. He didn't believe his boat. He smiled on a trumpy with the ",
+    "continuation": ", Stia came of the sun an advimmering some wheat into a night of all coming fishing sweet. He didn't believe his boat. He smiled on a trumpy with the ",
+    "generation_time_sec": 0.25942002900046646,
+    "generation_tokens_per_sec": 578.2128719125626
+  }
+]

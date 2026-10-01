@@ -1,0 +1,112 @@
+======================================================================
+Temperature: 0.5
+Sample: 1
+Seed: 4253
+Generation time: 0.2639 sec
+Generation tokens/sec: 568.29
+
+One day, they found a big mean to the park. He was so excited to see the cat were so excited. He loved the bunny and was very sad that he had a loud noise. H
+
+======================================================================
+Temperature: 0.5
+Sample: 2
+Seed: 4254
+Generation time: 0.2529 sec
+Generation tokens/sec: 593.11
+
+One day, she saw a big boy named Timmy. Tim felt grew blocks and saw the street in the truck and put it on the forest, and the store was the truck was so kin
+
+======================================================================
+Temperature: 0.5
+Sample: 3
+Seed: 4255
+Generation time: 0.2512 sec
+Generation tokens/sec: 597.17
+
+One day, the bird said, "That is too bear something else. It is a farmer soup and waiting with his friends. When the bee grass and a mountain. We were so tha
+
+======================================================================
+Temperature: 0.5
+Sample: 4
+Seed: 4256
+Generation time: 0.2562 sec
+Generation tokens/sec: 585.49
+
+One day, she saw a big dad and a farmer dead and said, "Okay, Mommy. Let's play a tasty because it was time to go home."
+
+Mommy and Dad said, "That's dinner 
+
+======================================================================
+Temperature: 0.8
+Sample: 1
+Seed: 4257
+Generation time: 0.2532 sec
+Generation tokens/sec: 592.36
+
+One day, she saw a zipper red and wanted to share. They were very sad and was very sad and go home. They gave her a voice fun and soon it made her to wait. T
+
+======================================================================
+Temperature: 0.8
+Sample: 2
+Seed: 4258
+Generation time: 0.2568 sec
+Generation tokens/sec: 584.18
+
+One day, the whole saw Mom was would always very happy to play. She went inside and ran to the park, sometimes wanted to say so tire. Lily would like the boy
+
+======================================================================
+Temperature: 0.8
+Sample: 3
+Seed: 4259
+Generation time: 0.2541 sec
+Generation tokens/sec: 590.33
+
+One day, the swan said he wanted to pretend it. But her friends came to tell herself for something special. One day, she found a big truck in the trees. He t
+
+======================================================================
+Temperature: 0.8
+Sample: 4
+Seed: 4260
+Generation time: 0.2560 sec
+Generation tokens/sec: 585.97
+
+One day, Emily was determined to catch his mom. They both said they had a magic was stuck day long to have him a new toy car.
+
+From that day on, Lily crawled
+
+======================================================================
+Temperature: 1.0
+Sample: 1
+Seed: 4261
+Generation time: 0.2543 sec
+Generation tokens/sec: 589.94
+
+One day, a family smiled and tell her walked around for a pencing from behaving colourful teel. One day, Jane was okay, his promised a beautiful gum hat. She
+
+======================================================================
+Temperature: 1.0
+Sample: 2
+Seed: 4262
+Generation time: 0.2576 sec
+Generation tokens/sec: 582.35
+
+One day, Lily's mom trying its something else in the air go completer and played together in the garden. One day, Lily's mommy said to Mia. He loved to play 
+
+======================================================================
+Temperature: 1.0
+Sample: 3
+Seed: 4263
+Generation time: 0.2562 sec
+Generation tokens/sec: 585.58
+
+One day, which arrived, always clapped with her mommy came to help Billy turned over a face. Timmy was sad and remembered him around and saw a place where to
+
+======================================================================
+Temperature: 1.0
+Sample: 4
+Seed: 4264
+Generation time: 0.2594 sec
+Generation tokens/sec: 578.21
+
+One day, Stia came of the sun an advimmering some wheat into a night of all coming fishing sweet. He didn't believe his boat. He smiled on a trumpy with the 
+
