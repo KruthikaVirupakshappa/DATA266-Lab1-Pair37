@@ -1,0 +1,30 @@
+{
+  "seed": 4253,
+  "data": {
+    "train_size": 100000,
+    "val_size": 10000,
+    "seq_len": 128
+  },
+  "model": {
+    "d_model": 128,
+    "num_heads": 4,
+    "num_layers": 2
+  },
+  "training": {
+    "batch_size": 32,
+    "epochs": 10,
+    "optimizer": "Adam",
+    "base_lr": 0.0003,
+    "warmup_fraction": 0.05,
+    "min_lr_ratio": 0.1
+  },
+  "generation": {
+    "prompt": "One day",
+    "max_new": 150,
+    "temperatures": [
+      0.5,
+      0.8,
+      1.0
+    ]
+  }
+}
