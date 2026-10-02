@@ -20,6 +20,9 @@ After downloading, the dataset is located at:
 ### Running Task 1
 
 ## Task 2
-
+Command:
+```
+python task2_sentiment/scripts/download_yelp.py
+```
 
 ## Task 3
