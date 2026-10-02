@@ -19,7 +19,7 @@ if dataset_folder.is_dir():
 else:
     dataset = load_dataset(
         "roneneldan/TinyStories",
-        revision="bbf1c97a1f0cf005e5aded43839fd814654a1557"
+        revision="f54c09fd23315a6f9c86f9dc80f725de7d8f9c64"
     )
     dataset.save_to_disk(dataset_folder)
     print("Download complete")
