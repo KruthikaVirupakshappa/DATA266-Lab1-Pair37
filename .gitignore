@@ -19,3 +19,6 @@ env/
 # Temporary files
 *.tmp
 *.temp
+
+task2_sentiment/data/*
+!task2_sentiment/data/.gitkeep
