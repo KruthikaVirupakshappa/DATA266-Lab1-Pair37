@@ -19,6 +19,9 @@ data_folder.mkdir(parents=True, exist_ok=True)
 if dataset_folder.is_dir():
     print("Dataset already exists.")
 else:
-    dataset = load_dataset("fancyzhx/yelp_polarity")
+    dataset = load_dataset(
+        "fancyzhx/yelp_polarity",
+        revision="bbf1c97a1f0cf005e5aded43839fd814654a1557"
+    )
     dataset.save_to_disk(dataset_folder)
     print("Download complete.")

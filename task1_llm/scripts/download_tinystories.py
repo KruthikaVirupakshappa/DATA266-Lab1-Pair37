@@ -17,6 +17,9 @@ data_folder.mkdir(parents=True, exist_ok=True)
 if dataset_folder.is_dir():
     print("Dataset already exists.")
 else:
-    dataset = load_dataset("roneneldan/TinyStories")
+    dataset = load_dataset(
+        "roneneldan/TinyStories",
+        revision="f54c09fd23315a6f9c86f9dc80f725de7d8f9c64"
+    )
     dataset.save_to_disk(dataset_folder)
     print("Download complete")
