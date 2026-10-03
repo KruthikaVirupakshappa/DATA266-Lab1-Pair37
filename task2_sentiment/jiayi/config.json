@@ -1,0 +1,44 @@
+{
+  "seed": 4253,
+
+  "data": {
+    "data_dir": "task2_sentiment/data/yelp_polarity",
+    "val_size": 0.1
+  },
+
+  "preprocessing": {
+    "lowercase": true,
+    "remove_punctuation": true,
+    "remove_stopwords": true,
+    "stemming": true,
+    "max_vocab_size": 30000,
+    "min_freq": 2,
+    "length_percentile": 95,
+    "max_len_cap": 256
+  },
+
+  "baseline": {
+    "embedding_dim": 128,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "epochs": 5
+  },
+
+  "experiment_1": {
+  "embedding_dim": 128,
+  "hidden_dim_1": 64,
+  "hidden_dim_2": 32,
+  "dropout": 0.3,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "epochs": 5
+},
+
+  "experiment_2": {
+  "embedding_dim": 128,
+  "attention_dim": 64,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "epochs": 5
+}
+}

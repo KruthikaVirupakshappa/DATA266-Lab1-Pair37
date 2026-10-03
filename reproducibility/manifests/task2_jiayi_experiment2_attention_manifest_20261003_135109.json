@@ -1,0 +1,32 @@
+{
+  "task": "task2_sentiment",
+  "model": "experiment2_single_head_self_attention",
+  "member": "jiayi",
+  "run_id": "20261003_135109",
+  "architecture": "Learned Token Embedding + Learned Positional Embedding -> Q/K/V -> Single-Head Self-Attention -> Wo -> Masked Mean Pooling -> Linear -> Sigmoid",
+  "config_file": "task2_sentiment/jiayi/config.json",
+  "config": {
+    "embedding_dim": 128,
+    "attention_dim": 64,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "epochs": 5
+  },
+  "raw_log": "reproducibility/raw_logs/task2_jiayi_experiment2_attention_train_20261003_135109.log",
+  "best_checkpoint": "task2_sentiment/jiayi/checkpoints/task2_experiment2_attention_best_20261003_135109.pt",
+  "best_epoch": 3,
+  "best_val_loss": 0.19371948484863555,
+  "loss_curve": "task2_sentiment/jiayi/outputs/experiment2_attention_loss_curve_20261003_135109.png",
+  "cpu": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "python_version": "3.13.15",
+  "pytorch_version": "2.11.0+cu130",
+  "cuda_version": "13.0",
+  "parameter_count": 3892417,
+  "training_time_sec": 586.0575254980004,
+  "total_run_time_sec": 640.5787632350002,
+  "examples_per_sec": 4299.919189432196,
+  "peak_gpu_memory_mb": 110.748046875,
+  "environment_file": "reproducibility/manifests/task2_jiayi_experiment2_attention_environment_20261003_135109.txt",
+  "metrics_report": "task2_sentiment/jiayi/metrics_report.csv"
+}
