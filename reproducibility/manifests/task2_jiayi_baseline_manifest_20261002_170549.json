@@ -1,0 +1,22 @@
+{
+  "task": "task2_sentiment",
+  "model": "baseline_mean_embedding",
+  "member": "jiayi",
+  "run_id": "20261002_170549",
+  "config_file": "task2_sentiment/jiayi/config.json",
+  "raw_log": "reproducibility/raw_logs/task2_jiayi_baseline_train_20261002_170549.log",
+  "best_checkpoint": "task2_sentiment/jiayi/checkpoints/task2_baseline_best_20261002_170549.pt",
+  "best_val_loss": 0.20483215206861496,
+  "loss_curve": "task2_sentiment/jiayi/outputs/baseline_loss_curve_20261002_170549.png",
+  "cpu": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "python_version": "3.13.15",
+  "pytorch_version": "2.11.0+cu130",
+  "cuda_version": "13.0",
+  "parameter_count": 3840129,
+  "training_time_sec": 515.8797852840003,
+  "examples_per_sec": 4884.858976617389,
+  "peak_gpu_memory_mb": 89.5888671875,
+  "environment_file": "reproducibility/manifests/task2_jiayi_baseline_environment_20261002_170549.txt",
+  "metrics_report": "task2_sentiment/jiayi/metrics_report.csv"
+}
