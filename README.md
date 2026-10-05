@@ -49,6 +49,17 @@ Add `--epochs N` to change the number of epochs (default 10, set in `src/config.
 - [metrics_report.csv](task1_llm/kruthika/metrics_report.csv)
 - raw log and manifest in `reproducibility/`
 
+### Task 1 team comparison (shared test set)
+
+Both members' models are compared on a shared test set of 5,000 official-validation stories that neither model has seen:
+
+```bash
+python task1_llm/shared_eval/build_test_set.py    # writes task1_llm/shared_eval/test_set.json
+python task1_llm/shared_eval/compare_models.py    # needs both members' folders (task1_llm/kruthika, task1_llm/jiayi)
+```
+
+Each model uses its own preprocessing, vocabulary and context length; generation uses identical prompts and settings. Results: [comparison_table.md](task1_llm/shared_eval/comparison_table.md) and [comparison_report.csv](task1_llm/shared_eval/comparison_report.csv).
+
 ## Task 2 sentiment classification (kruthika)
 
 Trained on a Google Colab GPU with [task2_colab.ipynb](task2_sentiment/kruthika/src/task2_colab.ipynb). That notebook downloads the dataset and then runs:
@@ -73,6 +84,24 @@ Details:
 - [metrics_report.csv](task2_sentiment/kruthika/metrics_report.csv)
 - raw log and manifest in `reproducibility/`
 
+## Task 3 CycleGAN Monet ↔ Photo (kruthika)
+
+Trained on a Google Colab GPU with [task3_colab.ipynb](task3_gan/kruthika/src/task3_colab.ipynb). That notebook downloads the competition data (needs a Kaggle API token in Colab Secrets) and runs:
+
+```bash
+python task3_gan/kruthika/src/train.py --config task3_gan/kruthika/src/config.yaml      # v1: 60 epochs from scratch
+python task3_gan/kruthika/src/train.py --config task3_gan/kruthika/src/config_v2.yaml   # v2: fine-tune of v1 (final model)
+python task3_gan/kruthika/evaluate_local.py --config task3_gan/kruthika/src/config_v2.yaml
+```
+
+`evaluate_local.py` writes `pred_A2B/` and `pred_B2A/`, `submission.csv` (computed exactly as the instructor's evaluation script: first 300 files per folder, average FID and MiFID over both directions), `full_metrics_report.csv` and the human-audit sheets. Training resumes automatically from the last checkpoint after a disconnect.
+
+**Results** (final model v2): Kaggle **−48.3416** (rank 19 on 2026-10-05); FID photo→Monet 97.44, Monet→photo 95.10 (submitted average 96.27, MiFID 0.4115). Details:
+- [results.md](task3_gan/kruthika/results.md): architecture, training runs, convergence and stability, all metrics
+- [failure_analysis.md](task3_gan/kruthika/failure_analysis.md): visual quality and failure cases
+- [full_metrics_report.csv](task3_gan/kruthika/full_metrics_report.csv), [submission.csv](task3_gan/kruthika/submission.csv)
+- raw logs and manifests in `reproducibility/`
+
 ## Data
 
 Raw data is not committed. To fetch it for **Task 1:**
@@ -95,6 +124,14 @@ python task2_sentiment/scripts/download_yelp_polarity.py
 ```
 
 This saves [fancyzhx/yelp_polarity](https://huggingface.co/datasets/fancyzhx/yelp_polarity) at a pinned revision to `task2_sentiment/data/yelp_polarity/` (560K train and 38K test reviews, perfectly balanced).
+
+**Task 3** (needs a Kaggle API token and having joined the competition):
+
+```bash
+python task3_gan/scripts/download_kaggle_data.py
+```
+
+This saves the class competition data to `task3_gan/data/`: `monet_jpg/` (300 paintings) and `photo_jpg/` (7,038 photos).
 
 ## Layout
 
