@@ -1,0 +1,12 @@
+2026-10-05 13:36:13,876 | python=3.13.14 torch=2.14.0 eval device=mps generation device=cpu
+2026-10-05 13:36:17,297 | kruthika: vocab 89 chars, context 256, parameters 10,814,297
+2026-10-05 13:36:17,297 | jiayi: vocab 152 chars, context 128, parameters 452,248
+2026-10-05 13:39:32,405 | SANITY kruthika: own validation loss reproduced 0.53554 vs reported 0.53555 (diff -0.00001)
+2026-10-05 13:39:51,193 | SANITY jiayi: own validation loss reproduced 0.92959 vs reported 0.92959 (diff -0.00000)
+2026-10-05 13:39:51,411 | test set: 5000 stories, 4,183,390 raw characters (revision f54c09fd)
+2026-10-05 13:41:31,922 | TEST kruthika: test_cross_entropy 0.5373 | test_perplexity 1.7113 | test_bits_per_char 0.7751 | test_bits_per_original_char 0.7756 | test_top1_acc 0.8279 | test_chars_scored 4185856 | test_chars_in_stream 4185955 | chars_removed_by_cleaning 2435 | chars_skipped_unknown 0 | eval_seconds 99.9751
+2026-10-05 13:41:40,590 | TEST jiayi: test_cross_entropy 0.9243 | test_perplexity 2.5200 | test_bits_per_char 1.3334 | test_bits_per_original_char 1.3350 | test_top1_acc 0.7081 | test_chars_scored 4188288 | test_chars_in_stream 4188387 | chars_removed_by_cleaning 0 | chars_skipped_unknown 2 | eval_seconds 8.3922
+2026-10-05 13:42:35,571 | GEN kruthika: distinct-1/2/3 0.338/0.745/0.908 | rep-4gram sampled 0.0073 greedy 0.0348 | 136 chars/s (CPU)
+2026-10-05 13:42:40,218 | GEN jiayi: distinct-1/2/3 0.390/0.812/0.947 | rep-4gram sampled 0.0009 greedy 0.4203 | 1614 chars/s (CPU)
+2026-10-05 13:42:40,221 | outputs -> task1_llm/shared_eval/comparison_report.csv, comparison_table.md, generation_samples.*
+2026-10-05 13:42:40,221 | raw log -> reproducibility/raw_logs/task1_shared_eval_20261005-133613.log

@@ -1,0 +1,68 @@
+{
+  "quality": {
+    "train_missing_or_empty": 0,
+    "test_missing_or_empty": 0,
+    "train_duplicate_texts": 0,
+    "test_texts_also_in_train": 0,
+    "train_with_escaped_newlines": 269718,
+    "train_with_html_entities": 27
+  },
+  "splits": {
+    "train": {
+      "n": 560000,
+      "class_counts": {
+        "negative": 280000,
+        "positive": 280000
+      },
+      "words_all": {
+        "mean": 133.0288732142857,
+        "median": 97.0,
+        "p95": 372.0,
+        "min": 1,
+        "max": 1052
+      },
+      "words_negative": {
+        "mean": 151.5271857142857,
+        "median": 112.0,
+        "p95": 419.0,
+        "min": 1,
+        "max": 1052
+      },
+      "words_positive": {
+        "mean": 114.53056071428571,
+        "median": 84.0,
+        "p95": 316.0,
+        "min": 1,
+        "max": 998
+      }
+    },
+    "test": {
+      "n": 38000,
+      "class_counts": {
+        "negative": 19000,
+        "positive": 19000
+      },
+      "words_all": {
+        "mean": 132.55863157894737,
+        "median": 97.0,
+        "p95": 367.0,
+        "min": 1,
+        "max": 1007
+      },
+      "words_negative": {
+        "mean": 151.31457894736843,
+        "median": 112.0,
+        "p95": 421.0,
+        "min": 1,
+        "max": 1007
+      },
+      "words_positive": {
+        "mean": 113.80268421052632,
+        "median": 84.0,
+        "p95": 315.0,
+        "min": 1,
+        "max": 988
+      }
+    }
+  }
+}

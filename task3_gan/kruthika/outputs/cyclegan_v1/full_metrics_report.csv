@@ -1,0 +1,57 @@
+direction,metric,value
+photo->monet (B2A),fid_eval_script,97.69508790581276
+photo->monet (B2A),mifid_eval_script,0.40743880302344126
+monet->photo (A2B),fid_eval_script,96.19032571568901
+monet->photo (A2B),mifid_eval_script,0.4167975463306453
+submission,FID_average,96.94270681075088
+submission,MiFID_average,0.41211817467704326
+submission,estimated_leaderboard_score,-48.67741249271396
+photo->monet (B2A),fid_all_images,80.37798568241321
+monet->photo (A2B),fid_all_images,78.40590838067152
+photo->monet (B2A),kid_mean,0.007665580487558019
+photo->monet (B2A),kid_std,0.0006291369825436584
+photo->monet (B2A),precision,0.5786666870117188
+photo->monet (B2A),recall,0.6499999761581421
+photo->monet (B2A),density,0.5443333387374878
+photo->monet (B2A),coverage,0.9800000190734863
+monet->photo (A2B),kid_mean,0.014404244606910099
+monet->photo (A2B),kid_std,0.0009983867281211614
+monet->photo (A2B),precision,0.7200000286102295
+monet->photo (A2B),recall,0.4970000088214874
+monet->photo (A2B),density,0.8873332738876343
+monet->photo (A2B),coverage,0.2709999978542328
+photo->monet (B2A),content_cosine_input_vs_output,0.8079595565795898
+monet->photo (A2B),content_cosine_input_vs_output,0.8279460668563843
+photo->monet (B2A),cycle_l1_photo_monet_photo,0.03470132127404213
+monet->photo (A2B),cycle_l1_monet_photo_monet,0.02933037094771862
+photo->monet (B2A),identity_l1_G_AB_on_photo,0.030363118276000023
+monet->photo (A2B),identity_l1_G_BA_on_monet,0.027207322418689728
+photo->monet (B2A),lpips_input_vs_output,0.3677646517753601
+monet->photo (A2B),lpips_input_vs_output,0.3027200996875763
+photo->monet (B2A),lpips_cycle_reconstruction,0.15151163935661316
+monet->photo (A2B),lpips_cycle_reconstruction,0.20194104313850403
+training,parameters_total,28285832
+training,train_time_min,306.41634090468324
+training,train_images_per_s,45.9505519791448
+training,nan_steps,0
+training,iterations,105600
+training,epochs,60
+training,peak_gpu_mem_mb,6647.986328125
+training,device,NVIDIA A100-SXM4-40GB
+training,parameters_G_AB,11378179
+training,parameters_G_BA,11378179
+training,parameters_D_A,2764737
+training,parameters_D_B,2764737
+training,grad_norm_G_mean,24.58267424645749
+training,grad_norm_G_max,40.361578140258786
+training,grad_norm_D_mean,11.733427228424134
+training,grad_norm_D_max,28.392495183944703
+training,final_loss_G_gan,1.075317929983139
+training,final_loss_cycle,0.09063383050262928
+training,final_loss_identity,0.07280195008963347
+training,final_loss_D_A,0.10222178462892771
+training,final_loss_D_B,0.1850012807548046
+inference,images_per_s,547.1071575547836
+inference,checkpoint,task3_gan/kruthika/checkpoints/cyclegan_v1_best.pt
+inference,checkpoint_epoch,58
+inference,checkpoint_weights,ema

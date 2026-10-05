@@ -1,0 +1,447 @@
+2026-09-29 02:40:40,762 | INFO | run_id=task1_kruthika_gpt_L6_H6_D384_20260929-024039 config=task1_llm/kruthika/src/config.yaml resume=True
+2026-09-29 02:40:40,763 | INFO | python=3.13.15 torch=2.11.0+cu128 device=cuda (NVIDIA A100-SXM4-40GB) precision=bf16 git=None dirty=False
+2026-09-29 02:40:40,764 | INFO | config: {"run_name": "gpt_L6_H6_D384", "seed": 1337, "device": "auto", "data": {"data_dir": "task1_llm/data/tinystories", "n_train": 100000, "n_val": 10000, "block_size": 256}, "model": {"n_layer": 6, "n_head": 6, "n_embd": 384, "dropout": 0.1}, "train": {"epochs": 10, "batch_size": 128, "lr": 0.001, "min_lr": 0.0001, "warmup_steps": 1000, "weight_decay": 0.1, "betas": [0.9, 0.95], "grad_clip": 1.0, "precision": "bf16", "compile": true, "log_every": 100, "eval_every": 500, "eval_batches": 50, "ckpt_every": 2000}, "generate": {"prompts": ["Once upon a time", "One day, a little girl named Lily", "The dog was very sad because", "Tom and his mom went to the park.", "In a big forest, there lived"], "samples_per_prompt": 4, "max_new_tokens": 500, "temperature": 0.8, "top_k": null}, "smoke": {"data": {"n_train": 2000, "n_val": 200, "block_size": 64}, "model": {"n_layer": 2, "n_head": 4, "n_embd": 64, "dropout": 0.0}, "train": {"batch_size": 16, "steps": 200, "lr": 0.001, "log_every": 25, "eval_batches": 10}, "generate": {"prompt": "Once upon a time", "max_new_tokens": 200, "temperature": 1.0, "n_samples": 3}}}
+2026-09-29 02:41:20,603 | INFO | data: 100000 train / 10000 val stories | 89,731,480 / 8,739,080 chars | vocab=89 | 39.8s
+2026-09-29 02:41:20,802 | INFO | model: {'n_layer': 6, 'n_head': 6, 'n_embd': 384, 'dropout': 0.1, 'vocab_size': 89, 'block_size': 256} | parameters=10,814,297
+2026-09-29 02:41:25,946 | INFO | schedule: 10 epochs x 2738 steps = 27380 steps (897M tokens), warmup=1000
+2026-09-29 02:41:54,677 | INFO | step    100/27380 | ep  0.04 | loss 2.4152 | lr 1.00e-04 | grad 0.729 | 127K tok/s
+2026-09-29 02:41:58,050 | INFO | step    200/27380 | ep  0.07 | loss 2.2512 | lr 2.00e-04 | grad 0.566 | 972K tok/s
+2026-09-29 02:42:01,430 | INFO | step    300/27380 | ep  0.11 | loss 1.9838 | lr 3.00e-04 | grad 1.129 | 970K tok/s
+2026-09-29 02:42:04,801 | INFO | step    400/27380 | ep  0.15 | loss 1.6577 | lr 4.00e-04 | grad 0.916 | 972K tok/s
+2026-09-29 02:42:08,168 | INFO | step    500/27380 | ep  0.18 | loss 1.4310 | lr 5.00e-04 | grad 0.698 | 973K tok/s
+2026-09-29 02:42:16,470 | INFO | EVAL step 500 | train 1.3043 | val 1.3064 | gap +0.0021 | val acc 0.599
+2026-09-29 02:42:16,581 | INFO | new best val 1.3064 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:42:19,953 | INFO | step    600/27380 | ep  0.22 | loss 1.2427 | lr 6.00e-04 | grad 0.665 | 972K tok/s
+2026-09-29 02:42:23,333 | INFO | step    700/27380 | ep  0.26 | loss 1.0969 | lr 7.00e-04 | grad 0.534 | 970K tok/s
+2026-09-29 02:42:26,721 | INFO | step    800/27380 | ep  0.29 | loss 1.0487 | lr 8.00e-04 | grad 0.451 | 967K tok/s
+2026-09-29 02:42:30,094 | INFO | step    900/27380 | ep  0.33 | loss 0.9872 | lr 9.00e-04 | grad 0.520 | 972K tok/s
+2026-09-29 02:42:33,466 | INFO | step   1000/27380 | ep  0.37 | loss 0.9314 | lr 1.00e-03 | grad 0.347 | 972K tok/s
+2026-09-29 02:42:34,513 | INFO | EVAL step 1000 | train 0.8884 | val 0.8876 | gap -0.0008 | val acc 0.723
+2026-09-29 02:42:34,616 | INFO | new best val 0.8876 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:42:38,006 | INFO | step   1100/27380 | ep  0.40 | loss 0.9079 | lr 1.00e-03 | grad 0.304 | 967K tok/s
+2026-09-29 02:42:41,401 | INFO | step   1200/27380 | ep  0.44 | loss 0.8576 | lr 1.00e-03 | grad 0.304 | 965K tok/s
+2026-09-29 02:42:44,777 | INFO | step   1300/27380 | ep  0.47 | loss 0.8546 | lr 1.00e-03 | grad 0.272 | 971K tok/s
+2026-09-29 02:42:48,157 | INFO | step   1400/27380 | ep  0.51 | loss 0.8184 | lr 9.99e-04 | grad 0.248 | 969K tok/s
+2026-09-29 02:42:51,546 | INFO | step   1500/27380 | ep  0.55 | loss 0.8098 | lr 9.99e-04 | grad 0.238 | 967K tok/s
+2026-09-29 02:42:52,602 | INFO | EVAL step 1500 | train 0.7661 | val 0.7656 | gap -0.0005 | val acc 0.759
+2026-09-29 02:42:52,703 | INFO | new best val 0.7656 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:42:56,079 | INFO | step   1600/27380 | ep  0.58 | loss 0.7920 | lr 9.99e-04 | grad 0.242 | 971K tok/s
+2026-09-29 02:42:59,456 | INFO | step   1700/27380 | ep  0.62 | loss 0.7664 | lr 9.98e-04 | grad 0.239 | 971K tok/s
+2026-09-29 02:43:02,843 | INFO | step   1800/27380 | ep  0.66 | loss 0.7768 | lr 9.98e-04 | grad 0.209 | 967K tok/s
+2026-09-29 02:43:06,231 | INFO | step   1900/27380 | ep  0.69 | loss 0.7793 | lr 9.97e-04 | grad 0.203 | 967K tok/s
+2026-09-29 02:43:09,619 | INFO | step   2000/27380 | ep  0.73 | loss 0.7517 | lr 9.97e-04 | grad 0.206 | 967K tok/s
+2026-09-29 02:43:10,670 | INFO | EVAL step 2000 | train 0.7239 | val 0.7193 | gap -0.0046 | val acc 0.773
+2026-09-29 02:43:10,773 | INFO | new best val 0.7193 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:43:14,520 | INFO | step   2100/27380 | ep  0.77 | loss 0.7270 | lr 9.96e-04 | grad 0.205 | 970K tok/s
+2026-09-29 02:43:17,917 | INFO | step   2200/27380 | ep  0.80 | loss 0.7361 | lr 9.95e-04 | grad 0.191 | 965K tok/s
+2026-09-29 02:43:21,303 | INFO | step   2300/27380 | ep  0.84 | loss 0.7413 | lr 9.95e-04 | grad 0.202 | 968K tok/s
+2026-09-29 02:43:24,676 | INFO | step   2400/27380 | ep  0.88 | loss 0.7196 | lr 9.94e-04 | grad 0.193 | 972K tok/s
+2026-09-29 02:43:28,061 | INFO | step   2500/27380 | ep  0.91 | loss 0.7222 | lr 9.93e-04 | grad 0.176 | 968K tok/s
+2026-09-29 02:43:29,110 | INFO | EVAL step 2500 | train 0.6919 | val 0.6926 | gap +0.0007 | val acc 0.781
+2026-09-29 02:43:29,215 | INFO | new best val 0.6926 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:43:32,596 | INFO | step   2600/27380 | ep  0.95 | loss 0.7164 | lr 9.92e-04 | grad 0.180 | 969K tok/s
+2026-09-29 02:43:35,974 | INFO | step   2700/27380 | ep  0.99 | loss 0.7270 | lr 9.91e-04 | grad 0.189 | 970K tok/s
+2026-09-29 02:43:39,367 | INFO | step   2800/27380 | ep  1.02 | loss 0.6981 | lr 9.90e-04 | grad 0.172 | 966K tok/s
+2026-09-29 02:43:42,759 | INFO | step   2900/27380 | ep  1.06 | loss 0.7027 | lr 9.89e-04 | grad 0.173 | 966K tok/s
+2026-09-29 02:43:46,135 | INFO | step   3000/27380 | ep  1.10 | loss 0.7102 | lr 9.87e-04 | grad 0.178 | 971K tok/s
+2026-09-29 02:43:47,184 | INFO | EVAL step 3000 | train 0.6771 | val 0.6763 | gap -0.0008 | val acc 0.786
+2026-09-29 02:43:47,288 | INFO | new best val 0.6763 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:43:50,668 | INFO | step   3100/27380 | ep  1.13 | loss 0.7165 | lr 9.86e-04 | grad 0.165 | 969K tok/s
+2026-09-29 02:43:54,052 | INFO | step   3200/27380 | ep  1.17 | loss 0.6914 | lr 9.85e-04 | grad 0.160 | 969K tok/s
+2026-09-29 02:43:57,432 | INFO | step   3300/27380 | ep  1.21 | loss 0.7032 | lr 9.83e-04 | grad 0.172 | 969K tok/s
+2026-09-29 02:44:00,808 | INFO | step   3400/27380 | ep  1.24 | loss 0.6926 | lr 9.82e-04 | grad 0.167 | 971K tok/s
+2026-09-29 02:44:04,189 | INFO | step   3500/27380 | ep  1.28 | loss 0.7096 | lr 9.80e-04 | grad 0.187 | 969K tok/s
+2026-09-29 02:44:05,241 | INFO | EVAL step 3500 | train 0.6593 | val 0.6643 | gap +0.0050 | val acc 0.789
+2026-09-29 02:44:05,348 | INFO | new best val 0.6643 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:44:08,738 | INFO | step   3600/27380 | ep  1.31 | loss 0.6798 | lr 9.79e-04 | grad 0.159 | 967K tok/s
+2026-09-29 02:44:12,127 | INFO | step   3700/27380 | ep  1.35 | loss 0.6971 | lr 9.77e-04 | grad 0.159 | 967K tok/s
+2026-09-29 02:44:15,504 | INFO | step   3800/27380 | ep  1.39 | loss 0.6795 | lr 9.75e-04 | grad 0.154 | 971K tok/s
+2026-09-29 02:44:18,896 | INFO | step   3900/27380 | ep  1.42 | loss 0.6866 | lr 9.73e-04 | grad 0.157 | 966K tok/s
+2026-09-29 02:44:22,282 | INFO | step   4000/27380 | ep  1.46 | loss 0.6910 | lr 9.72e-04 | grad 0.143 | 968K tok/s
+2026-09-29 02:44:23,332 | INFO | EVAL step 4000 | train 0.6495 | val 0.6509 | gap +0.0015 | val acc 0.793
+2026-09-29 02:44:23,437 | INFO | new best val 0.6509 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:44:27,110 | INFO | step   4100/27380 | ep  1.50 | loss 0.6864 | lr 9.70e-04 | grad 0.156 | 971K tok/s
+2026-09-29 02:44:30,496 | INFO | step   4200/27380 | ep  1.53 | loss 0.6682 | lr 9.68e-04 | grad 0.158 | 968K tok/s
+2026-09-29 02:44:33,880 | INFO | step   4300/27380 | ep  1.57 | loss 0.6740 | lr 9.66e-04 | grad 0.156 | 969K tok/s
+2026-09-29 02:44:37,261 | INFO | step   4400/27380 | ep  1.61 | loss 0.6877 | lr 9.64e-04 | grad 0.157 | 969K tok/s
+2026-09-29 02:44:40,636 | INFO | step   4500/27380 | ep  1.64 | loss 0.6633 | lr 9.61e-04 | grad 0.155 | 971K tok/s
+2026-09-29 02:44:41,691 | INFO | EVAL step 4500 | train 0.6412 | val 0.6415 | gap +0.0003 | val acc 0.796
+2026-09-29 02:44:41,800 | INFO | new best val 0.6415 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:44:45,200 | INFO | step   4600/27380 | ep  1.68 | loss 0.6604 | lr 9.59e-04 | grad 0.143 | 964K tok/s
+2026-09-29 02:44:48,579 | INFO | step   4700/27380 | ep  1.72 | loss 0.6433 | lr 9.57e-04 | grad 0.138 | 970K tok/s
+2026-09-29 02:44:51,957 | INFO | step   4800/27380 | ep  1.75 | loss 0.6617 | lr 9.55e-04 | grad 0.151 | 970K tok/s
+2026-09-29 02:44:55,345 | INFO | step   4900/27380 | ep  1.79 | loss 0.6795 | lr 9.52e-04 | grad 0.155 | 967K tok/s
+2026-09-29 02:44:58,724 | INFO | step   5000/27380 | ep  1.83 | loss 0.6573 | lr 9.50e-04 | grad 0.144 | 970K tok/s
+2026-09-29 02:44:59,774 | INFO | EVAL step 5000 | train 0.6314 | val 0.6380 | gap +0.0066 | val acc 0.797
+2026-09-29 02:44:59,888 | INFO | new best val 0.6380 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:45:03,271 | INFO | step   5100/27380 | ep  1.86 | loss 0.6474 | lr 9.47e-04 | grad 0.152 | 969K tok/s
+2026-09-29 02:45:06,645 | INFO | step   5200/27380 | ep  1.90 | loss 0.6649 | lr 9.45e-04 | grad 0.156 | 971K tok/s
+2026-09-29 02:45:10,025 | INFO | step   5300/27380 | ep  1.94 | loss 0.6451 | lr 9.42e-04 | grad 0.148 | 970K tok/s
+2026-09-29 02:45:13,398 | INFO | step   5400/27380 | ep  1.97 | loss 0.6375 | lr 9.40e-04 | grad 0.142 | 972K tok/s
+2026-09-29 02:45:16,768 | INFO | step   5500/27380 | ep  2.01 | loss 0.6563 | lr 9.37e-04 | grad 0.155 | 972K tok/s
+2026-09-29 02:45:17,819 | INFO | EVAL step 5500 | train 0.6233 | val 0.6276 | gap +0.0043 | val acc 0.800
+2026-09-29 02:45:17,934 | INFO | new best val 0.6276 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:45:21,323 | INFO | step   5600/27380 | ep  2.05 | loss 0.6576 | lr 9.34e-04 | grad 0.140 | 967K tok/s
+2026-09-29 02:45:24,716 | INFO | step   5700/27380 | ep  2.08 | loss 0.6304 | lr 9.31e-04 | grad 0.148 | 966K tok/s
+2026-09-29 02:45:28,094 | INFO | step   5800/27380 | ep  2.12 | loss 0.6676 | lr 9.28e-04 | grad 0.144 | 970K tok/s
+2026-09-29 02:45:31,466 | INFO | step   5900/27380 | ep  2.15 | loss 0.6352 | lr 9.26e-04 | grad 0.145 | 972K tok/s
+2026-09-29 02:45:34,850 | INFO | step   6000/27380 | ep  2.19 | loss 0.6351 | lr 9.23e-04 | grad 0.137 | 968K tok/s
+2026-09-29 02:45:35,897 | INFO | EVAL step 6000 | train 0.6207 | val 0.6254 | gap +0.0047 | val acc 0.801
+2026-09-29 02:45:36,009 | INFO | new best val 0.6254 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:45:39,699 | INFO | step   6100/27380 | ep  2.23 | loss 0.6380 | lr 9.20e-04 | grad 0.137 | 969K tok/s
+2026-09-29 02:45:43,071 | INFO | step   6200/27380 | ep  2.26 | loss 0.6339 | lr 9.16e-04 | grad 0.139 | 972K tok/s
+2026-09-29 02:45:46,452 | INFO | step   6300/27380 | ep  2.30 | loss 0.6550 | lr 9.13e-04 | grad 0.143 | 969K tok/s
+2026-09-29 02:45:49,831 | INFO | step   6400/27380 | ep  2.34 | loss 0.6417 | lr 9.10e-04 | grad 0.130 | 970K tok/s
+2026-09-29 02:45:53,216 | INFO | step   6500/27380 | ep  2.37 | loss 0.6375 | lr 9.07e-04 | grad 0.140 | 968K tok/s
+2026-09-29 02:45:54,272 | INFO | EVAL step 6500 | train 0.6110 | val 0.6183 | gap +0.0073 | val acc 0.803
+2026-09-29 02:45:54,377 | INFO | new best val 0.6183 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:45:57,762 | INFO | step   6600/27380 | ep  2.41 | loss 0.6448 | lr 9.04e-04 | grad 0.143 | 968K tok/s
+2026-09-29 02:46:01,147 | INFO | step   6700/27380 | ep  2.45 | loss 0.6349 | lr 9.00e-04 | grad 0.129 | 968K tok/s
+2026-09-29 02:46:04,545 | INFO | step   6800/27380 | ep  2.48 | loss 0.6491 | lr 8.97e-04 | grad 0.138 | 965K tok/s
+2026-09-29 02:46:07,922 | INFO | step   6900/27380 | ep  2.52 | loss 0.6332 | lr 8.93e-04 | grad 0.141 | 971K tok/s
+2026-09-29 02:46:11,304 | INFO | step   7000/27380 | ep  2.56 | loss 0.6478 | lr 8.90e-04 | grad 0.139 | 969K tok/s
+2026-09-29 02:46:12,360 | INFO | EVAL step 7000 | train 0.6062 | val 0.6136 | gap +0.0074 | val acc 0.804
+2026-09-29 02:46:12,463 | INFO | new best val 0.6136 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:46:15,841 | INFO | step   7100/27380 | ep  2.59 | loss 0.6289 | lr 8.86e-04 | grad 0.135 | 970K tok/s
+2026-09-29 02:46:19,219 | INFO | step   7200/27380 | ep  2.63 | loss 0.6300 | lr 8.83e-04 | grad 0.131 | 970K tok/s
+2026-09-29 02:46:22,599 | INFO | step   7300/27380 | ep  2.67 | loss 0.6232 | lr 8.79e-04 | grad 0.135 | 970K tok/s
+2026-09-29 02:46:25,981 | INFO | step   7400/27380 | ep  2.70 | loss 0.6383 | lr 8.76e-04 | grad 0.135 | 969K tok/s
+2026-09-29 02:46:29,364 | INFO | step   7500/27380 | ep  2.74 | loss 0.6196 | lr 8.72e-04 | grad 0.130 | 969K tok/s
+2026-09-29 02:46:30,416 | INFO | EVAL step 7500 | train 0.6014 | val 0.6106 | gap +0.0091 | val acc 0.805
+2026-09-29 02:46:30,520 | INFO | new best val 0.6106 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:46:33,896 | INFO | step   7600/27380 | ep  2.78 | loss 0.6296 | lr 8.68e-04 | grad 0.132 | 971K tok/s
+2026-09-29 02:46:37,272 | INFO | step   7700/27380 | ep  2.81 | loss 0.6417 | lr 8.64e-04 | grad 0.139 | 971K tok/s
+2026-09-29 02:46:40,656 | INFO | step   7800/27380 | ep  2.85 | loss 0.6146 | lr 8.60e-04 | grad 0.127 | 969K tok/s
+2026-09-29 02:46:44,031 | INFO | step   7900/27380 | ep  2.89 | loss 0.6418 | lr 8.56e-04 | grad 0.144 | 971K tok/s
+2026-09-29 02:46:47,409 | INFO | step   8000/27380 | ep  2.92 | loss 0.6363 | lr 8.53e-04 | grad 0.133 | 970K tok/s
+2026-09-29 02:46:48,474 | INFO | EVAL step 8000 | train 0.6011 | val 0.6073 | gap +0.0062 | val acc 0.806
+2026-09-29 02:46:48,581 | INFO | new best val 0.6073 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:46:52,291 | INFO | step   8100/27380 | ep  2.96 | loss 0.6156 | lr 8.49e-04 | grad 0.136 | 968K tok/s
+2026-09-29 02:46:55,671 | INFO | step   8200/27380 | ep  2.99 | loss 0.6181 | lr 8.45e-04 | grad 0.127 | 970K tok/s
+2026-09-29 02:46:59,051 | INFO | step   8300/27380 | ep  3.03 | loss 0.6139 | lr 8.40e-04 | grad 0.146 | 970K tok/s
+2026-09-29 02:47:02,435 | INFO | step   8400/27380 | ep  3.07 | loss 0.6188 | lr 8.36e-04 | grad 0.136 | 968K tok/s
+2026-09-29 02:47:05,816 | INFO | step   8500/27380 | ep  3.10 | loss 0.6113 | lr 8.32e-04 | grad 0.129 | 969K tok/s
+2026-09-29 02:47:06,867 | INFO | EVAL step 8500 | train 0.5968 | val 0.6029 | gap +0.0061 | val acc 0.807
+2026-09-29 02:47:06,982 | INFO | new best val 0.6029 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:47:10,360 | INFO | step   8600/27380 | ep  3.14 | loss 0.6047 | lr 8.28e-04 | grad 0.123 | 970K tok/s
+2026-09-29 02:47:13,738 | INFO | step   8700/27380 | ep  3.18 | loss 0.6140 | lr 8.24e-04 | grad 0.126 | 970K tok/s
+2026-09-29 02:47:17,116 | INFO | step   8800/27380 | ep  3.21 | loss 0.6293 | lr 8.19e-04 | grad 0.144 | 970K tok/s
+2026-09-29 02:47:20,518 | INFO | step   8900/27380 | ep  3.25 | loss 0.6085 | lr 8.15e-04 | grad 0.135 | 963K tok/s
+2026-09-29 02:47:23,895 | INFO | step   9000/27380 | ep  3.29 | loss 0.6071 | lr 8.11e-04 | grad 0.130 | 971K tok/s
+2026-09-29 02:47:24,946 | INFO | EVAL step 9000 | train 0.5932 | val 0.5992 | gap +0.0060 | val acc 0.809
+2026-09-29 02:47:25,062 | INFO | new best val 0.5992 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:47:28,444 | INFO | step   9100/27380 | ep  3.32 | loss 0.6259 | lr 8.06e-04 | grad 0.125 | 969K tok/s
+2026-09-29 02:47:31,823 | INFO | step   9200/27380 | ep  3.36 | loss 0.6318 | lr 8.02e-04 | grad 0.133 | 970K tok/s
+2026-09-29 02:47:35,208 | INFO | step   9300/27380 | ep  3.40 | loss 0.6193 | lr 7.98e-04 | grad 0.133 | 968K tok/s
+2026-09-29 02:47:38,587 | INFO | step   9400/27380 | ep  3.43 | loss 0.6174 | lr 7.93e-04 | grad 0.126 | 970K tok/s
+2026-09-29 02:47:41,967 | INFO | step   9500/27380 | ep  3.47 | loss 0.6339 | lr 7.89e-04 | grad 0.132 | 970K tok/s
+2026-09-29 02:47:43,014 | INFO | EVAL step 9500 | train 0.5879 | val 0.5975 | gap +0.0096 | val acc 0.810
+2026-09-29 02:47:43,113 | INFO | new best val 0.5975 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:47:46,490 | INFO | step   9600/27380 | ep  3.51 | loss 0.6208 | lr 7.84e-04 | grad 0.123 | 970K tok/s
+2026-09-29 02:47:49,871 | INFO | step   9700/27380 | ep  3.54 | loss 0.6209 | lr 7.79e-04 | grad 0.129 | 969K tok/s
+2026-09-29 02:47:53,247 | INFO | step   9800/27380 | ep  3.58 | loss 0.6170 | lr 7.75e-04 | grad 0.126 | 971K tok/s
+2026-09-29 02:47:56,625 | INFO | step   9900/27380 | ep  3.62 | loss 0.6061 | lr 7.70e-04 | grad 0.126 | 970K tok/s
+2026-09-29 02:48:00,021 | INFO | step  10000/27380 | ep  3.65 | loss 0.6117 | lr 7.65e-04 | grad 0.127 | 965K tok/s
+2026-09-29 02:48:01,077 | INFO | EVAL step 10000 | train 0.5856 | val 0.5951 | gap +0.0095 | val acc 0.810
+2026-09-29 02:48:01,183 | INFO | new best val 0.5951 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:48:04,876 | INFO | step  10100/27380 | ep  3.69 | loss 0.6127 | lr 7.61e-04 | grad 0.129 | 969K tok/s
+2026-09-29 02:48:08,256 | INFO | step  10200/27380 | ep  3.73 | loss 0.6121 | lr 7.56e-04 | grad 0.129 | 969K tok/s
+2026-09-29 02:48:11,641 | INFO | step  10300/27380 | ep  3.76 | loss 0.6132 | lr 7.51e-04 | grad 0.134 | 968K tok/s
+2026-09-29 02:48:15,030 | INFO | step  10400/27380 | ep  3.80 | loss 0.6249 | lr 7.46e-04 | grad 0.142 | 967K tok/s
+2026-09-29 02:48:18,408 | INFO | step  10500/27380 | ep  3.83 | loss 0.6028 | lr 7.41e-04 | grad 0.130 | 970K tok/s
+2026-09-29 02:48:19,462 | INFO | EVAL step 10500 | train 0.5847 | val 0.5897 | gap +0.0050 | val acc 0.812
+2026-09-29 02:48:19,569 | INFO | new best val 0.5897 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:48:22,947 | INFO | step  10600/27380 | ep  3.87 | loss 0.6012 | lr 7.37e-04 | grad 0.127 | 970K tok/s
+2026-09-29 02:48:26,326 | INFO | step  10700/27380 | ep  3.91 | loss 0.6017 | lr 7.32e-04 | grad 0.129 | 970K tok/s
+2026-09-29 02:48:29,701 | INFO | step  10800/27380 | ep  3.94 | loss 0.6101 | lr 7.27e-04 | grad 0.138 | 971K tok/s
+2026-09-29 02:48:33,083 | INFO | step  10900/27380 | ep  3.98 | loss 0.6101 | lr 7.22e-04 | grad 0.128 | 969K tok/s
+2026-09-29 02:48:36,484 | INFO | step  11000/27380 | ep  4.02 | loss 0.5892 | lr 7.17e-04 | grad 0.126 | 964K tok/s
+2026-09-29 02:48:37,534 | INFO | EVAL step 11000 | train 0.5810 | val 0.5896 | gap +0.0086 | val acc 0.812
+2026-09-29 02:48:37,647 | INFO | new best val 0.5896 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:48:41,026 | INFO | step  11100/27380 | ep  4.05 | loss 0.6142 | lr 7.12e-04 | grad 0.135 | 970K tok/s
+2026-09-29 02:48:44,403 | INFO | step  11200/27380 | ep  4.09 | loss 0.5963 | lr 7.07e-04 | grad 0.127 | 971K tok/s
+2026-09-29 02:48:47,781 | INFO | step  11300/27380 | ep  4.13 | loss 0.5970 | lr 7.02e-04 | grad 0.129 | 970K tok/s
+2026-09-29 02:48:51,161 | INFO | step  11400/27380 | ep  4.16 | loss 0.6162 | lr 6.97e-04 | grad 0.131 | 970K tok/s
+2026-09-29 02:48:54,534 | INFO | step  11500/27380 | ep  4.20 | loss 0.6085 | lr 6.92e-04 | grad 0.133 | 972K tok/s
+2026-09-29 02:48:55,584 | INFO | EVAL step 11500 | train 0.5757 | val 0.5870 | gap +0.0113 | val acc 0.813
+2026-09-29 02:48:55,690 | INFO | new best val 0.5870 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:48:59,073 | INFO | step  11600/27380 | ep  4.24 | loss 0.5997 | lr 6.87e-04 | grad 0.125 | 969K tok/s
+2026-09-29 02:49:02,454 | INFO | step  11700/27380 | ep  4.27 | loss 0.5911 | lr 6.82e-04 | grad 0.133 | 969K tok/s
+2026-09-29 02:49:05,836 | INFO | step  11800/27380 | ep  4.31 | loss 0.6161 | lr 6.76e-04 | grad 0.136 | 969K tok/s
+2026-09-29 02:49:09,220 | INFO | step  11900/27380 | ep  4.35 | loss 0.6057 | lr 6.71e-04 | grad 0.130 | 969K tok/s
+2026-09-29 02:49:12,604 | INFO | step  12000/27380 | ep  4.38 | loss 0.5919 | lr 6.66e-04 | grad 0.130 | 969K tok/s
+2026-09-29 02:49:13,653 | INFO | EVAL step 12000 | train 0.5767 | val 0.5822 | gap +0.0055 | val acc 0.814
+2026-09-29 02:49:13,765 | INFO | new best val 0.5822 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:49:17,475 | INFO | step  12100/27380 | ep  4.42 | loss 0.6140 | lr 6.61e-04 | grad 0.136 | 969K tok/s
+2026-09-29 02:49:20,846 | INFO | step  12200/27380 | ep  4.46 | loss 0.5850 | lr 6.56e-04 | grad 0.126 | 972K tok/s
+2026-09-29 02:49:24,225 | INFO | step  12300/27380 | ep  4.49 | loss 0.5924 | lr 6.50e-04 | grad 0.124 | 970K tok/s
+2026-09-29 02:49:27,614 | INFO | step  12400/27380 | ep  4.53 | loss 0.5838 | lr 6.45e-04 | grad 0.129 | 967K tok/s
+2026-09-29 02:49:30,990 | INFO | step  12500/27380 | ep  4.57 | loss 0.6063 | lr 6.40e-04 | grad 0.134 | 971K tok/s
+2026-09-29 02:49:32,039 | INFO | EVAL step 12500 | train 0.5689 | val 0.5796 | gap +0.0107 | val acc 0.815
+2026-09-29 02:49:32,145 | INFO | new best val 0.5796 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:49:35,517 | INFO | step  12600/27380 | ep  4.60 | loss 0.5902 | lr 6.35e-04 | grad 0.132 | 972K tok/s
+2026-09-29 02:49:38,906 | INFO | step  12700/27380 | ep  4.64 | loss 0.6008 | lr 6.29e-04 | grad 0.130 | 967K tok/s
+2026-09-29 02:49:42,289 | INFO | step  12800/27380 | ep  4.67 | loss 0.6141 | lr 6.24e-04 | grad 0.131 | 969K tok/s
+2026-09-29 02:49:45,669 | INFO | step  12900/27380 | ep  4.71 | loss 0.5862 | lr 6.19e-04 | grad 0.127 | 970K tok/s
+2026-09-29 02:49:49,048 | INFO | step  13000/27380 | ep  4.75 | loss 0.5989 | lr 6.14e-04 | grad 0.133 | 970K tok/s
+2026-09-29 02:49:50,094 | INFO | EVAL step 13000 | train 0.5693 | val 0.5782 | gap +0.0088 | val acc 0.815
+2026-09-29 02:49:50,201 | INFO | new best val 0.5782 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:49:53,585 | INFO | step  13100/27380 | ep  4.78 | loss 0.5856 | lr 6.08e-04 | grad 0.127 | 968K tok/s
+2026-09-29 02:49:56,953 | INFO | step  13200/27380 | ep  4.82 | loss 0.6283 | lr 6.03e-04 | grad 0.138 | 973K tok/s
+2026-09-29 02:50:00,329 | INFO | step  13300/27380 | ep  4.86 | loss 0.5867 | lr 5.98e-04 | grad 0.130 | 971K tok/s
+2026-09-29 02:50:03,722 | INFO | step  13400/27380 | ep  4.89 | loss 0.5827 | lr 5.92e-04 | grad 0.127 | 966K tok/s
+2026-09-29 02:50:07,111 | INFO | step  13500/27380 | ep  4.93 | loss 0.5750 | lr 5.87e-04 | grad 0.129 | 967K tok/s
+2026-09-29 02:50:08,159 | INFO | EVAL step 13500 | train 0.5679 | val 0.5788 | gap +0.0109 | val acc 0.815
+2026-09-29 02:50:11,524 | INFO | step  13600/27380 | ep  4.97 | loss 0.5750 | lr 5.82e-04 | grad 0.131 | 974K tok/s
+2026-09-29 02:50:14,903 | INFO | step  13700/27380 | ep  5.00 | loss 0.6030 | lr 5.76e-04 | grad 0.134 | 970K tok/s
+2026-09-29 02:50:18,284 | INFO | step  13800/27380 | ep  5.04 | loss 0.5877 | lr 5.71e-04 | grad 0.135 | 969K tok/s
+2026-09-29 02:50:21,654 | INFO | step  13900/27380 | ep  5.08 | loss 0.6030 | lr 5.66e-04 | grad 0.134 | 973K tok/s
+2026-09-29 02:50:25,021 | INFO | step  14000/27380 | ep  5.11 | loss 0.5763 | lr 5.60e-04 | grad 0.139 | 973K tok/s
+2026-09-29 02:50:26,069 | INFO | EVAL step 14000 | train 0.5641 | val 0.5715 | gap +0.0073 | val acc 0.817
+2026-09-29 02:50:26,176 | INFO | new best val 0.5715 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:50:29,859 | INFO | step  14100/27380 | ep  5.15 | loss 0.5723 | lr 5.55e-04 | grad 0.127 | 969K tok/s
+2026-09-29 02:50:33,227 | INFO | step  14200/27380 | ep  5.19 | loss 0.5872 | lr 5.50e-04 | grad 0.126 | 973K tok/s
+2026-09-29 02:50:36,610 | INFO | step  14300/27380 | ep  5.22 | loss 0.5967 | lr 5.44e-04 | grad 0.131 | 973K tok/s
+2026-09-29 02:50:39,998 | INFO | step  14400/27380 | ep  5.26 | loss 0.5790 | lr 5.39e-04 | grad 0.132 | 968K tok/s
+2026-09-29 02:50:43,381 | INFO | step  14500/27380 | ep  5.30 | loss 0.5843 | lr 5.33e-04 | grad 0.132 | 969K tok/s
+2026-09-29 02:50:44,429 | INFO | EVAL step 14500 | train 0.5636 | val 0.5689 | gap +0.0053 | val acc 0.818
+2026-09-29 02:50:44,535 | INFO | new best val 0.5689 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:50:47,904 | INFO | step  14600/27380 | ep  5.33 | loss 0.5767 | lr 5.28e-04 | grad 0.125 | 973K tok/s
+2026-09-29 02:50:51,297 | INFO | step  14700/27380 | ep  5.37 | loss 0.5927 | lr 5.23e-04 | grad 0.131 | 966K tok/s
+2026-09-29 02:50:54,690 | INFO | step  14800/27380 | ep  5.41 | loss 0.5823 | lr 5.17e-04 | grad 0.138 | 966K tok/s
+2026-09-29 02:50:58,064 | INFO | step  14900/27380 | ep  5.44 | loss 0.5922 | lr 5.12e-04 | grad 0.129 | 971K tok/s
+2026-09-29 02:51:01,432 | INFO | step  15000/27380 | ep  5.48 | loss 0.5902 | lr 5.07e-04 | grad 0.132 | 973K tok/s
+2026-09-29 02:51:02,484 | INFO | EVAL step 15000 | train 0.5568 | val 0.5689 | gap +0.0120 | val acc 0.818
+2026-09-29 02:51:02,593 | INFO | new best val 0.5689 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:51:05,978 | INFO | step  15100/27380 | ep  5.51 | loss 0.5966 | lr 5.01e-04 | grad 0.128 | 968K tok/s
+2026-09-29 02:51:09,357 | INFO | step  15200/27380 | ep  5.55 | loss 0.5812 | lr 4.96e-04 | grad 0.138 | 970K tok/s
+2026-09-29 02:51:12,728 | INFO | step  15300/27380 | ep  5.59 | loss 0.5852 | lr 4.91e-04 | grad 0.142 | 972K tok/s
+2026-09-29 02:51:16,102 | INFO | step  15400/27380 | ep  5.62 | loss 0.5742 | lr 4.85e-04 | grad 0.130 | 972K tok/s
+2026-09-29 02:51:19,501 | INFO | step  15500/27380 | ep  5.66 | loss 0.5865 | lr 4.80e-04 | grad 0.129 | 964K tok/s
+2026-09-29 02:51:20,564 | INFO | EVAL step 15500 | train 0.5549 | val 0.5666 | gap +0.0117 | val acc 0.819
+2026-09-29 02:51:20,670 | INFO | new best val 0.5666 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:51:24,045 | INFO | step  15600/27380 | ep  5.70 | loss 0.5908 | lr 4.75e-04 | grad 0.131 | 971K tok/s
+2026-09-29 02:51:27,417 | INFO | step  15700/27380 | ep  5.73 | loss 0.5795 | lr 4.70e-04 | grad 0.129 | 972K tok/s
+2026-09-29 02:51:30,798 | INFO | step  15800/27380 | ep  5.77 | loss 0.5780 | lr 4.64e-04 | grad 0.136 | 969K tok/s
+2026-09-29 02:51:34,174 | INFO | step  15900/27380 | ep  5.81 | loss 0.5842 | lr 4.59e-04 | grad 0.138 | 971K tok/s
+2026-09-29 02:51:37,537 | INFO | step  16000/27380 | ep  5.84 | loss 0.5622 | lr 4.54e-04 | grad 0.126 | 974K tok/s
+2026-09-29 02:51:38,587 | INFO | EVAL step 16000 | train 0.5529 | val 0.5634 | gap +0.0105 | val acc 0.820
+2026-09-29 02:51:38,695 | INFO | new best val 0.5634 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:51:42,378 | INFO | step  16100/27380 | ep  5.88 | loss 0.5944 | lr 4.49e-04 | grad 0.137 | 972K tok/s
+2026-09-29 02:51:45,755 | INFO | step  16200/27380 | ep  5.92 | loss 0.5782 | lr 4.43e-04 | grad 0.139 | 970K tok/s
+2026-09-29 02:51:49,125 | INFO | step  16300/27380 | ep  5.95 | loss 0.5818 | lr 4.38e-04 | grad 0.148 | 972K tok/s
+2026-09-29 02:51:52,495 | INFO | step  16400/27380 | ep  5.99 | loss 0.5587 | lr 4.33e-04 | grad 0.132 | 972K tok/s
+2026-09-29 02:51:55,874 | INFO | step  16500/27380 | ep  6.03 | loss 0.5817 | lr 4.28e-04 | grad 0.136 | 970K tok/s
+2026-09-29 02:51:56,928 | INFO | EVAL step 16500 | train 0.5486 | val 0.5670 | gap +0.0184 | val acc 0.819
+2026-09-29 02:52:00,319 | INFO | step  16600/27380 | ep  6.06 | loss 0.5792 | lr 4.23e-04 | grad 0.135 | 966K tok/s
+2026-09-29 02:52:03,684 | INFO | step  16700/27380 | ep  6.10 | loss 0.5505 | lr 4.18e-04 | grad 0.131 | 974K tok/s
+2026-09-29 02:52:07,053 | INFO | step  16800/27380 | ep  6.14 | loss 0.5654 | lr 4.12e-04 | grad 0.136 | 973K tok/s
+2026-09-29 02:52:10,442 | INFO | step  16900/27380 | ep  6.17 | loss 0.5570 | lr 4.07e-04 | grad 0.132 | 967K tok/s
+2026-09-29 02:52:13,807 | INFO | step  17000/27380 | ep  6.21 | loss 0.5690 | lr 4.02e-04 | grad 0.137 | 974K tok/s
+2026-09-29 02:52:14,856 | INFO | EVAL step 17000 | train 0.5491 | val 0.5617 | gap +0.0126 | val acc 0.820
+2026-09-29 02:52:14,967 | INFO | new best val 0.5617 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:52:18,333 | INFO | step  17100/27380 | ep  6.25 | loss 0.5537 | lr 3.97e-04 | grad 0.137 | 974K tok/s
+2026-09-29 02:52:21,718 | INFO | step  17200/27380 | ep  6.28 | loss 0.5839 | lr 3.92e-04 | grad 0.133 | 968K tok/s
+2026-09-29 02:52:25,112 | INFO | step  17300/27380 | ep  6.32 | loss 0.5755 | lr 3.87e-04 | grad 0.138 | 965K tok/s
+2026-09-29 02:52:28,485 | INFO | step  17400/27380 | ep  6.36 | loss 0.5681 | lr 3.82e-04 | grad 0.138 | 972K tok/s
+2026-09-29 02:52:31,854 | INFO | step  17500/27380 | ep  6.39 | loss 0.5932 | lr 3.77e-04 | grad 0.134 | 973K tok/s
+2026-09-29 02:52:32,911 | INFO | EVAL step 17500 | train 0.5477 | val 0.5584 | gap +0.0107 | val acc 0.821
+2026-09-29 02:52:33,022 | INFO | new best val 0.5584 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:52:36,407 | INFO | step  17600/27380 | ep  6.43 | loss 0.5549 | lr 3.72e-04 | grad 0.131 | 968K tok/s
+2026-09-29 02:52:39,774 | INFO | step  17700/27380 | ep  6.46 | loss 0.5695 | lr 3.67e-04 | grad 0.135 | 973K tok/s
+2026-09-29 02:52:43,142 | INFO | step  17800/27380 | ep  6.50 | loss 0.5504 | lr 3.62e-04 | grad 0.132 | 973K tok/s
+2026-09-29 02:52:46,522 | INFO | step  17900/27380 | ep  6.54 | loss 0.5560 | lr 3.58e-04 | grad 0.134 | 969K tok/s
+2026-09-29 02:52:49,901 | INFO | step  18000/27380 | ep  6.57 | loss 0.5597 | lr 3.53e-04 | grad 0.135 | 970K tok/s
+2026-09-29 02:52:50,947 | INFO | EVAL step 18000 | train 0.5442 | val 0.5571 | gap +0.0130 | val acc 0.822
+2026-09-29 02:52:51,059 | INFO | new best val 0.5571 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:52:54,741 | INFO | step  18100/27380 | ep  6.61 | loss 0.5695 | lr 3.48e-04 | grad 0.136 | 972K tok/s
+2026-09-29 02:52:58,118 | INFO | step  18200/27380 | ep  6.65 | loss 0.5574 | lr 3.43e-04 | grad 0.135 | 971K tok/s
+2026-09-29 02:53:01,514 | INFO | step  18300/27380 | ep  6.68 | loss 0.5735 | lr 3.38e-04 | grad 0.142 | 965K tok/s
+2026-09-29 02:53:04,895 | INFO | step  18400/27380 | ep  6.72 | loss 0.5725 | lr 3.34e-04 | grad 0.139 | 970K tok/s
+2026-09-29 02:53:08,267 | INFO | step  18500/27380 | ep  6.76 | loss 0.5649 | lr 3.29e-04 | grad 0.137 | 972K tok/s
+2026-09-29 02:53:09,315 | INFO | EVAL step 18500 | train 0.5398 | val 0.5560 | gap +0.0162 | val acc 0.822
+2026-09-29 02:53:09,417 | INFO | new best val 0.5560 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:53:12,800 | INFO | step  18600/27380 | ep  6.79 | loss 0.5622 | lr 3.24e-04 | grad 0.138 | 969K tok/s
+2026-09-29 02:53:16,170 | INFO | step  18700/27380 | ep  6.83 | loss 0.5603 | lr 3.20e-04 | grad 0.138 | 972K tok/s
+2026-09-29 02:53:19,534 | INFO | step  18800/27380 | ep  6.87 | loss 0.5614 | lr 3.15e-04 | grad 0.141 | 974K tok/s
+2026-09-29 02:53:22,906 | INFO | step  18900/27380 | ep  6.90 | loss 0.5708 | lr 3.11e-04 | grad 0.138 | 972K tok/s
+2026-09-29 02:53:26,304 | INFO | step  19000/27380 | ep  6.94 | loss 0.5822 | lr 3.06e-04 | grad 0.142 | 964K tok/s
+2026-09-29 02:53:27,354 | INFO | EVAL step 19000 | train 0.5400 | val 0.5519 | gap +0.0119 | val acc 0.823
+2026-09-29 02:53:27,461 | INFO | new best val 0.5519 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:53:30,830 | INFO | step  19100/27380 | ep  6.98 | loss 0.5626 | lr 3.02e-04 | grad 0.139 | 973K tok/s
+2026-09-29 02:53:34,201 | INFO | step  19200/27380 | ep  7.01 | loss 0.5594 | lr 2.97e-04 | grad 0.138 | 972K tok/s
+2026-09-29 02:53:37,588 | INFO | step  19300/27380 | ep  7.05 | loss 0.5665 | lr 2.93e-04 | grad 0.139 | 967K tok/s
+2026-09-29 02:53:40,965 | INFO | step  19400/27380 | ep  7.09 | loss 0.5733 | lr 2.88e-04 | grad 0.144 | 971K tok/s
+2026-09-29 02:53:44,332 | INFO | step  19500/27380 | ep  7.12 | loss 0.5493 | lr 2.84e-04 | grad 0.143 | 973K tok/s
+2026-09-29 02:53:45,378 | INFO | EVAL step 19500 | train 0.5373 | val 0.5530 | gap +0.0157 | val acc 0.823
+2026-09-29 02:53:48,753 | INFO | step  19600/27380 | ep  7.16 | loss 0.5510 | lr 2.80e-04 | grad 0.136 | 971K tok/s
+2026-09-29 02:53:52,134 | INFO | step  19700/27380 | ep  7.20 | loss 0.5830 | lr 2.75e-04 | grad 0.149 | 969K tok/s
+2026-09-29 02:53:55,519 | INFO | step  19800/27380 | ep  7.23 | loss 0.5591 | lr 2.71e-04 | grad 0.140 | 968K tok/s
+2026-09-29 02:53:58,892 | INFO | step  19900/27380 | ep  7.27 | loss 0.5675 | lr 2.67e-04 | grad 0.143 | 972K tok/s
+2026-09-29 02:54:02,273 | INFO | step  20000/27380 | ep  7.30 | loss 0.5526 | lr 2.63e-04 | grad 0.140 | 969K tok/s
+2026-09-29 02:54:03,327 | INFO | EVAL step 20000 | train 0.5365 | val 0.5509 | gap +0.0144 | val acc 0.823
+2026-09-29 02:54:03,435 | INFO | new best val 0.5509 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:54:07,152 | INFO | step  20100/27380 | ep  7.34 | loss 0.5382 | lr 2.59e-04 | grad 0.137 | 971K tok/s
+2026-09-29 02:54:10,524 | INFO | step  20200/27380 | ep  7.38 | loss 0.5592 | lr 2.55e-04 | grad 0.144 | 972K tok/s
+2026-09-29 02:54:13,907 | INFO | step  20300/27380 | ep  7.41 | loss 0.5519 | lr 2.51e-04 | grad 0.145 | 969K tok/s
+2026-09-29 02:54:17,293 | INFO | step  20400/27380 | ep  7.45 | loss 0.5638 | lr 2.47e-04 | grad 0.142 | 968K tok/s
+2026-09-29 02:54:20,691 | INFO | step  20500/27380 | ep  7.49 | loss 0.5622 | lr 2.43e-04 | grad 0.145 | 965K tok/s
+2026-09-29 02:54:21,738 | INFO | EVAL step 20500 | train 0.5358 | val 0.5496 | gap +0.0138 | val acc 0.824
+2026-09-29 02:54:21,845 | INFO | new best val 0.5496 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:54:25,222 | INFO | step  20600/27380 | ep  7.52 | loss 0.5647 | lr 2.39e-04 | grad 0.140 | 970K tok/s
+2026-09-29 02:54:28,601 | INFO | step  20700/27380 | ep  7.56 | loss 0.5674 | lr 2.35e-04 | grad 0.146 | 970K tok/s
+2026-09-29 02:54:31,975 | INFO | step  20800/27380 | ep  7.60 | loss 0.5344 | lr 2.31e-04 | grad 0.140 | 971K tok/s
+2026-09-29 02:54:35,345 | INFO | step  20900/27380 | ep  7.63 | loss 0.5730 | lr 2.28e-04 | grad 0.147 | 972K tok/s
+2026-09-29 02:54:38,717 | INFO | step  21000/27380 | ep  7.67 | loss 0.5732 | lr 2.24e-04 | grad 0.145 | 972K tok/s
+2026-09-29 02:54:39,772 | INFO | EVAL step 21000 | train 0.5317 | val 0.5489 | gap +0.0172 | val acc 0.824
+2026-09-29 02:54:39,883 | INFO | new best val 0.5489 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:54:43,265 | INFO | step  21100/27380 | ep  7.71 | loss 0.5552 | lr 2.20e-04 | grad 0.148 | 969K tok/s
+2026-09-29 02:54:46,634 | INFO | step  21200/27380 | ep  7.74 | loss 0.5486 | lr 2.17e-04 | grad 0.144 | 973K tok/s
+2026-09-29 02:54:50,028 | INFO | step  21300/27380 | ep  7.78 | loss 0.5524 | lr 2.13e-04 | grad 0.138 | 966K tok/s
+2026-09-29 02:54:53,405 | INFO | step  21400/27380 | ep  7.82 | loss 0.5632 | lr 2.09e-04 | grad 0.142 | 971K tok/s
+2026-09-29 02:54:56,783 | INFO | step  21500/27380 | ep  7.85 | loss 0.5455 | lr 2.06e-04 | grad 0.145 | 970K tok/s
+2026-09-29 02:54:57,830 | INFO | EVAL step 21500 | train 0.5312 | val 0.5477 | gap +0.0164 | val acc 0.824
+2026-09-29 02:54:57,936 | INFO | new best val 0.5477 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:55:01,311 | INFO | step  21600/27380 | ep  7.89 | loss 0.5548 | lr 2.02e-04 | grad 0.150 | 971K tok/s
+2026-09-29 02:55:04,685 | INFO | step  21700/27380 | ep  7.93 | loss 0.5635 | lr 1.99e-04 | grad 0.150 | 971K tok/s
+2026-09-29 02:55:08,066 | INFO | step  21800/27380 | ep  7.96 | loss 0.5306 | lr 1.96e-04 | grad 0.136 | 969K tok/s
+2026-09-29 02:55:11,442 | INFO | step  21900/27380 | ep  8.00 | loss 0.5597 | lr 1.93e-04 | grad 0.144 | 971K tok/s
+2026-09-29 02:55:14,817 | INFO | step  22000/27380 | ep  8.04 | loss 0.5453 | lr 1.89e-04 | grad 0.141 | 971K tok/s
+2026-09-29 02:55:15,865 | INFO | EVAL step 22000 | train 0.5291 | val 0.5435 | gap +0.0144 | val acc 0.826
+2026-09-29 02:55:15,969 | INFO | new best val 0.5435 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:55:19,689 | INFO | step  22100/27380 | ep  8.07 | loss 0.5522 | lr 1.86e-04 | grad 0.149 | 963K tok/s
+2026-09-29 02:55:23,064 | INFO | step  22200/27380 | ep  8.11 | loss 0.5503 | lr 1.83e-04 | grad 0.147 | 971K tok/s
+2026-09-29 02:55:26,434 | INFO | step  22300/27380 | ep  8.14 | loss 0.5573 | lr 1.80e-04 | grad 0.147 | 972K tok/s
+2026-09-29 02:55:29,809 | INFO | step  22400/27380 | ep  8.18 | loss 0.5509 | lr 1.77e-04 | grad 0.146 | 971K tok/s
+2026-09-29 02:55:33,191 | INFO | step  22500/27380 | ep  8.22 | loss 0.5578 | lr 1.74e-04 | grad 0.153 | 969K tok/s
+2026-09-29 02:55:34,238 | INFO | EVAL step 22500 | train 0.5254 | val 0.5435 | gap +0.0180 | val acc 0.826
+2026-09-29 02:55:34,345 | INFO | new best val 0.5435 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:55:37,719 | INFO | step  22600/27380 | ep  8.25 | loss 0.5333 | lr 1.71e-04 | grad 0.143 | 971K tok/s
+2026-09-29 02:55:41,094 | INFO | step  22700/27380 | ep  8.29 | loss 0.5399 | lr 1.68e-04 | grad 0.149 | 971K tok/s
+2026-09-29 02:55:44,475 | INFO | step  22800/27380 | ep  8.33 | loss 0.5451 | lr 1.65e-04 | grad 0.148 | 969K tok/s
+2026-09-29 02:55:47,854 | INFO | step  22900/27380 | ep  8.36 | loss 0.5563 | lr 1.63e-04 | grad 0.149 | 970K tok/s
+2026-09-29 02:55:51,230 | INFO | step  23000/27380 | ep  8.40 | loss 0.5598 | lr 1.60e-04 | grad 0.145 | 971K tok/s
+2026-09-29 02:55:52,281 | INFO | EVAL step 23000 | train 0.5263 | val 0.5411 | gap +0.0148 | val acc 0.826
+2026-09-29 02:55:52,400 | INFO | new best val 0.5411 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:55:55,776 | INFO | step  23100/27380 | ep  8.44 | loss 0.5560 | lr 1.57e-04 | grad 0.148 | 971K tok/s
+2026-09-29 02:55:59,168 | INFO | step  23200/27380 | ep  8.47 | loss 0.5587 | lr 1.55e-04 | grad 0.148 | 966K tok/s
+2026-09-29 02:56:02,544 | INFO | step  23300/27380 | ep  8.51 | loss 0.5493 | lr 1.52e-04 | grad 0.149 | 971K tok/s
+2026-09-29 02:56:05,912 | INFO | step  23400/27380 | ep  8.55 | loss 0.5611 | lr 1.50e-04 | grad 0.151 | 973K tok/s
+2026-09-29 02:56:09,282 | INFO | step  23500/27380 | ep  8.58 | loss 0.5407 | lr 1.47e-04 | grad 0.152 | 972K tok/s
+2026-09-29 02:56:10,335 | INFO | EVAL step 23500 | train 0.5231 | val 0.5415 | gap +0.0184 | val acc 0.826
+2026-09-29 02:56:13,696 | INFO | step  23600/27380 | ep  8.62 | loss 0.5327 | lr 1.45e-04 | grad 0.141 | 975K tok/s
+2026-09-29 02:56:17,068 | INFO | step  23700/27380 | ep  8.66 | loss 0.5474 | lr 1.43e-04 | grad 0.155 | 972K tok/s
+2026-09-29 02:56:20,436 | INFO | step  23800/27380 | ep  8.69 | loss 0.5415 | lr 1.40e-04 | grad 0.150 | 973K tok/s
+2026-09-29 02:56:23,825 | INFO | step  23900/27380 | ep  8.73 | loss 0.5370 | lr 1.38e-04 | grad 0.146 | 967K tok/s
+2026-09-29 02:56:27,197 | INFO | step  24000/27380 | ep  8.77 | loss 0.5308 | lr 1.36e-04 | grad 0.148 | 972K tok/s
+2026-09-29 02:56:28,245 | INFO | EVAL step 24000 | train 0.5228 | val 0.5386 | gap +0.0158 | val acc 0.827
+2026-09-29 02:56:28,353 | INFO | new best val 0.5386 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:56:32,043 | INFO | step  24100/27380 | ep  8.80 | loss 0.5440 | lr 1.34e-04 | grad 0.154 | 972K tok/s
+2026-09-29 02:56:35,425 | INFO | step  24200/27380 | ep  8.84 | loss 0.5632 | lr 1.32e-04 | grad 0.153 | 969K tok/s
+2026-09-29 02:56:38,795 | INFO | step  24300/27380 | ep  8.88 | loss 0.5617 | lr 1.30e-04 | grad 0.153 | 973K tok/s
+2026-09-29 02:56:42,158 | INFO | step  24400/27380 | ep  8.91 | loss 0.5420 | lr 1.28e-04 | grad 0.146 | 974K tok/s
+2026-09-29 02:56:45,545 | INFO | step  24500/27380 | ep  8.95 | loss 0.5655 | lr 1.26e-04 | grad 0.154 | 968K tok/s
+2026-09-29 02:56:46,598 | INFO | EVAL step 24500 | train 0.5255 | val 0.5385 | gap +0.0130 | val acc 0.827
+2026-09-29 02:56:46,703 | INFO | new best val 0.5385 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:56:50,081 | INFO | step  24600/27380 | ep  8.98 | loss 0.5582 | lr 1.24e-04 | grad 0.151 | 970K tok/s
+2026-09-29 02:56:53,445 | INFO | step  24700/27380 | ep  9.02 | loss 0.5605 | lr 1.23e-04 | grad 0.154 | 974K tok/s
+2026-09-29 02:56:56,808 | INFO | step  24800/27380 | ep  9.06 | loss 0.5481 | lr 1.21e-04 | grad 0.158 | 975K tok/s
+2026-09-29 02:57:00,192 | INFO | step  24900/27380 | ep  9.09 | loss 0.5454 | lr 1.19e-04 | grad 0.151 | 969K tok/s
+2026-09-29 02:57:03,563 | INFO | step  25000/27380 | ep  9.13 | loss 0.5546 | lr 1.18e-04 | grad 0.154 | 972K tok/s
+2026-09-29 02:57:04,614 | INFO | EVAL step 25000 | train 0.5213 | val 0.5383 | gap +0.0170 | val acc 0.827
+2026-09-29 02:57:04,722 | INFO | new best val 0.5383 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:57:08,086 | INFO | step  25100/27380 | ep  9.17 | loss 0.5469 | lr 1.17e-04 | grad 0.157 | 974K tok/s
+2026-09-29 02:57:11,458 | INFO | step  25200/27380 | ep  9.20 | loss 0.5412 | lr 1.15e-04 | grad 0.152 | 972K tok/s
+2026-09-29 02:57:14,839 | INFO | step  25300/27380 | ep  9.24 | loss 0.5530 | lr 1.14e-04 | grad 0.156 | 969K tok/s
+2026-09-29 02:57:18,202 | INFO | step  25400/27380 | ep  9.28 | loss 0.5364 | lr 1.12e-04 | grad 0.150 | 975K tok/s
+2026-09-29 02:57:21,566 | INFO | step  25500/27380 | ep  9.31 | loss 0.5423 | lr 1.11e-04 | grad 0.147 | 974K tok/s
+2026-09-29 02:57:22,611 | INFO | EVAL step 25500 | train 0.5215 | val 0.5381 | gap +0.0167 | val acc 0.827
+2026-09-29 02:57:22,717 | INFO | new best val 0.5381 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:57:26,096 | INFO | step  25600/27380 | ep  9.35 | loss 0.5422 | lr 1.10e-04 | grad 0.150 | 970K tok/s
+2026-09-29 02:57:29,467 | INFO | step  25700/27380 | ep  9.39 | loss 0.5463 | lr 1.09e-04 | grad 0.157 | 972K tok/s
+2026-09-29 02:57:32,834 | INFO | step  25800/27380 | ep  9.42 | loss 0.5412 | lr 1.08e-04 | grad 0.152 | 974K tok/s
+2026-09-29 02:57:36,221 | INFO | step  25900/27380 | ep  9.46 | loss 0.5351 | lr 1.07e-04 | grad 0.153 | 967K tok/s
+2026-09-29 02:57:39,599 | INFO | step  26000/27380 | ep  9.50 | loss 0.5456 | lr 1.06e-04 | grad 0.154 | 970K tok/s
+2026-09-29 02:57:40,647 | INFO | EVAL step 26000 | train 0.5181 | val 0.5358 | gap +0.0176 | val acc 0.828
+2026-09-29 02:57:40,754 | INFO | new best val 0.5358 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:57:44,435 | INFO | step  26100/27380 | ep  9.53 | loss 0.5289 | lr 1.05e-04 | grad 0.154 | 974K tok/s
+2026-09-29 02:57:47,799 | INFO | step  26200/27380 | ep  9.57 | loss 0.5638 | lr 1.04e-04 | grad 0.154 | 974K tok/s
+2026-09-29 02:57:51,178 | INFO | step  26300/27380 | ep  9.61 | loss 0.5435 | lr 1.04e-04 | grad 0.153 | 970K tok/s
+2026-09-29 02:57:54,553 | INFO | step  26400/27380 | ep  9.64 | loss 0.5456 | lr 1.03e-04 | grad 0.152 | 971K tok/s
+2026-09-29 02:57:57,923 | INFO | step  26500/27380 | ep  9.68 | loss 0.5396 | lr 1.02e-04 | grad 0.149 | 972K tok/s
+2026-09-29 02:57:58,971 | INFO | EVAL step 26500 | train 0.5212 | val 0.5377 | gap +0.0165 | val acc 0.827
+2026-09-29 02:58:02,343 | INFO | step  26600/27380 | ep  9.72 | loss 0.5286 | lr 1.02e-04 | grad 0.152 | 972K tok/s
+2026-09-29 02:58:05,720 | INFO | step  26700/27380 | ep  9.75 | loss 0.5461 | lr 1.01e-04 | grad 0.150 | 971K tok/s
+2026-09-29 02:58:09,084 | INFO | step  26800/27380 | ep  9.79 | loss 0.5481 | lr 1.01e-04 | grad 0.157 | 974K tok/s
+2026-09-29 02:58:12,449 | INFO | step  26900/27380 | ep  9.82 | loss 0.5396 | lr 1.01e-04 | grad 0.152 | 974K tok/s
+2026-09-29 02:58:15,819 | INFO | step  27000/27380 | ep  9.86 | loss 0.5323 | lr 1.00e-04 | grad 0.152 | 973K tok/s
+2026-09-29 02:58:16,877 | INFO | EVAL step 27000 | train 0.5184 | val 0.5351 | gap +0.0167 | val acc 0.828
+2026-09-29 02:58:16,982 | INFO | new best val 0.5351 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:58:20,350 | INFO | step  27100/27380 | ep  9.90 | loss 0.5510 | lr 1.00e-04 | grad 0.155 | 973K tok/s
+2026-09-29 02:58:23,726 | INFO | step  27200/27380 | ep  9.93 | loss 0.5450 | lr 1.00e-04 | grad 0.153 | 971K tok/s
+2026-09-29 02:58:27,103 | INFO | step  27300/27380 | ep  9.97 | loss 0.5387 | lr 1.00e-04 | grad 0.153 | 970K tok/s
+2026-09-29 02:58:29,807 | INFO | step  27380/27380 | ep 10.00 | loss 0.5483 | lr 1.00e-04 | grad 0.159 | 970K tok/s
+2026-09-29 02:58:30,859 | INFO | EVAL step 27380 | train 0.5178 | val 0.5331 | gap +0.0153 | val acc 0.829
+2026-09-29 02:58:30,973 | INFO | new best val 0.5331 -> task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:58:31,371 | INFO | final evaluation uses best checkpoint (step 27380)
+2026-09-29 02:58:45,273 | INFO | [sampled] 'Once upon a time, there was a little girl named Lily. She had a new doll that she loved to play with. One day, Lily\'s mom put it on the table and told her for milk. Lily did not want to share, but she knew she had to listen to her mom.\n\nAs they were walking in the park, Lily saw a big slide. She wanted to go slide, but her mom said, "Let\'s go slide and see what we can do." Lily was unhappy but she was also excited to go sliding.\n\nAs they were sliding down the icy slide, Lily\'s mom asked, "Can I go slide in the '
+2026-09-29 02:58:47,625 | INFO | [sampled] 'Once upon a time, there was a little girl named Lily. She had a little cat named Mittens who loved to sleep all day and night. One night, Lily and Mittens went to sleep in their chairs. \n\nLily was scared but Mittens just wanted to play with her. They sat under the chairs and waited for the sound of the light. \n\nWhen the lights fit, Lily saw the beautiful rhinoceros. She asked Mittens if he could perform for her. Mittens said yes, and Lily performed with the rhinoceros. \n\nAfter the rhinoceros showed her friend h'
+2026-09-29 02:58:49,925 | INFO | [sampled] 'Once upon a time, there was a little boy named Timmy. He loved to play with his toys all day long. One day, his mom asked him to go to the store to buy treats. Timmy was so excited to go to the store that he put his toy car away in the backyard.\n\nWhen Timmy got home, he showed his mom what he had buying. His mom was very proud of him and said, "Wow, Timmy! You see your toy car available! It\'s going to be a great day for Timmy!" Timmy smiled and said, "Thanks, Mommy!" They all hugged each other tightly and did t'
+2026-09-29 02:58:52,204 | INFO | [sampled] 'Once upon a time, there was a boy named Timmy. He loved to play outside and run in the park. One morning, he saw a tree with a big trunk. The trunk was very big and had many leaves. Timmy wanted to climb the tree and see what was on top. \n\nSo, he started to climb the tree. He was having lots of fun until he saw a beautiful flower. He picked it up and started to play with it. He threw it in the air and caught it with his long tail. He was so happy when he touched it!\n\nAs he got closer, he noticed a sparkly yello'
+2026-09-29 02:58:54,420 | INFO | [greedy] 'Once upon a time, there was a little girl named Lily. She loved to play outside in the sunshine. One day, she saw a big bush with lots of bright flowers. She wanted to pick some flowers, but she was too shy to ask.\n\nLily saw a big bush and wanted to pick some flowers. She asked her mommy if she could pick some flowers. Her mommy said yes and they went to the bush. Lily picked some flowers and put them in a basket. She was very happy with her new flowers.\n\nAfter they finished picking the flowers, Lily saw a big '
+2026-09-29 02:58:56,740 | INFO | [sampled] "One day, a little girl named Lily was walking down the street when she saw a paintbrush. She ran to it and saw that it was shiny and colorful. \n\nLily wanted to paint the paintbrush, but her friend said no. Lily was sad and didn't know what to do. \n\nLily felt so sorry and told her friend that she missed her special paintbrush. Her friend felt much better after that and they continued to paint the paintbrush together. The end.§Lily and Sam are friends. They like to play in the park. One day, they see a new cat. The new cat is big"
+2026-09-29 02:58:59,009 | INFO | [sampled] 'One day, a little girl named Lily could not find her toys. She looked and looked. She asked her mom, "Mommy, where is my toys?" Her mom replied, "I don\'t know, Lily. Maybe your toys belong to Spot."\n\nLily said, "Tom, let\'s go play outside. I\'m sure he will like your toys."\n\nTom thought for a moment. Then he said, "Okay, Mommy. I will be careful. I will play with the flowers and the bugs."\n\nMommy smiled. She said, "That sounds good, Lily. You are a good sister. And thank you for being brave. And you are a good sister. You are a '
+2026-09-29 02:59:01,269 | INFO | [sampled] 'One day, a little girl named Lily was playing in the park. She wanted to swing on the swings and the slide. So, she got a big ball. She bounced it all around the park and shouted, "I won!"\n\nSuddenly, Lily saw a bird on the ground. The bird said, "Hello! Can I play too?" Lily said, "Yes, you can. But be careful, the bird can balance." The bird said, "Thank you! What are you doing?" Lily said, "I am trying to balance on the ground."\n\nThe bird said, "Don\'t be careless. I want to balance on that ground like my friends." The bird lo'
+2026-09-29 02:59:03,531 | INFO | [sampled] 'One day, a little girl named Lily went to the park with her mom. They saw a big tree with a shiny pillow inside. \n\nLily wanted to lay down, but her mom said, "Please, be careful, Lily. The pillow is heavy and can break." \n\nLily was shy but she wanted to help the pillow. She asked her mom, "Can we please break it?" \n\nHer mom said, "Yes, we can break it into small pillows." \n\nLily and her mom put the pillows on the couch. They put on their hats, shoes, and coats. Lily got her pillows and went to the kitchen. She saw the pillows o'
+2026-09-29 02:59:05,701 | INFO | [greedy] "One day, a little girl named Lily went to the park with her mom. They saw a big slide and ran to it. Lily wanted to go down the slide, but her mom said no. \n\nLily was sad and didn't know what to do. She asked her mom for help. Her mom said they could go down the slide and see the world around them. \n\nLily was so happy to have a new friend to play with. She ran around the park and played with her friends. They all had a great time and Lily was very grateful for her mom's help. From that day on, Lily always remembered to be caref"
+2026-09-29 02:59:07,967 | INFO | [sampled] "The dog was very sad because it didn't have any friends to play with. \n\nBut then, the dog saw the same spot of toys and he decided to take the toys home with him. He played with them all day, laughing and having fun. But then, the dog started to feel dizzy again and decided he wanted to play with them too. \n\nThe dog ran around the park and there was a lot of green clothes. The dog saw the clothes in the washing machine and wanted to join in in. He went over and took a big bite. He was so hungry that he wanted to eat someth"
+2026-09-29 02:59:10,228 | INFO | [sampled] "The dog was very sad because Timmy had to wear his favorite dress and he didn't like it when he was playing.\n\nBut then, Timmy saw a big wheel rolling down the street and he was very happy. He realized that he was being mean to the dog and couldn't wait to play with him. So, Timmy got out of the mud and he went back to the park to play.\n\nTimmy ran over to the wheel and he saw that the dog was crying. His mom asked him what was wrong and Timmy told her that he wanted to play with the dog. His mom told him that they should go"
+2026-09-29 02:59:12,491 | INFO | [sampled] "The dog was very sad because he was not nice to Lily. Lily was sad because she loved that dog, so she decided to help him fix his toy. She went to her mom and asked her to help him. Her mom smiled and gave her a big hug.\n\nLily was so happy and couldn't wait to play with her new toy. She played with it for a long time and had so much fun. The end.§Once upon a time, there was a little girl named Lily. She loved to draw and color with her crayons. One day, her mom made her a yummy drawing for dinner. Lily was so happy!\n\nLily'"
+2026-09-29 02:59:14,761 | INFO | [sampled] "The dog was very sad because he wanted to play with the football. He asked the frog if he could play with the football too. The frog said yes and they played together all day.\n\nAfter playing, the frog and the dog became good friends. They played with the football every day and had lots of fun. The frog was very happy to have a new friend. The moral of the story is that it's always better to be kind to others and not rush in the right thing.§Once upon a time, there was a little girl named Lily. She loved to play with her to"
+2026-09-29 02:59:16,910 | INFO | [greedy] 'The dog was very sad because he couldn\'t play with the ball anymore. The dog was sad and went home. The end.§Once upon a time, there was a little girl named Lily. She loved to play outside in the sunshine. One day, she saw a big bush with lots of bright colors. She wanted to pick it up, but it was too high for her to reach.\n\nLily asked her mom, "Can you help me reach the bush?" Her mom said, "Yes, I can help you." They went to the bush and reached for the bush. Lily was so happy and said, "Thank you, Mommy!" They both smil'
+2026-09-29 02:59:19,179 | INFO | [sampled] 'Tom and his mom went to the park. They saw a big tree with many branches. They wanted to climb the tree and see what was up there.\n\n"Maybe there is something branch inside this tree," Tom said.\n\nMom smiled and nodded. She was glad that they liked to climb.\n\n"Really? What is it?" Mom asked.\n\n"We love to climb," Tom said.\n\nThey lay down on the grass and held hands. They watched the grass and the flowers. They saw the moon and the birds and the bugs. They felt happy and safe.\n\n"Wow, this is amazing!" Lily said.\n\n"I like the moon,"'
+2026-09-29 02:59:21,446 | INFO | [sampled] 'Tom and his mom went to the park. Tom\'s mom was very busy in the park. She looked at the clock and smiled. "This clock is old and boring," she said.\n\nTom\'s mom then showed him how to tie the clock around a big rope. "Let me help you," she said.\n\nTom tied the clock to a rope and tied the rope up. It was full of swings, slides, and seesaws. When he finished the race, it looked so fancy!\n\nTom was so happy and said, "Thank you, Lily! You are so sweet!"\n\nLily smiled and said, "You\'re welcome, Tom. You are so adorable!"§Once upon a t'
+2026-09-29 02:59:23,706 | INFO | [sampled] 'Tom and his mom went to the park. They played on the swings and the slide. They had so much fun. When it was time to go home, Tom and his family said goodbye. They waved goodbye to their new friend and started to walk back home.§Once upon a time, there was a little girl named Lily. She loved to play outside and explore. One day, she saw a magic crystal on the ground. It was big and shiny and had a picture of a fairy garden.\n\nLily was so happy and she wanted to touch the crystal. She tried to pick it up, but it was too heavy. Sh'
+2026-09-29 02:59:25,964 | INFO | [sampled] 'Tom and his mom went to the park. He saw a big dog with a ball. The dog was loud and friendly. It played together and laughed.\n\n"Look at me, Lily!" Tom said. "I ate some food! I want to eat some food!"\n\nLily and Tom smiled and waved at Spot. They played with him and some other kids. They had fun and laughed. They were happy.§Once upon a time, there was a little girl named Lily. She loved to play with her dolls and teddy bears. One day, Lily\'s mom said, "Lily, let\'s go to the doctor. He said it will be a few days."\n\nLily was so '
+2026-09-29 02:59:28,109 | INFO | [greedy] 'Tom and his mom went to the park. They saw a big slide. Tom wanted to go on the slide. He ran to the slide and climbed up. He saw a big slide. He wanted to go on the slide.\n\n"Can I go on the slide?" Tom asked.\n\n"No, it is mine. You have to go on the slide. It is fun." Sam said.\n\nTom did not listen. He ran to the slide. He slid down fast. He felt the wind in his hair. He laughed.\n\n"Sam, you are silly. You are not silly. You are silly. You are not silly. You are silly. You are not silly. You are silly. You are not silly. You are '
+2026-09-29 02:59:30,403 | INFO | [sampled] 'In a big forest, there lived a fox. The fox was very happy because he had a red bone. The fox loved to use the bone to keep the bone.\n\nOne day, the fox saw a window in the garden. It was a little bone with a green stone. The fox wanted to grab the bone, but the bone was too small. The fox grabbed the bone with his mouth. The fox swung back.\n\nThe fox caught the bone. The fox was happy. Now, the fox could roar louder. The fox and the fox were happy.§Once upon a time, there was a little boy named Timmy. Timmy loved playing wi'
+2026-09-29 02:59:32,665 | INFO | [sampled] 'In a big forest, there lived a little bird named Tweety. Tweety loved to sing all day long. One day, Tweety was flying around a park when he saw a big, round tree. Tweety was so happy to see the tree that he started to sing a song.\n\nSuddenly, the tree started to sing very loud. Tweety looked around and saw a bird singing back at him. The bird was hungry and wanted to eat the bird for dinner. Tweety started to sing again and again, but then Tweety felt tired. The bird said to Tweety, "I have to rest when I came back. I can '
+2026-09-29 02:59:34,953 | INFO | [sampled] "In a big forest, there lived a little bunny named Benny. Benny loved to hop around and play with his friends. One day, Benny saw a big, wide tree with many leaves. Benny wanted to play with the leaves, but he didn't know how.\n\nHe thought and thought, but then he had an idea! He decided to take the leaves from the tree and climb up the leaves. Benny tried to climb them with his friend but they still couldn't reach them. He was so sad and started to cry.\n\nBut then Benny saw something shiny in the ground. He remembered what h"
+2026-09-29 02:59:37,195 | INFO | [sampled] 'In a big forest, there lived an old lady. She had a big red ball that kept her forever. The old lady always kicked the ball hard. The old lady was very happy.\n\nOne day, a little boy named Tim came to visit. They were both sad because they could not play with the ball anymore. Tim asked the old lady, "Are you okay?" The old lady said, "No, I\'m not okay. I am a jolly boy." Sue was very sad.\n\nThe next day, Tim and his mom went to the park. Tim saw a big red ball. He wanted to take the ball away from the old lady and the new b'
+2026-09-29 02:59:39,375 | INFO | [greedy] "In a big forest, there lived a little bird named Tweety. Tweety loved to fly high in the sky and sing songs. One day, Tweety saw a big tree with a lot of leaves. Tweety wanted to climb the tree, but he was scared of the leaves.\n\nTweety saw a big tree and decided to climb it. He flew up and up, up, up and up. But then, he saw a big tree with a lot of leaves. Tweety wanted to climb the tree, but he was too scared to climb. Suddenly, a big wind came and blew Tweety away. Tweety was sad and didn't know what to do.\n\nBut then, T"
+2026-09-29 02:59:39,382 | INFO | METRIC run_name = gpt_L6_H6_D384
+2026-09-29 02:59:39,382 | INFO | METRIC checkpoint = task1_llm/kruthika/checkpoints/gpt_L6_H6_D384_best.pt
+2026-09-29 02:59:39,382 | INFO | METRIC best_step = 27380
+2026-09-29 02:59:39,382 | INFO | METRIC train_cross_entropy = 0.5182992834636566
+2026-09-29 02:59:39,382 | INFO | METRIC val_cross_entropy = 0.535550558391046
+2026-09-29 02:59:39,382 | INFO | METRIC val_perplexity = 1.7083885510349544
+2026-09-29 02:59:39,382 | INFO | METRIC val_bits_per_char = 0.7726361347360774
+2026-09-29 02:59:39,382 | INFO | METRIC train_perplexity = 1.6791694286612835
+2026-09-29 02:59:39,383 | INFO | METRIC generalization_gap = 0.017251274927389426
+2026-09-29 02:59:39,383 | INFO | METRIC train_top1_acc = 0.8325713531139233
+2026-09-29 02:59:39,383 | INFO | METRIC val_top1_acc = 0.8281412488648681
+2026-09-29 02:59:39,383 | INFO | METRIC distinct_1 = 0.27442730247779334
+2026-09-29 02:59:39,383 | INFO | METRIC distinct_2 = 0.6724870221802737
+2026-09-29 02:59:39,383 | INFO | METRIC distinct_3 = 0.8542162934730824
+2026-09-29 02:59:39,383 | INFO | METRIC repeated_4gram_rate = 0.0019332365747460113
+2026-09-29 02:59:39,383 | INFO | METRIC greedy_repeated_4gram_rate = 0.08280669563817802
+2026-09-29 02:59:39,383 | INFO | METRIC grad_norm_mean = 0.16507907641412567
+2026-09-29 02:59:39,383 | INFO | METRIC grad_norm_max = 1.1289716958999634
+2026-09-29 02:59:39,384 | INFO | METRIC loss_spikes = 0
+2026-09-29 02:59:39,384 | INFO | METRIC nan_inf_steps = 0
+2026-09-29 02:59:39,384 | INFO | METRIC final_logged_train_loss = 0.5482906699180603
+2026-09-29 02:59:39,384 | INFO | METRIC parameters = 10814297
+2026-09-29 02:59:39,384 | INFO | METRIC train_tokens_per_s = 946939.715424218
+2026-09-29 02:59:39,384 | INFO | METRIC gen_tokens_per_s = 219.79828114312448
+2026-09-29 02:59:39,384 | INFO | METRIC total_train_time_s = 947.4603561199989
+2026-09-29 02:59:39,384 | INFO | METRIC total_train_time_min = 15.791005935333315
+2026-09-29 02:59:39,384 | INFO | METRIC total_steps = 27380
+2026-09-29 02:59:39,385 | INFO | METRIC epochs = 10
+2026-09-29 02:59:39,385 | INFO | METRIC tokens_seen = 897187840
+2026-09-29 02:59:39,385 | INFO | METRIC peak_gpu_mem_mb = 5282.00341796875
+2026-09-29 02:59:39,385 | INFO | METRIC peak_rss_mb = 2531.61328125
+2026-09-29 02:59:39,385 | INFO | METRIC device = NVIDIA A100-SXM4-40GB
+2026-09-29 02:59:41,377 | INFO | outputs  -> task1_llm/kruthika/outputs/gpt_L6_H6_D384
+2026-09-29 02:59:41,378 | INFO | metrics  -> task1_llm/kruthika/metrics_report.csv
+2026-09-29 02:59:41,379 | INFO | raw log  -> reproducibility/raw_logs/task1_kruthika_gpt_L6_H6_D384_20260929-024039.log
+2026-09-29 02:59:41,379 | INFO | manifest -> reproducibility/manifests/task1_kruthika_gpt_L6_H6_D384_20260929-024039.json

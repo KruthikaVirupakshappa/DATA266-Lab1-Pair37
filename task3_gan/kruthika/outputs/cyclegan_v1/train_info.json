@@ -1,0 +1,33 @@
+{
+  "run_name": "cyclegan_v1",
+  "iterations": 105600,
+  "epochs": 60,
+  "iters_per_epoch": 1760,
+  "batch_size": 4,
+  "train_time_s": 18384.980454280994,
+  "train_time_min": 306.41634090468324,
+  "train_images_per_s": 45.9505519791448,
+  "nan_steps": 0,
+  "parameters": {
+    "G_AB": 11378179,
+    "G_BA": 11378179,
+    "D_A": 2764737,
+    "D_B": 2764737
+  },
+  "parameters_total": 28285832,
+  "best": {
+    "fid_B2A": 97.48209272218601,
+    "mifid_B2A": 0.4080577295039321,
+    "fid_A2B": 96.18739290521252,
+    "mifid_A2B": 0.41603585453820435,
+    "FID": 96.83474281369926,
+    "MiFID": 0.4120467920210682,
+    "score": 48.62339480286017,
+    "epoch": 58,
+    "iter": 102080,
+    "weights": "ema"
+  },
+  "peak_gpu_mem_mb": 6647.986328125,
+  "peak_rss_mb": 11645.1796875,
+  "device": "NVIDIA A100-SXM4-40GB"
+}

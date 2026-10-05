@@ -1,0 +1,42 @@
+# Task 3: CycleGAN Monet <-> Photo. All paths are relative to the repo root.
+# Domain A = Monet paintings, domain B = photos (as in the competition).
+# G_AB: Monet -> photo (pred_A2B), G_BA: photo -> Monet (pred_B2A).
+# The evaluation script scores BOTH directions and reports their average FID and MiFID.
+
+run_name: cyclegan_v1
+seed: 42
+device: auto
+
+data:
+  data_dir: task3_gan/data        # monet_jpg/, photo_jpg/ (download_kaggle_data.py)
+
+model:
+  ngf: 64                         # generator base width
+  n_blocks: 9                     # residual blocks (9 = paper setting for 256x256)
+  ndf: 64                         # discriminator base width
+  n_layers: 3                     # 3 -> 70x70 PatchGAN
+
+train:
+  epochs: 60                      # 1 epoch = one pass over the 7,038 photos
+  decay_start: 0.5                # constant LR for the first half, then linear decay to 0
+  batch_size: 4
+  lr_g: 2.0e-4
+  lr_d: 2.0e-4
+  betas: [0.5, 0.999]
+  lambda_cycle: 10.0              # weight of cycle-consistency loss (paper: 10)
+  lambda_identity: 0.5            # identity loss weight, as a fraction of lambda_cycle (paper: 0.5)
+  pool_size: 50                   # history of generated images shown to D
+  diffaug: "color,translation,cutout"   # augmentation of D inputs (real and fake); "" = off
+  jitter: true                    # random flip + 286->256 crop on training images
+  ema_decay: 0.999                # exponential moving average of generator weights
+  precision: bf16                 # mixed precision on supported GPUs, fp32 otherwise
+  log_every: 100                  # iterations between log lines
+  eval_every: 2                   # epochs between competition-score checks (both directions, 600 images)
+  ckpt_every: 2                   # epochs between resume checkpoints
+
+eval:
+  kid_subsets: 100
+  prdc_k: 5
+  lpips_photos: 1000              # photos used for LPIPS / cycle metrics (all 300 Monets are used)
+  audit_samples: 30               # fixed samples for the blinded human audit
+  jpg_quality: 95

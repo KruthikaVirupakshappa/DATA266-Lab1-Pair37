@@ -1,0 +1,35 @@
+section,metric,kruthika,jiayi
+sanity check (own validation),reproduced,0.5355400593393866,0.9295939127331825
+sanity check (own validation),reported,0.535550558391046,0.9295939312745802
+sanity check (own validation),diff,-1.049905165939613e-05,-1.8541397750482247e-08
+shared test set,test_cross_entropy,0.5372586548055001,0.9242509230035488
+shared test set,test_perplexity,1.7113091370045928,2.519979894210354
+shared test set,test_bits_per_char,0.7751003969625704,1.333412223154267
+shared test set,test_bits_per_original_char,0.7755756413261629,1.3350049651360334
+shared test set,test_top1_acc,0.8279073623172895,0.708134684147795
+shared test set,test_chars_scored,4185856,4188288
+shared test set,test_chars_in_stream,4185955,4188387
+shared test set,chars_removed_by_cleaning,2435,0
+shared test set,chars_skipped_unknown,0,2
+shared test set,eval_seconds,73.38069224962965,6.241626082919538
+generation (shared settings),distinct_1,0.33825944170771755,0.38961038961038963
+generation (shared settings),distinct_2,0.7454090150250418,0.8118811881188119
+generation (shared settings),distinct_3,0.9083191850594228,0.9471476510067114
+generation (shared settings),repeated_4gram_rate,0.007339172769018876,0.0008620689655172431
+generation (shared settings),greedy_repeated_4gram_rate,0.034769735458636486,0.4202661640039966
+generation (shared settings),gen_chars_per_s_cpu,138.8102680887447,1581.3790024162315
+own training run (own validation split),parameters,10814297,452248
+own training run (own validation split),epochs,10,10
+own training run (own validation split),train_cross_entropy,0.5182992834636566,0.9252886422143661
+own training run (own validation split),val_cross_entropy,0.535550558391046,0.9295939312796866
+own training run (own validation split),val_perplexity,1.7083885510349544,2.533480201651093
+own training run (own validation split),val_bits_per_char,0.7726361347360774,1.3411205546976797
+own training run (own validation split),val_top1_acc,0.8281412488648681,0.7061334288213036
+own training run (own validation split),generalization_gap,0.017251274927389426,0.004305289065320461
+own training run (own validation split),grad_norm_mean,0.16507907641412567,0.84709
+own training run (own validation split),grad_norm_max,1.1289716958999634,2.9612
+own training run (own validation split),nan_inf_steps,0,0
+own training run (own validation split),train_tokens_per_s,946939.715424218,572170.0
+own training run (own validation split),total_train_time_min,15.791005935333315,26.902833333333334
+own training run (own validation split),peak_gpu_mem_mb,5282.00341796875,123.55
+own training run (own validation split),device,NVIDIA A100-SXM4-40GB,NVIDIA A100-SXM4-40GB

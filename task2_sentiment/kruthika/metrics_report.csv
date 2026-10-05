@@ -1,0 +1,158 @@
+model,metric,value
+baseline_mean_embedding,accuracy,0.9326052631578947
+baseline_mean_embedding,precision_macro,0.9326355608299538
+baseline_mean_embedding,recall_macro,0.9326052631578947
+baseline_mean_embedding,f1_macro,0.9326040832159472
+baseline_mean_embedding,precision_micro,0.9326052631578947
+baseline_mean_embedding,recall_micro,0.9326052631578947
+baseline_mean_embedding,f1_micro,0.9326052631578947
+baseline_mean_embedding,precision_weighted,0.9326355608299537
+baseline_mean_embedding,recall_weighted,0.9326052631578947
+baseline_mean_embedding,f1_weighted,0.9326040832159472
+baseline_mean_embedding,tn,17799
+baseline_mean_embedding,fp,1201
+baseline_mean_embedding,fn,1360
+baseline_mean_embedding,tp,17640
+baseline_mean_embedding,roc_auc,0.9789572368421053
+baseline_mean_embedding,pr_auc,0.9788110275042113
+baseline_mean_embedding,mcc,0.8652408234573901
+baseline_mean_embedding,brier,0.05169863132210231
+baseline_mean_embedding,ece,0.0118007011005753
+baseline_mean_embedding,error_rate,0.06739473684210529
+baseline_mean_embedding,accuracy_ci_low,0.930078947368421
+baseline_mean_embedding,accuracy_ci_high,0.9351585526315789
+baseline_mean_embedding,f1_macro_ci_low,0.9300767003608709
+baseline_mean_embedding,f1_macro_ci_high,0.9351535182393217
+baseline_mean_embedding,mcc_ci_low,0.8602062417104749
+baseline_mean_embedding,mcc_ci_high,0.870333908068408
+baseline_mean_embedding,parameters,5140481
+baseline_mean_embedding,train_time_s,25.458502745000033
+baseline_mean_embedding,train_examples_per_s,98984.6113591625
+baseline_mean_embedding,inference_examples_per_s,1187091.9371461854
+baseline_mean_embedding,epochs_run,5
+baseline_mean_embedding,best_epoch,3
+baseline_mean_embedding,peak_gpu_mem_mb,965.16796875
+baseline_mean_embedding,peak_rss_mb,3472.3203125
+baseline_mean_embedding,device,NVIDIA A100-SXM4-40GB
+baseline_mean_embedding,slice[length=long (>200)]_f1_macro,0.9305353206584144
+baseline_mean_embedding,slice[length=long (>200)]_error_rate,0.06496115724618269
+baseline_mean_embedding,slice[length=medium (51-200)]_f1_macro,0.9323136754551515
+baseline_mean_embedding,slice[length=medium (51-200)]_error_rate,0.06768373323257132
+baseline_mean_embedding,slice[length=short (<=50 words)]_f1_macro,0.9284544375215678
+baseline_mean_embedding,slice[length=short (<=50 words)]_error_rate,0.06868190557573169
+baseline_mean_embedding,slice[negation=has negation]_f1_macro,0.9248870432992531
+baseline_mean_embedding,slice[negation=has negation]_error_rate,0.0724704546261135
+baseline_mean_embedding,slice[negation=no negation]_f1_macro,0.9273929486718544
+baseline_mean_embedding,slice[negation=no negation]_error_rate,0.05283518273439886
+baseline_mean_embedding,slice[contrast=has contrast word]_f1_macro,0.9240949822904392
+baseline_mean_embedding,slice[contrast=has contrast word]_error_rate,0.07506228765571914
+baseline_mean_embedding,slice[contrast=no contrast word]_f1_macro,0.9421629694709892
+baseline_mean_embedding,slice[contrast=no contrast word]_error_rate,0.056766091051805335
+exp1_bilstm,accuracy,0.9531052631578948
+exp1_bilstm,precision_macro,0.9531178148979196
+exp1_bilstm,recall_macro,0.9531052631578947
+exp1_bilstm,f1_macro,0.9531049383998504
+exp1_bilstm,precision_micro,0.9531052631578948
+exp1_bilstm,recall_micro,0.9531052631578948
+exp1_bilstm,f1_micro,0.9531052631578948
+exp1_bilstm,precision_weighted,0.9531178148979196
+exp1_bilstm,recall_weighted,0.9531052631578948
+exp1_bilstm,f1_weighted,0.9531049383998504
+exp1_bilstm,tn,18059
+exp1_bilstm,fp,941
+exp1_bilstm,fn,841
+exp1_bilstm,tp,18159
+exp1_bilstm,roc_auc,0.9901734736842105
+exp1_bilstm,pr_auc,0.9902469796252797
+exp1_bilstm,mcc,0.9062230779688898
+exp1_bilstm,brier,0.0359428190690334
+exp1_bilstm,ece,0.013494792809611916
+exp1_bilstm,error_rate,0.04689473684210521
+exp1_bilstm,accuracy_ci_low,0.9509473684210527
+exp1_bilstm,accuracy_ci_high,0.9550263157894737
+exp1_bilstm,f1_macro_ci_low,0.9509460679023076
+exp1_bilstm,f1_macro_ci_high,0.9550235237617378
+exp1_bilstm,mcc_ci_low,0.9019015360678202
+exp1_bilstm,mcc_ci_high,0.9100540607988803
+exp1_bilstm,parameters,5405057
+exp1_bilstm,train_time_s,459.731215626
+exp1_bilstm,train_examples_per_s,5481.46376479701
+exp1_bilstm,inference_examples_per_s,62305.810925710764
+exp1_bilstm,epochs_run,5
+exp1_bilstm,best_epoch,5
+exp1_bilstm,peak_gpu_mem_mb,1471.22802734375
+exp1_bilstm,peak_rss_mb,3890.6953125
+exp1_bilstm,device,NVIDIA A100-SXM4-40GB
+exp1_bilstm,mcnemar_vs_baseline_b_base_only_correct,588
+exp1_bilstm,mcnemar_vs_baseline_c_exp_only_correct,1367
+exp1_bilstm,mcnemar_vs_baseline_chi2,309.6081841432225
+exp1_bilstm,mcnemar_vs_baseline_p_value,2.6581489305996096e-69
+exp1_bilstm,mcnemar_vs_baseline_p_value_exact,3.3660314426319298e-71
+exp1_bilstm,slice[length=long (>200)]_f1_macro,0.9534953199248994
+exp1_bilstm,slice[length=long (>200)]_error_rate,0.04379855344227163
+exp1_bilstm,slice[length=medium (51-200)]_f1_macro,0.9547041396281488
+exp1_bilstm,slice[length=medium (51-200)]_error_rate,0.04529567353107879
+exp1_bilstm,slice[length=short (<=50 words)]_f1_macro,0.9448475726790038
+exp1_bilstm,slice[length=short (<=50 words)]_error_rate,0.052980132450331126
+exp1_bilstm,slice[negation=has negation]_f1_macro,0.9503618313752531
+exp1_bilstm,slice[negation=has negation]_error_rate,0.04808886680626043
+exp1_bilstm,slice[negation=no negation]_f1_macro,0.9406773712473523
+exp1_bilstm,slice[negation=no negation]_error_rate,0.04346940853099868
+exp1_bilstm,slice[contrast=has contrast word]_f1_macro,0.948382799681919
+exp1_bilstm,slice[contrast=has contrast word]_error_rate,0.05114382785956965
+exp1_bilstm,slice[contrast=no contrast word]_f1_macro,0.9581871133958295
+exp1_bilstm,slice[contrast=no contrast word]_error_rate,0.041004709576138144
+exp2_textcnn,accuracy,0.9435263157894737
+exp2_textcnn,precision_macro,0.9435539611194603
+exp2_textcnn,recall_macro,0.9435263157894738
+exp2_textcnn,f1_macro,0.9435254358187715
+exp2_textcnn,precision_micro,0.9435263157894737
+exp2_textcnn,recall_micro,0.9435263157894737
+exp2_textcnn,f1_micro,0.9435263157894737
+exp2_textcnn,precision_weighted,0.9435539611194602
+exp2_textcnn,recall_weighted,0.9435263157894737
+exp2_textcnn,f1_weighted,0.9435254358187714
+exp2_textcnn,tn,17852
+exp2_textcnn,fp,1148
+exp2_textcnn,fn,998
+exp2_textcnn,tp,18002
+exp2_textcnn,roc_auc,0.9867380346260387
+exp2_textcnn,pr_auc,0.9871375283493765
+exp2_textcnn,mcc,0.8870802764781588
+exp2_textcnn,brier,0.042397760609263535
+exp2_textcnn,ece,0.004881807629999357
+exp2_textcnn,error_rate,0.05647368421052634
+exp2_textcnn,accuracy_ci_low,0.9412105263157895
+exp2_textcnn,accuracy_ci_high,0.9456322368421052
+exp2_textcnn,f1_macro_ci_low,0.9412104840394504
+exp2_textcnn,f1_macro_ci_high,0.9456319505723767
+exp2_textcnn,mcc_ci_low,0.8824772426493371
+exp2_textcnn,mcc_ci_high,0.8913096513630889
+exp2_textcnn,parameters,5337729
+exp2_textcnn,train_time_s,53.10831821900001
+exp2_textcnn,train_examples_per_s,47450.19395282688
+exp2_textcnn,inference_examples_per_s,203973.25077619607
+exp2_textcnn,epochs_run,5
+exp2_textcnn,best_epoch,4
+exp2_textcnn,peak_gpu_mem_mb,1223.8681640625
+exp2_textcnn,peak_rss_mb,4009.9453125
+exp2_textcnn,device,NVIDIA A100-SXM4-40GB
+exp2_textcnn,mcnemar_vs_baseline_b_base_only_correct,677
+exp2_textcnn,mcnemar_vs_baseline_c_exp_only_correct,1092
+exp2_textcnn,mcnemar_vs_baseline_chi2,96.88863764838892
+exp2_textcnn,mcnemar_vs_baseline_p_value,7.333833576674953e-23
+exp2_textcnn,mcnemar_vs_baseline_p_value_exact,4.6666385167431935e-23
+exp2_textcnn,slice[length=long (>200)]_f1_macro,0.9394117630922512
+exp2_textcnn,slice[length=long (>200)]_error_rate,0.05705866595231717
+exp2_textcnn,slice[length=medium (51-200)]_f1_macro,0.9454465477099763
+exp2_textcnn,slice[length=medium (51-200)]_error_rate,0.054553183449839414
+exp2_textcnn,slice[length=short (<=50 words)]_f1_macro,0.9370429098072403
+exp2_textcnn,slice[length=short (<=50 words)]_error_rate,0.060350352488784446
+exp2_textcnn,slice[negation=has negation]_f1_macro,0.9403867462969407
+exp2_textcnn,slice[negation=has negation]_error_rate,0.05774213010611492
+exp2_textcnn,slice[negation=no negation]_f1_macro,0.9272226664610075
+exp2_textcnn,slice[negation=no negation]_error_rate,0.05283518273439886
+exp2_textcnn,slice[contrast=has contrast word]_f1_macro,0.9381567171244296
+exp2_textcnn,slice[contrast=has contrast word]_error_rate,0.06129105322763307
+exp2_textcnn,slice[contrast=no contrast word]_f1_macro,0.9492026394913534
+exp2_textcnn,slice[contrast=no contrast word]_error_rate,0.04979591836734694

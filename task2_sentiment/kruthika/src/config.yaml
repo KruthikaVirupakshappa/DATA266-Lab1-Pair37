@@ -1,0 +1,44 @@
+# Task 2: Yelp Polarity sentiment classification. All paths are relative to the repo root.
+
+seed: 42
+device: auto                 # cuda > mps > cpu
+
+data:
+  data_dir: task2_sentiment/data/yelp_polarity   # saved by task2_sentiment/scripts/download_yelp_polarity.py
+  val_fraction: 0.1          # of the official train split (stratified); the official test split is the test set
+  stemming: true             # Porter stemming after stopword removal (negations are kept)
+  min_freq: 5                # a word must appear 5+ times in training to get its own embedding
+  max_vocab: 50000
+  max_len: 256               # tokens per review after preprocessing (~98% of reviews fit)
+
+train:
+  batch_size: 256
+  epochs: 5                  # maximum; early stopping on validation loss
+  patience: 2                # stop after 2 epochs without validation-loss improvement
+  grad_clip: 1.0
+
+eval:
+  bootstrap: 1000            # resamples for 95% confidence intervals
+  ece_bins: 15
+
+# Embeddings are learned from scratch in every model (no pretrained vectors).
+models:
+  baseline_mean_embedding:   # bag of words: average embedding -> linear
+    type: mean_embedding
+    embed_dim: 128
+    dropout: 0.3
+    lr: 2.0e-3
+  exp1_bilstm:               # word order + context: 1-layer bidirectional LSTM, max+mean pooling
+    type: bilstm
+    embed_dim: 128
+    hidden: 128
+    layers: 1
+    dropout: 0.3
+    lr: 1.0e-3
+  exp2_textcnn:              # local phrases: convolutions over 3/4/5 words, max-over-time pooling
+    type: textcnn
+    embed_dim: 128
+    filters: 128
+    kernel_sizes: [3, 4, 5]
+    dropout: 0.5
+    lr: 1.0e-3

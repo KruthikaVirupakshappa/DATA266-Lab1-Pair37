@@ -1,0 +1,34 @@
+2026-10-02 03:16:44,026 | INFO | run_id=task2_kruthika_sentiment_20261002-031643 config=task2_sentiment/kruthika/src/config.yaml force=False
+2026-10-02 03:16:44,027 | INFO | python=3.13.15 torch=2.11.0+cu130 device=cuda (NVIDIA A100-SXM4-40GB) git=None dirty=False
+2026-10-02 03:16:44,027 | INFO | config: {"seed": 42, "device": "auto", "data": {"data_dir": "task2_sentiment/data/yelp_polarity", "val_fraction": 0.1, "stemming": true, "min_freq": 5, "max_vocab": 50000, "max_len": 256}, "train": {"batch_size": 256, "epochs": 5, "patience": 2, "grad_clip": 1.0}, "eval": {"bootstrap": 1000, "ece_bins": 15}, "models": {"baseline_mean_embedding": {"type": "mean_embedding", "embed_dim": 128, "dropout": 0.3, "lr": 0.002}, "exp1_bilstm": {"type": "bilstm", "embed_dim": 128, "hidden": 128, "layers": 1, "dropout": 0.3, "lr": 0.001}, "exp2_textcnn": {"type": "textcnn", "embed_dim": 128, "filters": 128, "kernel_sizes": [3, 4, 5], "dropout": 0.5, "lr": 0.001}}}
+2026-10-02 03:17:35,551 | INFO | data quality: {'train_missing_or_empty': 0, 'test_missing_or_empty': 0, 'train_duplicate_texts': 0, 'test_texts_also_in_train': 0, 'train_with_escaped_newlines': 269718, 'train_with_html_entities': 27}
+2026-10-02 03:17:35,552 | INFO | train: n=560,000 classes={'negative': 280000, 'positive': 280000} words mean=133 median=97 p95=372 max=1052
+2026-10-02 03:17:35,552 | INFO | test: n=38,000 classes={'negative': 19000, 'positive': 19000} words mean=133 median=97 p95=367 max=1007
+2026-10-02 03:19:03,305 | INFO | preprocessing: {"stopwords_removed": 195, "negations_kept": ["cannot", "neither", "never", "no", "nobody", "none", "nor", "not", "nothing", "nowhere"], "n_train": 504000, "n_val": 56000, "n_test": 38000, "vocab_size": 40159, "tokens_per_review_mean": 68.91976607142857, "tokens_per_review_median": 50.0, "tokens_per_review_p95": 191.0, "truncated_share": 0.019980357142857143, "empty_after_preprocessing_train": 46, "empty_after_preprocessing_test": 0, "unk_rate_val": 0.005133640186234066, "unk_rate_test": 0.00485306519064998, "seconds": 65.96243363399981}
+2026-10-02 03:19:10,435 | INFO | [baseline_mean_embedding] {'type': 'mean_embedding', 'embed_dim': 128, 'dropout': 0.3, 'lr': 0.002} | parameters=5,140,481
+2026-10-02 03:19:16,195 | INFO | [baseline_mean_embedding] epoch 1 | train loss 0.2543 acc 0.9024 | val loss 0.1947 acc 0.9281 | 6s (88,517 ex/s)
+2026-10-02 03:19:21,192 | INFO | [baseline_mean_embedding] epoch 2 | train loss 0.1967 acc 0.9276 | val loss 0.1910 acc 0.9294 | 5s (102,076 ex/s)
+2026-10-02 03:19:26,202 | INFO | [baseline_mean_embedding] epoch 3 | train loss 0.1884 acc 0.9310 | val loss 0.1901 acc 0.9294 | 5s (101,796 ex/s)
+2026-10-02 03:19:31,148 | INFO | [baseline_mean_embedding] epoch 4 | train loss 0.1836 acc 0.9330 | val loss 0.1904 acc 0.9292 | 5s (103,143 ex/s)
+2026-10-02 03:19:36,197 | INFO | [baseline_mean_embedding] epoch 5 | train loss 0.1801 acc 0.9344 | val loss 0.1910 acc 0.9292 | 5s (101,008 ex/s)
+2026-10-02 03:19:36,198 | INFO | [baseline_mean_embedding] early stopping: no val improvement for 2 epochs
+2026-10-02 03:19:37,203 | INFO | [exp1_bilstm] {'type': 'bilstm', 'embed_dim': 128, 'hidden': 128, 'layers': 1, 'dropout': 0.3, 'lr': 0.001} | parameters=5,405,057
+2026-10-02 03:21:09,818 | INFO | [exp1_bilstm] epoch 1 | train loss 0.2241 acc 0.9061 | val loss 0.1662 acc 0.9374 | 92s (5,497 ex/s)
+2026-10-02 03:22:41,808 | INFO | [exp1_bilstm] epoch 2 | train loss 0.1570 acc 0.9380 | val loss 0.1495 acc 0.9447 | 91s (5,533 ex/s)
+2026-10-02 03:24:14,647 | INFO | [exp1_bilstm] epoch 3 | train loss 0.1384 acc 0.9458 | val loss 0.1457 acc 0.9471 | 92s (5,483 ex/s)
+2026-10-02 03:25:48,041 | INFO | [exp1_bilstm] epoch 4 | train loss 0.1269 acc 0.9506 | val loss 0.1365 acc 0.9493 | 92s (5,449 ex/s)
+2026-10-02 03:27:21,506 | INFO | [exp1_bilstm] epoch 5 | train loss 0.1178 acc 0.9546 | val loss 0.1349 acc 0.9503 | 93s (5,446 ex/s)
+2026-10-02 03:27:22,364 | INFO | [exp2_textcnn] {'type': 'textcnn', 'embed_dim': 128, 'filters': 128, 'kernel_sizes': [3, 4, 5], 'dropout': 0.5, 'lr': 0.001} | parameters=5,337,729
+2026-10-02 03:27:33,713 | INFO | [exp2_textcnn] epoch 1 | train loss 0.2632 acc 0.8869 | val loss 0.1743 acc 0.9315 | 11s (45,554 ex/s)
+2026-10-02 03:27:44,515 | INFO | [exp2_textcnn] epoch 2 | train loss 0.1839 acc 0.9268 | val loss 0.1610 acc 0.9371 | 11s (47,904 ex/s)
+2026-10-02 03:27:55,306 | INFO | [exp2_textcnn] epoch 3 | train loss 0.1601 acc 0.9375 | val loss 0.1581 acc 0.9387 | 11s (47,955 ex/s)
+2026-10-02 03:28:06,095 | INFO | [exp2_textcnn] epoch 4 | train loss 0.1434 acc 0.9450 | val loss 0.1528 acc 0.9416 | 11s (47,958 ex/s)
+2026-10-02 03:28:16,881 | INFO | [exp2_textcnn] epoch 5 | train loss 0.1295 acc 0.9509 | val loss 0.1532 acc 0.9418 | 11s (47,979 ex/s)
+2026-10-02 03:28:17,782 | INFO | [baseline_mean_embedding] TEST acc 0.9326 [0.9301, 0.9352] macroF1 0.9326 MCC 0.8652 ROC-AUC 0.9790 PR-AUC 0.9788 Brier 0.0517 ECE 0.0118
+2026-10-02 03:28:18,412 | INFO | [exp1_bilstm] TEST acc 0.9531 [0.9509, 0.9550] macroF1 0.9531 MCC 0.9062 ROC-AUC 0.9902 PR-AUC 0.9902 Brier 0.0359 ECE 0.0135
+2026-10-02 03:28:19,036 | INFO | [exp2_textcnn] TEST acc 0.9435 [0.9412, 0.9456] macroF1 0.9435 MCC 0.8871 ROC-AUC 0.9867 PR-AUC 0.9871 Brier 0.0424 ECE 0.0049
+2026-10-02 03:28:19,037 | INFO | McNemar baseline_mean_embedding vs exp1_bilstm: b=588 c=1367 chi2=309.61 p=2.66e-69
+2026-10-02 03:28:19,037 | INFO | McNemar baseline_mean_embedding vs exp2_textcnn: b=677 c=1092 chi2=96.89 p=7.33e-23
+2026-10-02 03:28:21,337 | INFO | metrics  -> task2_sentiment/kruthika/metrics_report.csv
+2026-10-02 03:28:21,338 | INFO | raw log  -> reproducibility/raw_logs/task2_kruthika_sentiment_20261002-031643.log
+2026-10-02 03:28:21,339 | INFO | manifest -> reproducibility/manifests/task2_kruthika_sentiment_20261002-031643.json
