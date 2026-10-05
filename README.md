@@ -2,6 +2,11 @@
 
 LLM pretraining (Task 1) · Sentiment classification (Task 2) · CycleGAN style transfer (Task 3).
 
+## Team members
+
+Kruthika Virupakshappa  
+Jiayi Liang
+
 ## Setup
 
 Tested with Python 3.13 on macOS (Apple M3, MPS). Also runs on CUDA or CPU; the device is chosen automatically.
@@ -120,7 +125,7 @@ This saves [roneneldan/TinyStories](https://huggingface.co/datasets/roneneldan/T
 **Task 2:**
 
 ```bash
-python task2_sentiment/scripts/download_yelp_polarity.py
+python task2_sentiment/scripts/download_yelp_polarity.py   # or: python task2_sentiment/scripts/download_yelp.py
 ```
 
 This saves [fancyzhx/yelp_polarity](https://huggingface.co/datasets/fancyzhx/yelp_polarity) at a pinned revision to `task2_sentiment/data/yelp_polarity/` (560K train and 38K test reviews, perfectly balanced).
@@ -128,7 +133,8 @@ This saves [fancyzhx/yelp_polarity](https://huggingface.co/datasets/fancyzhx/yel
 **Task 3** (needs a Kaggle API token and having joined the competition):
 
 ```bash
-python task3_gan/scripts/download_kaggle_data.py
+python task3_gan/scripts/download_kaggle_data.py     # Kaggle CLI token
+python task3_gan/scripts/download_cyclegan_data.py   # alternative: kagglehub (in Colab: %run task3_gan/scripts/download_cyclegan_data.py)
 ```
 
 This saves the class competition data to `task3_gan/data/`: `monet_jpg/` (300 paintings) and `photo_jpg/` (7,038 photos).

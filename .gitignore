@@ -31,3 +31,7 @@ env/
 
 # Duplicate of the Kaggle data uploaded with the evaluation notebook
 Part3/dataset/
+
+# Task 2 data (also covered by **/data/* above)
+task2_sentiment/data/*
+!task2_sentiment/data/.gitkeep
