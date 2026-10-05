@@ -1,0 +1,52 @@
+category,metric,direction,value,unit,notes,evidence
+Distribution,FID,A2B,107.57866259269412,,Real Photo vs generated Photo; provided evaluation script,Part3_Evaluation_Script.ipynb
+Distribution,FID,B2A,108.70928792268552,,Real Monet vs generated Monet; provided evaluation script,Part3_Evaluation_Script.ipynb
+Distribution,MiFID,A2B,0.42371535301208496,,Provided evaluation script,Part3_Evaluation_Script.ipynb
+Distribution,MiFID,B2A,0.4099247455596924,,Provided evaluation script,Part3_Evaluation_Script.ipynb
+Distribution,KID,A2B,0.022096477553745372,,100 deterministic subsets x 100 images; std=0.002738,
+Distribution,KID,B2A,0.012398476565029015,,100 deterministic subsets x 100 images; std=0.001745,
+Distribution,Generative Precision,A2B,0.6200000047683716,,"Inception feature manifold, k=3",
+Distribution,Generative Recall,A2B,0.30666667222976685,,"Inception feature manifold, k=3",
+Distribution,Generative Precision,B2A,0.3466666638851166,,"Inception feature manifold, k=3",
+Distribution,Generative Recall,B2A,0.653333306312561,,"Inception feature manifold, k=3",
+Content,LPIPS,A2B,0.3775400221347809,,AlexNet LPIPS; std=0.081123,
+Content,LPIPS,B2A,0.4369979798793793,,AlexNet LPIPS; std=0.103622,
+Content,Content Cosine Similarity,A2B,0.8022102117538452,,Inception feature cosine; std=0.070453,
+Content,Content Cosine Similarity,B2A,0.7623605132102966,,Inception feature cosine; std=0.090442,
+Cycle,Cycle Reconstruction L1,A2B2A,0.09333991259336472,,Raw unweighted L1; std=0.018017,
+Cycle,Cycle Reconstruction L1,B2A2B,0.11393208801746368,,Raw unweighted L1; std=0.044666,
+Training,Final Generator Loss,Overall,3.337748062817269,,,task3_gan/jiayi/outputs/cyclegan_generator_cycle_losses_20261004_021221.png
+Training,Final Discriminator Loss,A,0.16679654189002519,,,task3_gan/jiayi/outputs/cyclegan_discriminator_losses_20261004_021221.png
+Training,Final Discriminator Loss,B,0.11044634535536065,,,task3_gan/jiayi/outputs/cyclegan_discriminator_losses_20261004_021221.png
+Training,Final Weighted Cycle Loss,A,0.9786715545448331,,Training cycle L1 multiplied by lambda_A=10,task3_gan/jiayi/outputs/cyclegan_generator_cycle_losses_20261004_021221.png
+Training,Final Weighted Cycle Loss,B,1.1875276954108323,,Training cycle L1 multiplied by lambda_B=10,task3_gan/jiayi/outputs/cyclegan_generator_cycle_losses_20261004_021221.png
+Training,Identity Loss,Overall,0.0,,Not used; lambda_identity=0,
+Stability,Mean Generator Gradient Norm,Overall,39.63561956617566,,Mean sampled gradient norm across epochs,reproducibility/raw_logs/task3_jiayi_cyclegan_train_20261004_021221.log
+Stability,Mean Discriminator Gradient Norm,Overall,11.70168577167723,,Mean sampled gradient norm across epochs,reproducibility/raw_logs/task3_jiayi_cyclegan_train_20261004_021221.log
+Stability,Loss NaN Count,Overall,0,count,,reproducibility/raw_logs/task3_jiayi_cyclegan_train_20261004_021221.log
+Stability,Sampled Gradient NaN Count,Overall,0,count,,reproducibility/raw_logs/task3_jiayi_cyclegan_train_20261004_021221.log
+Human Audit,Style,A2B,1.6666666666666667,1-5,,task3_gan/jiayi/outputs/human_audit_ratings.csv
+Human Audit,Content,A2B,3.5,1-5,,task3_gan/jiayi/outputs/human_audit_ratings.csv
+Human Audit,Artifacts,A2B,3.0,1-5,Higher = fewer visible artifacts,task3_gan/jiayi/outputs/human_audit_ratings.csv
+Human Audit,Style,B2A,3.8666666666666667,1-5,,task3_gan/jiayi/outputs/human_audit_ratings.csv
+Human Audit,Content,B2A,3.8333333333333335,1-5,,task3_gan/jiayi/outputs/human_audit_ratings.csv
+Human Audit,Artifacts,B2A,3.2666666666666666,1-5,Higher = fewer visible artifacts,task3_gan/jiayi/outputs/human_audit_ratings.csv
+Human Audit,Human Audit Mean,A2B,2.7222222222222228,1-5,,task3_gan/jiayi/outputs/human_audit_ratings.csv
+Human Audit,Human Audit Mean,B2A,3.6555555555555554,1-5,,task3_gan/jiayi/outputs/human_audit_ratings.csv
+Human Audit,Human Audit Mean,Overall,3.188888888888889,1-5,,task3_gan/jiayi/outputs/human_audit_ratings.csv
+Human Audit,Weighted Cohen Kappa,Style,0.8820887142055025,,Quadratic weights; R1 vs R2,
+Human Audit,Weighted Cohen Kappa,Content,0.38144329896907214,,Quadratic weights; R1 vs R2,
+Human Audit,Weighted Cohen Kappa,Artifacts,0.3571428571428571,,Quadratic weights; R1 vs R2,
+Human Audit,Mean Criterion Kappa,Overall,0.5402249567724772,,"Arithmetic mean of Style, Content, and Artifacts kappas",
+Efficiency,Generator Parameters,Overall,15675398,parameters,,
+Efficiency,Discriminator Parameters,Overall,5529474,parameters,,
+Efficiency,Total Parameters,Overall,21204872,parameters,,
+Efficiency,Training Time,Overall,2415.5495534600004,seconds,,reproducibility/raw_logs/task3_jiayi_cyclegan_train_20261004_021221.log
+Efficiency,Training Throughput,Overall,58.27245390117428,images/sec,,reproducibility/raw_logs/task3_jiayi_cyclegan_train_20261004_021221.log
+Efficiency,Peak GPU Memory,Overall,2562.59521484375,MB,,reproducibility/raw_logs/task3_jiayi_cyclegan_train_20261004_021221.log
+Hardware,Training GPU,Overall,NVIDIA A100-SXM4-40GB,,,
+Kaggle,Submission FID,Average,108.14397525768982,,,task3_gan/jiayi/submission.csv
+Kaggle,Submission MiFID,Average,0.41682004928588867,,,task3_gan/jiayi/submission.csv
+Kaggle,Public Leaderboard Score,Overall,-48.3416,,Fill from Kaggle leaderboard,
+Kaggle,Public Leaderboard Rank,Overall,17,,Fill from Kaggle leaderboard,
+Kaggle,Private Leaderboard Score,Overall,,,Fill when available,
