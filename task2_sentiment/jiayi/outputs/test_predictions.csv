@@ -1,4 +1,4 @@
-test_index,true,prob_jiayi_meanmax,prob_jiayi_mlp,prob_jiayi_attention
+test_index,true,prob_meanmax,prob_mlp,prob_attention
 0,1,0.41991717,0.23655699,0.12901612
 1,0,0.5691767,0.4140763,0.44532508
 2,1,0.96556115,0.8796811,0.8369622
