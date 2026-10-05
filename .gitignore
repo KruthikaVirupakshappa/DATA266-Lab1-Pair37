@@ -22,3 +22,12 @@ env/
 
 # Resume checkpoints include optimizer state (too big for GitHub); best checkpoints are committed
 **/checkpoints/*_resume.pt
+
+# Cached encoded arrays from preprocessing (large, regenerated automatically)
+**/data_processed/*.npz
+
+# Task 3 resume checkpoints (optimizer state, ~350 MB); best checkpoints are committed
+**/checkpoints/*_last.pt
+
+# Duplicate of the Kaggle data uploaded with the evaluation notebook
+Part3/dataset/

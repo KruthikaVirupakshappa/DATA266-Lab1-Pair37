@@ -1,0 +1,65 @@
+2026-10-04 05:38:26,338 | INFO | run_id=task3_kruthika_cyclegan_v2_ft_eval_20261004-053825 device=cuda (NVIDIA A100-SXM4-80GB)
+2026-10-04 05:38:26,866 | INFO | checkpoint task3_gan/kruthika/checkpoints/cyclegan_v2_ft_best.pt: epoch 18, raw weights, training-subset score 48.307
+2026-10-04 05:40:41,199 | INFO | generated 7038 B2A + 300 A2B images in 12.9s (571 images/s)
+2026-10-04 05:41:34,847 | INFO | [Photo->Monet] FID=97.440  MiFID=0.4089
+2026-10-04 05:41:34,847 | INFO | [Monet->Photo] FID=95.103  MiFID=0.4141
+2026-10-04 05:41:34,847 | INFO | SUBMISSION FID=96.2718 MiFID=0.4115 | estimated leaderboard score -48.3416
+2026-10-04 05:41:56,615 | INFO | METRIC [photo->monet (B2A)] fid_eval_script = 97.4402104872012
+2026-10-04 05:41:56,615 | INFO | METRIC [photo->monet (B2A)] mifid_eval_script = 0.40888740381038063
+2026-10-04 05:41:56,615 | INFO | METRIC [monet->photo (A2B)] fid_eval_script = 95.10337711887578
+2026-10-04 05:41:56,616 | INFO | METRIC [monet->photo (A2B)] mifid_eval_script = 0.41406744098688003
+2026-10-04 05:41:56,616 | INFO | METRIC [submission] FID_average = 96.27179380303849
+2026-10-04 05:41:56,616 | INFO | METRIC [submission] MiFID_average = 0.41147742239863033
+2026-10-04 05:41:56,616 | INFO | METRIC [submission] estimated_leaderboard_score = -48.34163561271856
+2026-10-04 05:42:13,851 | INFO | METRIC [photo->monet (B2A)] fid_all_images = 80.12153341659933
+2026-10-04 05:42:28,499 | INFO | METRIC [monet->photo (A2B)] fid_all_images = 77.25836132504669
+2026-10-04 05:42:30,888 | INFO | METRIC [photo->monet (B2A)] kid_mean = 0.007777329986015746
+2026-10-04 05:42:30,888 | INFO | METRIC [photo->monet (B2A)] kid_std = 0.0006332593407003614
+2026-10-04 05:42:31,182 | INFO | METRIC [photo->monet (B2A)] precision = 0.6026666760444641
+2026-10-04 05:42:31,183 | INFO | METRIC [photo->monet (B2A)] recall = 0.6433333158493042
+2026-10-04 05:42:31,183 | INFO | METRIC [photo->monet (B2A)] density = 0.571066677570343
+2026-10-04 05:42:31,183 | INFO | METRIC [photo->monet (B2A)] coverage = 0.9900000095367432
+2026-10-04 05:42:32,326 | INFO | METRIC [monet->photo (A2B)] kid_mean = 0.01412934357965593
+2026-10-04 05:42:32,329 | INFO | METRIC [monet->photo (A2B)] kid_std = 0.001013315726710624
+2026-10-04 05:42:32,533 | INFO | METRIC [monet->photo (A2B)] precision = 0.7366666793823242
+2026-10-04 05:42:32,533 | INFO | METRIC [monet->photo (A2B)] recall = 0.45533332228660583
+2026-10-04 05:42:32,533 | INFO | METRIC [monet->photo (A2B)] density = 1.0193332433700562
+2026-10-04 05:42:32,533 | INFO | METRIC [monet->photo (A2B)] coverage = 0.3076666593551636
+2026-10-04 05:42:32,992 | INFO | METRIC [photo->monet (B2A)] content_cosine_input_vs_output = 0.8133355975151062
+2026-10-04 05:42:32,998 | INFO | METRIC [monet->photo (A2B)] content_cosine_input_vs_output = 0.8069700002670288
+2026-10-04 05:42:39,993 | INFO | METRIC [photo->monet (B2A)] cycle_l1_photo_monet_photo = 0.03425181657075882
+2026-10-04 05:42:40,134 | INFO | METRIC [monet->photo (A2B)] cycle_l1_monet_photo_monet = 0.03058621473610401
+2026-10-04 05:42:40,691 | INFO | METRIC [photo->monet (B2A)] identity_l1_G_AB_on_photo = 0.03256898373365402
+2026-10-04 05:42:40,857 | INFO | METRIC [monet->photo (A2B)] identity_l1_G_BA_on_monet = 0.04266770929098129
+2026-10-04 05:42:41,328 | INFO | METRIC [photo->monet (B2A)] lpips_input_vs_output = 0.34803515672683716
+2026-10-04 05:42:41,393 | INFO | METRIC [monet->photo (A2B)] lpips_input_vs_output = 0.34170228242874146
+2026-10-04 05:42:41,691 | INFO | METRIC [photo->monet (B2A)] lpips_cycle_reconstruction = 0.1438065469264984
+2026-10-04 05:42:41,755 | INFO | METRIC [monet->photo (A2B)] lpips_cycle_reconstruction = 0.19424870610237122
+2026-10-04 05:42:41,757 | INFO | METRIC [training] parameters_total = 28285832
+2026-10-04 05:42:41,757 | INFO | METRIC [training] train_time_min = 149.58936338588344
+2026-10-04 05:42:41,758 | INFO | METRIC [training] train_images_per_s = 47.06216966669942
+2026-10-04 05:42:41,758 | INFO | METRIC [training] nan_steps = 0
+2026-10-04 05:42:41,758 | INFO | METRIC [training] iterations = 52800
+2026-10-04 05:42:41,758 | INFO | METRIC [training] epochs = 30
+2026-10-04 05:42:41,758 | INFO | METRIC [training] peak_gpu_mem_mb = 7066.4150390625
+2026-10-04 05:42:41,758 | INFO | METRIC [training] device = NVIDIA A100-SXM4-80GB
+2026-10-04 05:42:41,758 | INFO | METRIC [training] parameters_G_AB = 11378179
+2026-10-04 05:42:41,758 | INFO | METRIC [training] parameters_G_BA = 11378179
+2026-10-04 05:42:41,758 | INFO | METRIC [training] parameters_D_A = 2764737
+2026-10-04 05:42:41,758 | INFO | METRIC [training] parameters_D_B = 2764737
+2026-10-04 05:42:41,763 | INFO | METRIC [training] grad_norm_G_mean = 27.92229242397077
+2026-10-04 05:42:41,763 | INFO | METRIC [training] grad_norm_G_max = 36.068729400634766
+2026-10-04 05:42:41,764 | INFO | METRIC [training] grad_norm_D_mean = 14.011624267607024
+2026-10-04 05:42:41,764 | INFO | METRIC [training] grad_norm_D_max = 24.1683292388916
+2026-10-04 05:42:41,764 | INFO | METRIC [training] final_loss_G_gan = 1.0708411931991577
+2026-10-04 05:42:41,764 | INFO | METRIC [training] final_loss_cycle = 0.08591067045927048
+2026-10-04 05:42:41,764 | INFO | METRIC [training] final_loss_identity = 0.08024467527866364
+2026-10-04 05:42:41,765 | INFO | METRIC [training] final_loss_D_A = 0.0969948098063469
+2026-10-04 05:42:41,765 | INFO | METRIC [training] final_loss_D_B = 0.1821887046098709
+2026-10-04 05:42:41,765 | INFO | METRIC [inference] images_per_s = 570.881031680193
+2026-10-04 05:42:41,766 | INFO | METRIC [inference] checkpoint = task3_gan/kruthika/checkpoints/cyclegan_v2_ft_best.pt
+2026-10-04 05:42:41,766 | INFO | METRIC [inference] checkpoint_epoch = 18
+2026-10-04 05:42:41,766 | INFO | METRIC [inference] checkpoint_weights = raw
+2026-10-04 05:43:04,550 | INFO | submission -> task3_gan/kruthika/submission.csv
+2026-10-04 05:43:04,551 | INFO | metrics    -> task3_gan/kruthika/full_metrics_report.csv
+2026-10-04 05:43:04,552 | INFO | manifest   -> reproducibility/manifests/task3_kruthika_cyclegan_v2_ft_eval_20261004-053825.json

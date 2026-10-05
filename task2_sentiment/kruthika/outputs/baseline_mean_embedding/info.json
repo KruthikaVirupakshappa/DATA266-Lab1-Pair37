@@ -1,0 +1,13 @@
+{
+  "parameters": 5140481,
+  "epochs_run": 5,
+  "best_epoch": 3,
+  "best_val_loss": 0.19014073930467879,
+  "best_val_acc": 0.9293571428571429,
+  "train_time_s": 25.458502745000033,
+  "train_examples_per_s": 98984.6113591625,
+  "inference_examples_per_s": 1187091.9371461854,
+  "peak_gpu_mem_mb": 965.16796875,
+  "peak_rss_mb": 3472.3203125,
+  "checkpoint": "task2_sentiment/kruthika/checkpoints/baseline_mean_embedding_best.pt"
+}

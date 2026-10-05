@@ -1,0 +1,13 @@
+{
+  "parameters": 5405057,
+  "epochs_run": 5,
+  "best_epoch": 5,
+  "best_val_loss": 0.13491689804622106,
+  "best_val_acc": 0.95025,
+  "train_time_s": 459.731215626,
+  "train_examples_per_s": 5481.46376479701,
+  "inference_examples_per_s": 62305.810925710764,
+  "peak_gpu_mem_mb": 1471.22802734375,
+  "peak_rss_mb": 3890.6953125,
+  "checkpoint": "task2_sentiment/kruthika/checkpoints/exp1_bilstm_best.pt"
+}

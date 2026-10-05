@@ -49,9 +49,33 @@ Add `--epochs N` to change the number of epochs (default 10, set in `src/config.
 - [metrics_report.csv](task1_llm/kruthika/metrics_report.csv)
 - raw log and manifest in `reproducibility/`
 
+## Task 2 sentiment classification (kruthika)
+
+Trained on a Google Colab GPU with [task2_colab.ipynb](task2_sentiment/kruthika/src/task2_colab.ipynb). That notebook downloads the dataset and then runs:
+
+```bash
+python task2_sentiment/kruthika/src/train.py
+```
+
+This preprocesses the data, then trains and evaluates all three models. Add `--epochs N` to change the maximum epochs per model (default 5, with early stopping). Models that already finished are not retrained; add `--force` to retrain them.
+
+**Results** (official Yelp Polarity test set, 38,000 reviews; embeddings learned from scratch):
+
+| Model | Accuracy [95% CI] | Macro-F1 | MCC | ROC-AUC |
+|---|---|---|---|---|
+| Baseline: mean embedding | 0.9326 [0.9301, 0.9352] | 0.9326 | 0.8652 | 0.9790 |
+| Exp 1: BiLSTM | **0.9531** [0.9509, 0.9550] | **0.9531** | **0.9062** | **0.9902** |
+| Exp 2: TextCNN | 0.9435 [0.9412, 0.9456] | 0.9435 | 0.8871 | 0.9867 |
+
+Details:
+- [results.md](task2_sentiment/kruthika/results.md): preprocessing, models, all metrics, McNemar tests, slices
+- [failure_analysis.md](task2_sentiment/kruthika/failure_analysis.md): review of 20 errors
+- [metrics_report.csv](task2_sentiment/kruthika/metrics_report.csv)
+- raw log and manifest in `reproducibility/`
+
 ## Data
 
-Raw data is not committed. To fetch it:
+Raw data is not committed. To fetch it for **Task 1:**
 
 ```bash
 python task1_llm/scripts/download_tinystories.py
@@ -63,6 +87,14 @@ This saves [roneneldan/TinyStories](https://huggingface.co/datasets/roneneldan/T
 - **Validation (10K):** sampled from the official `validation` split.
 - **Training (100K):** sampled from the official `train` split.
 - The `train` split contains 6,601 exact copies of `validation` stories. Any training story identical to a chosen validation story is skipped, so validation text is never trained on.
+
+**Task 2:**
+
+```bash
+python task2_sentiment/scripts/download_yelp_polarity.py
+```
+
+This saves [fancyzhx/yelp_polarity](https://huggingface.co/datasets/fancyzhx/yelp_polarity) at a pinned revision to `task2_sentiment/data/yelp_polarity/` (560K train and 38K test reviews, perfectly balanced).
 
 ## Layout
 

@@ -1,0 +1,13 @@
+{
+  "parameters": 5337729,
+  "epochs_run": 5,
+  "best_epoch": 4,
+  "best_val_loss": 0.15276233087267194,
+  "best_val_acc": 0.9415714285714286,
+  "train_time_s": 53.10831821900001,
+  "train_examples_per_s": 47450.19395282688,
+  "inference_examples_per_s": 203973.25077619607,
+  "peak_gpu_mem_mb": 1223.8681640625,
+  "peak_rss_mb": 4009.9453125,
+  "checkpoint": "task2_sentiment/kruthika/checkpoints/exp2_textcnn_best.pt"
+}
