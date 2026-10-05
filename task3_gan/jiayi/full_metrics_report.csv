@@ -47,6 +47,5 @@ Efficiency,Peak GPU Memory,Overall,2562.59521484375,MB,,reproducibility/raw_logs
 Hardware,Training GPU,Overall,NVIDIA A100-SXM4-40GB,,,
 Kaggle,Submission FID,Average,108.14397525768982,,,task3_gan/jiayi/submission.csv
 Kaggle,Submission MiFID,Average,0.41682004928588867,,,task3_gan/jiayi/submission.csv
-Kaggle,Public Leaderboard Score,Overall,-48.3416,,Fill from Kaggle leaderboard,
-Kaggle,Public Leaderboard Rank,Overall,17,,Fill from Kaggle leaderboard,
-Kaggle,Private Leaderboard Score,Overall,,,Fill when available,
+Kaggle,Public Leaderboard Score,Overall,-48.3416,,Kaggle public leaderboard score,
+Kaggle,Private Leaderboard Score,Overall,-54.2803,,Kaggle private leaderboard score,
