@@ -19,10 +19,11 @@
 
   "baseline": {
     "embedding_dim": 128,
+    "pooling": "mean_max",
     "batch_size": 64,
-    "learning_rate": 0.001,
-    "epochs": 5
-  },
+   "learning_rate": 0.001,
+   "epochs": 5
+},
 
   "experiment_1": {
   "embedding_dim": 128,
