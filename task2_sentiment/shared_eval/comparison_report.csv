@@ -1,0 +1,187 @@
+model,member,metric,value
+K-baseline (mean embedding),kruthika,accuracy,0.9326052631578947
+K-baseline (mean embedding),kruthika,precision_macro,0.9326355608299538
+K-baseline (mean embedding),kruthika,recall_macro,0.9326052631578947
+K-baseline (mean embedding),kruthika,f1_macro,0.9326040832159472
+K-baseline (mean embedding),kruthika,precision_micro,0.9326052631578947
+K-baseline (mean embedding),kruthika,recall_micro,0.9326052631578947
+K-baseline (mean embedding),kruthika,f1_micro,0.9326052631578947
+K-baseline (mean embedding),kruthika,precision_weighted,0.9326355608299537
+K-baseline (mean embedding),kruthika,recall_weighted,0.9326052631578947
+K-baseline (mean embedding),kruthika,f1_weighted,0.9326040832159472
+K-baseline (mean embedding),kruthika,tn,17799
+K-baseline (mean embedding),kruthika,fp,1201
+K-baseline (mean embedding),kruthika,fn,1360
+K-baseline (mean embedding),kruthika,tp,17640
+K-baseline (mean embedding),kruthika,roc_auc,0.9789577174515236
+K-baseline (mean embedding),kruthika,pr_auc,0.9788431842552014
+K-baseline (mean embedding),kruthika,mcc,0.8652408234573901
+K-baseline (mean embedding),kruthika,brier,0.05169862906607311
+K-baseline (mean embedding),kruthika,ece,0.011800681947368358
+K-baseline (mean embedding),kruthika,error_rate,0.06739473684210529
+K-baseline (mean embedding),kruthika,accuracy_ci_low,0.930078947368421
+K-baseline (mean embedding),kruthika,accuracy_ci_high,0.9351585526315789
+K-baseline (mean embedding),kruthika,f1_macro_ci_low,0.9300767003608709
+K-baseline (mean embedding),kruthika,f1_macro_ci_high,0.9351535182393217
+K-baseline (mean embedding),kruthika,mcc_ci_low,0.8602062417104749
+K-baseline (mean embedding),kruthika,mcc_ci_high,0.870333908068408
+K-baseline (mean embedding),kruthika,parameters,5140481
+K-baseline (mean embedding),kruthika,train_time_s,25.458502745000033
+K-baseline (mean embedding),kruthika,train_examples_per_s,98984.6113591625
+K-baseline (mean embedding),kruthika,inference_examples_per_s,1187091.9371461854
+K-baseline (mean embedding),kruthika,peak_gpu_mem_mb,965.16796875
+K-exp1 (BiLSTM),kruthika,accuracy,0.9531052631578948
+K-exp1 (BiLSTM),kruthika,precision_macro,0.9531178148979196
+K-exp1 (BiLSTM),kruthika,recall_macro,0.9531052631578947
+K-exp1 (BiLSTM),kruthika,f1_macro,0.9531049383998504
+K-exp1 (BiLSTM),kruthika,precision_micro,0.9531052631578948
+K-exp1 (BiLSTM),kruthika,recall_micro,0.9531052631578948
+K-exp1 (BiLSTM),kruthika,f1_micro,0.9531052631578948
+K-exp1 (BiLSTM),kruthika,precision_weighted,0.9531178148979196
+K-exp1 (BiLSTM),kruthika,recall_weighted,0.9531052631578948
+K-exp1 (BiLSTM),kruthika,f1_weighted,0.9531049383998504
+K-exp1 (BiLSTM),kruthika,tn,18059
+K-exp1 (BiLSTM),kruthika,fp,941
+K-exp1 (BiLSTM),kruthika,fn,841
+K-exp1 (BiLSTM),kruthika,tp,18159
+K-exp1 (BiLSTM),kruthika,roc_auc,0.9901734612188366
+K-exp1 (BiLSTM),kruthika,pr_auc,0.9902462250261324
+K-exp1 (BiLSTM),kruthika,mcc,0.9062230779688898
+K-exp1 (BiLSTM),kruthika,brier,0.03594281928863971
+K-exp1 (BiLSTM),kruthika,ece,0.013494815868421127
+K-exp1 (BiLSTM),kruthika,error_rate,0.04689473684210521
+K-exp1 (BiLSTM),kruthika,accuracy_ci_low,0.9509473684210527
+K-exp1 (BiLSTM),kruthika,accuracy_ci_high,0.9550263157894737
+K-exp1 (BiLSTM),kruthika,f1_macro_ci_low,0.9509460679023076
+K-exp1 (BiLSTM),kruthika,f1_macro_ci_high,0.9550235237617378
+K-exp1 (BiLSTM),kruthika,mcc_ci_low,0.9019015360678202
+K-exp1 (BiLSTM),kruthika,mcc_ci_high,0.9100540607988803
+K-exp1 (BiLSTM),kruthika,parameters,5405057
+K-exp1 (BiLSTM),kruthika,train_time_s,459.731215626
+K-exp1 (BiLSTM),kruthika,train_examples_per_s,5481.46376479701
+K-exp1 (BiLSTM),kruthika,inference_examples_per_s,62305.810925710764
+K-exp1 (BiLSTM),kruthika,peak_gpu_mem_mb,1471.22802734375
+K-exp2 (TextCNN),kruthika,accuracy,0.9435263157894737
+K-exp2 (TextCNN),kruthika,precision_macro,0.9435539611194603
+K-exp2 (TextCNN),kruthika,recall_macro,0.9435263157894738
+K-exp2 (TextCNN),kruthika,f1_macro,0.9435254358187715
+K-exp2 (TextCNN),kruthika,precision_micro,0.9435263157894737
+K-exp2 (TextCNN),kruthika,recall_micro,0.9435263157894737
+K-exp2 (TextCNN),kruthika,f1_micro,0.9435263157894737
+K-exp2 (TextCNN),kruthika,precision_weighted,0.9435539611194602
+K-exp2 (TextCNN),kruthika,recall_weighted,0.9435263157894737
+K-exp2 (TextCNN),kruthika,f1_weighted,0.9435254358187714
+K-exp2 (TextCNN),kruthika,tn,17852
+K-exp2 (TextCNN),kruthika,fp,1148
+K-exp2 (TextCNN),kruthika,fn,998
+K-exp2 (TextCNN),kruthika,tp,18002
+K-exp2 (TextCNN),kruthika,roc_auc,0.9867380180055402
+K-exp2 (TextCNN),kruthika,pr_auc,0.9871371297138848
+K-exp2 (TextCNN),kruthika,mcc,0.8870802764781588
+K-exp2 (TextCNN),kruthika,brier,0.04239776254954476
+K-exp2 (TextCNN),kruthika,ece,0.004881832447368374
+K-exp2 (TextCNN),kruthika,error_rate,0.05647368421052634
+K-exp2 (TextCNN),kruthika,accuracy_ci_low,0.9412105263157895
+K-exp2 (TextCNN),kruthika,accuracy_ci_high,0.9456322368421052
+K-exp2 (TextCNN),kruthika,f1_macro_ci_low,0.9412104840394504
+K-exp2 (TextCNN),kruthika,f1_macro_ci_high,0.9456319505723767
+K-exp2 (TextCNN),kruthika,mcc_ci_low,0.8824772426493371
+K-exp2 (TextCNN),kruthika,mcc_ci_high,0.8913096513630889
+K-exp2 (TextCNN),kruthika,parameters,5337729
+K-exp2 (TextCNN),kruthika,train_time_s,53.10831821900001
+K-exp2 (TextCNN),kruthika,train_examples_per_s,47450.19395282688
+K-exp2 (TextCNN),kruthika,inference_examples_per_s,203973.25077619607
+K-exp2 (TextCNN),kruthika,peak_gpu_mem_mb,1223.8681640625
+J-baseline (mean+max embedding),jiayi,accuracy,0.9271578947368421
+J-baseline (mean+max embedding),jiayi,precision_macro,0.9271791424617231
+J-baseline (mean+max embedding),jiayi,recall_macro,0.9271578947368422
+J-baseline (mean+max embedding),jiayi,f1_macro,0.9271569889410619
+J-baseline (mean+max embedding),jiayi,precision_micro,0.9271578947368421
+J-baseline (mean+max embedding),jiayi,recall_micro,0.9271578947368421
+J-baseline (mean+max embedding),jiayi,f1_micro,0.9271578947368421
+J-baseline (mean+max embedding),jiayi,precision_weighted,0.9271791424617232
+J-baseline (mean+max embedding),jiayi,recall_weighted,0.9271578947368421
+J-baseline (mean+max embedding),jiayi,f1_weighted,0.9271569889410618
+J-baseline (mean+max embedding),jiayi,tn,17549
+J-baseline (mean+max embedding),jiayi,fp,1451
+J-baseline (mean+max embedding),jiayi,fn,1317
+J-baseline (mean+max embedding),jiayi,tp,17683
+J-baseline (mean+max embedding),jiayi,roc_auc,0.9788982105263159
+J-baseline (mean+max embedding),jiayi,pr_auc,0.9788817105661938
+J-baseline (mean+max embedding),jiayi,mcc,0.8543370369343452
+J-baseline (mean+max embedding),jiayi,brier,0.0538447476295834
+J-baseline (mean+max embedding),jiayi,ece,0.007401235488397159
+J-baseline (mean+max embedding),jiayi,error_rate,0.07284210526315793
+J-baseline (mean+max embedding),jiayi,accuracy_ci_low,0.9245789473684211
+J-baseline (mean+max embedding),jiayi,accuracy_ci_high,0.9297368421052632
+J-baseline (mean+max embedding),jiayi,f1_macro_ci_low,0.9245781246353342
+J-baseline (mean+max embedding),jiayi,f1_macro_ci_high,0.9297353219744351
+J-baseline (mean+max embedding),jiayi,mcc_ci_low,0.84920484132831
+J-baseline (mean+max embedding),jiayi,mcc_ci_high,0.8594793001663285
+J-baseline (mean+max embedding),jiayi,parameters,3840257
+J-baseline (mean+max embedding),jiayi,train_time_s,533.6522096809999
+J-baseline (mean+max embedding),jiayi,train_examples_per_s,4722.176642923253
+J-baseline (mean+max embedding),jiayi,inference_examples_per_s,nan
+J-baseline (mean+max embedding),jiayi,peak_gpu_mem_mb,89.90380859375
+J-exp1 (MLP),jiayi,accuracy,0.9282894736842106
+J-exp1 (MLP),jiayi,precision_macro,0.9285266578475841
+J-exp1 (MLP),jiayi,recall_macro,0.9282894736842104
+J-exp1 (MLP),jiayi,f1_macro,0.9282795495903906
+J-exp1 (MLP),jiayi,precision_micro,0.9282894736842106
+J-exp1 (MLP),jiayi,recall_micro,0.9282894736842106
+J-exp1 (MLP),jiayi,f1_micro,0.9282894736842106
+J-exp1 (MLP),jiayi,precision_weighted,0.9285266578475843
+J-exp1 (MLP),jiayi,recall_weighted,0.9282894736842106
+J-exp1 (MLP),jiayi,f1_weighted,0.9282795495903908
+J-exp1 (MLP),jiayi,tn,17861
+J-exp1 (MLP),jiayi,fp,1139
+J-exp1 (MLP),jiayi,fn,1586
+J-exp1 (MLP),jiayi,tp,17414
+J-exp1 (MLP),jiayi,roc_auc,0.9796365789473687
+J-exp1 (MLP),jiayi,pr_auc,0.9796921776706802
+J-exp1 (MLP),jiayi,mcc,0.8568160987030894
+J-exp1 (MLP),jiayi,brier,0.053314884562972904
+J-exp1 (MLP),jiayi,ece,0.008343527415628637
+J-exp1 (MLP),jiayi,error_rate,0.07171052631578945
+J-exp1 (MLP),jiayi,accuracy_ci_low,0.9257098684210526
+J-exp1 (MLP),jiayi,accuracy_ci_high,0.9308697368421053
+J-exp1 (MLP),jiayi,f1_macro_ci_low,0.9256925331476894
+J-exp1 (MLP),jiayi,f1_macro_ci_high,0.9308570706554693
+J-exp1 (MLP),jiayi,mcc_ci_low,0.8517210487873577
+J-exp1 (MLP),jiayi,mcc_ci_high,0.8619290754778401
+J-exp1 (MLP),jiayi,parameters,3850369
+J-exp1 (MLP),jiayi,train_time_s,612.5822125779996
+J-exp1 (MLP),jiayi,train_examples_per_s,4113.733549974944
+J-exp1 (MLP),jiayi,inference_examples_per_s,nan
+J-exp1 (MLP),jiayi,peak_gpu_mem_mb,90.7890625
+J-exp2 (self-attention),jiayi,accuracy,0.9261315789473684
+J-exp2 (self-attention),jiayi,precision_macro,0.9262012929643996
+J-exp2 (self-attention),jiayi,recall_macro,0.9261315789473684
+J-exp2 (self-attention),jiayi,f1_macro,0.9261285581476663
+J-exp2 (self-attention),jiayi,precision_micro,0.9261315789473684
+J-exp2 (self-attention),jiayi,recall_micro,0.9261315789473684
+J-exp2 (self-attention),jiayi,f1_micro,0.9261315789473684
+J-exp2 (self-attention),jiayi,precision_weighted,0.9262012929643995
+J-exp2 (self-attention),jiayi,recall_weighted,0.9261315789473684
+J-exp2 (self-attention),jiayi,f1_weighted,0.926128558147666
+J-exp2 (self-attention),jiayi,tn,17475
+J-exp2 (self-attention),jiayi,fp,1525
+J-exp2 (self-attention),jiayi,fn,1282
+J-exp2 (self-attention),jiayi,tp,17718
+J-exp2 (self-attention),jiayi,roc_auc,0.978996012465374
+J-exp2 (self-attention),jiayi,pr_auc,0.979445995791723
+J-exp2 (self-attention),jiayi,mcc,0.8523328690607432
+J-exp2 (self-attention),jiayi,brier,0.05456996434857373
+J-exp2 (self-attention),jiayi,ece,0.004550699878804288
+J-exp2 (self-attention),jiayi,error_rate,0.07386842105263158
+J-exp2 (self-attention),jiayi,accuracy_ci_low,0.9233684210526316
+J-exp2 (self-attention),jiayi,accuracy_ci_high,0.9284743421052631
+J-exp2 (self-attention),jiayi,f1_macro_ci_low,0.9233674139890277
+J-exp2 (self-attention),jiayi,f1_macro_ci_high,0.9284732750098887
+J-exp2 (self-attention),jiayi,mcc_ci_low,0.8468341731631112
+J-exp2 (self-attention),jiayi,mcc_ci_high,0.85704505729709
+J-exp2 (self-attention),jiayi,parameters,3892417
+J-exp2 (self-attention),jiayi,train_time_s,586.0575254980004
+J-exp2 (self-attention),jiayi,train_examples_per_s,4299.919189432196
+J-exp2 (self-attention),jiayi,inference_examples_per_s,nan
+J-exp2 (self-attention),jiayi,peak_gpu_mem_mb,110.748046875

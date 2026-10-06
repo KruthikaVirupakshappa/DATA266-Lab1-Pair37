@@ -1,0 +1,22 @@
+2026-10-05 20:47:28,986 | python=3.13.14
+2026-10-05 20:47:29,024 | sanity: both files have the same 38,000 test reviews in the same order with identical labels
+2026-10-05 20:47:29,034 | SANITY K-baseline (mean embedding): recomputed accuracy 0.932605 vs reported 0.932605
+2026-10-05 20:47:29,035 | SANITY K-exp1 (BiLSTM): recomputed accuracy 0.953105 vs reported 0.953105
+2026-10-05 20:47:29,035 | SANITY K-exp2 (TextCNN): recomputed accuracy 0.943526 vs reported 0.943526
+2026-10-05 20:47:29,035 | SANITY J-baseline (mean+max embedding): recomputed accuracy 0.927158 vs reported 0.927158
+2026-10-05 20:47:29,035 | SANITY J-exp1 (MLP): recomputed accuracy 0.928289 vs reported 0.928289
+2026-10-05 20:47:29,035 | SANITY J-exp2 (self-attention): recomputed accuracy 0.926132 vs reported 0.926132
+2026-10-05 20:47:29,220 | K-baseline (mean embedding): acc 0.9326 [0.9301, 0.9352] macroF1 0.9326 MCC 0.8652 ROC-AUC 0.9790 PR-AUC 0.9788 Brier 0.0517 ECE 0.0118
+2026-10-05 20:47:29,383 | K-exp1 (BiLSTM): acc 0.9531 [0.9509, 0.9550] macroF1 0.9531 MCC 0.9062 ROC-AUC 0.9902 PR-AUC 0.9902 Brier 0.0359 ECE 0.0135
+2026-10-05 20:47:29,551 | K-exp2 (TextCNN): acc 0.9435 [0.9412, 0.9456] macroF1 0.9435 MCC 0.8871 ROC-AUC 0.9867 PR-AUC 0.9871 Brier 0.0424 ECE 0.0049
+2026-10-05 20:47:29,740 | J-baseline (mean+max embedding): acc 0.9272 [0.9246, 0.9297] macroF1 0.9272 MCC 0.8543 ROC-AUC 0.9789 PR-AUC 0.9789 Brier 0.0538 ECE 0.0074
+2026-10-05 20:47:29,908 | J-exp1 (MLP): acc 0.9283 [0.9257, 0.9309] macroF1 0.9283 MCC 0.8568 ROC-AUC 0.9796 PR-AUC 0.9797 Brier 0.0533 ECE 0.0083
+2026-10-05 20:47:30,074 | J-exp2 (self-attention): acc 0.9261 [0.9234, 0.9285] macroF1 0.9261 MCC 0.8523 ROC-AUC 0.9790 PR-AUC 0.9794 Brier 0.0546 ECE 0.0046
+2026-10-05 20:47:30,349 | McNemar K-baseline (mean embedding) vs K-exp1 (BiLSTM): A-only 588 B-only 1367 chi2 309.61 p 2.66e-69
+2026-10-05 20:47:30,350 | McNemar K-baseline (mean embedding) vs K-exp2 (TextCNN): A-only 677 B-only 1092 chi2 96.89 p 7.33e-23
+2026-10-05 20:47:30,350 | McNemar J-baseline (mean+max embedding) vs J-exp1 (MLP): A-only 538 B-only 581 chi2 1.58 p 0.209
+2026-10-05 20:47:30,351 | McNemar J-baseline (mean+max embedding) vs J-exp2 (self-attention): A-only 784 B-only 745 chi2 0.94 p 0.331
+2026-10-05 20:47:30,351 | McNemar J-baseline (mean+max embedding) vs K-baseline (mean embedding): A-only 627 B-only 834 chi2 29.05 p 7.07e-08
+2026-10-05 20:47:30,351 | McNemar J-exp1 (MLP) vs K-exp1 (BiLSTM): A-only 660 B-only 1603 chi2 392.12 p 2.86e-87
+2026-10-05 20:47:30,390 | outputs -> task2_sentiment/shared_eval/comparison_table.md, comparison_report.csv, mcnemar.csv, slice_metrics.csv
+2026-10-05 20:47:30,390 | raw log -> reproducibility/raw_logs/task2_shared_eval_20261005-204728.log
