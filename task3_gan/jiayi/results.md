@@ -77,10 +77,9 @@ Stability statistics:
 
 The sampled generator and discriminator gradient norms remained finite, no NaN losses were observed, and no NaN gradients were detected in the sampled gradient checks.
 
-Loss-curve evidence:
-
-- `task3_gan/jiayi/outputs/cyclegan_generator_cycle_losses_20261004_021221.png`
-- `task3_gan/jiayi/outputs/cyclegan_discriminator_losses_20261004_021221.png`
+Loss-curve 
+![Cyclegan generator cycle loss](task3_gan/jiayi/outputs/cyclegan_generator_cycle_losses_20261004_021221.png)
+![Cyclegan discriminator loss](task3_gan/jiayi/outputs/cyclegan_discriminator_losses_20261004_021221.png)
 
 ## Evaluation
 
