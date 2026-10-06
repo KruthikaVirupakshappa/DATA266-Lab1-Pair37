@@ -118,6 +118,16 @@ Details:
 - [metrics_report.csv](task2_sentiment/jiayi/metrics_report.csv)
 - raw logs and manifests in `reproducibility/`
 
+### Task 2 team comparison (all six models)
+
+Both members saved test-set probabilities for the official Yelp Polarity test split, so one script recomputes every metric for all six models with identical settings, plus McNemar tests within and across members:
+
+```bash
+python task2_sentiment/shared_eval/compare_models.py    # needs both members' outputs/test_predictions.csv
+```
+
+Results: [comparison_table.md](task2_sentiment/shared_eval/comparison_table.md), [comparison_report.csv](task2_sentiment/shared_eval/comparison_report.csv), [mcnemar.csv](task2_sentiment/shared_eval/mcnemar.csv), [slice_metrics.csv](task2_sentiment/shared_eval/slice_metrics.csv).
+
 ## Task 3 CycleGAN Monet ↔ Photo (kruthika)
 
 Trained on a Google Colab GPU with [task3_colab.ipynb](task3_gan/kruthika/src/task3_colab.ipynb). That notebook downloads the competition data (needs a Kaggle API token in Colab Secrets) and runs:

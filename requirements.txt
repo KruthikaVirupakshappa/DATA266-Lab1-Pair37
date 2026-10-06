@@ -1,8 +1,29 @@
-# Tested with Python 3.13 on macOS (Apple M3 / MPS). Install: pip install -r requirements.txt
+# DATA266 Lab 1 - Python packages for all three tasks.
+# Install (Python 3.13):  pip install -r requirements.txt
+# Versions below are the exact ones used to develop and test locally (macOS, Apple M3).
+# Training ran on Google Colab GPUs with Colab's preinstalled PyTorch; the exact versions
+# of every run are recorded in reproducibility/manifests/.
+
+# Core (all tasks)
 torch==2.14.0
+torchvision==0.29.1
 numpy==2.5.3
 pyyaml==6.0.3
 matplotlib==3.11.2
-huggingface_hub==1.33.0
+pillow==12.3.0
+pandas==3.0.6
+
+# Datasets (Task 1: TinyStories, Task 2: Yelp Polarity from Hugging Face)
 datasets==5.0.1
+huggingface_hub==1.33.0
 pyarrow==25.0.1
+
+# Task 2: metrics, statistics, text preprocessing (stopwords, stemming)
+scikit-learn==1.9.1
+scipy==1.18.1
+nltk==3.10.3
+
+# Task 3: competition data download (Kaggle API token required) and LPIPS metric
+kaggle==2.2.4
+kagglehub==1.0.2
+lpips==0.1.4
