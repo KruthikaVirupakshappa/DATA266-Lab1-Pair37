@@ -1,0 +1,55 @@
+{
+  "seed": 4253,
+  "data": {
+    "data_dir": "task3_gan/data",
+    "resize": 286,
+    "crop_size": 256,
+    "random_horizontal_flip": true,
+    "normalize_mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "normalize_std": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "dataloader": {
+    "batch_size": 2,
+    "shuffle": true,
+    "num_workers": 2,
+    "pin_memory": true,
+    "persistent_workers": true
+  },
+  "model": {
+    "input_nc": 3,
+    "output_nc": 3,
+    "ngf": 64,
+    "ndf": 64,
+    "generator": "resnet_6blocks",
+    "discriminator": "basic",
+    "norm": "instance",
+    "use_dropout": false,
+    "init_type": "normal",
+    "init_gain": 0.02
+  },
+  "training": {
+    "epochs": 10,
+    "gan_mode": "lsgan",
+    "lambda_A": 10.0,
+    "lambda_B": 10.0,
+    "identity_loss": false,
+    "lambda_identity": 0.0,
+    "optimizer": "Adam",
+    "learning_rate": 0.0001,
+    "betas": [
+      0.5,
+      0.999
+    ],
+    "lr_scheduler": "none",
+    "image_pool": false,
+    "gradient_log_interval": 100
+  }
+}

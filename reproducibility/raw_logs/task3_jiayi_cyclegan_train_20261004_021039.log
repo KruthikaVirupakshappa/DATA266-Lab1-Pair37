@@ -1,0 +1,9 @@
+[2026-10-04 02:10:41 PDT] Task 3 CycleGAN Official Training
+[2026-10-04 02:10:41 PDT] Config file: task3_gan/jiayi/config.json
+[2026-10-04 02:10:41 PDT] Config: {"data": {"crop_size": 256, "data_dir": "task3_gan/data", "normalize_mean": [0.5, 0.5, 0.5], "normalize_std": [0.5, 0.5, 0.5], "random_horizontal_flip": true, "resize": 286}, "dataloader": {"batch_size": 2, "num_workers": 2, "persistent_workers": true, "pin_memory": true, "shuffle": true}, "model": {"discriminator": "basic", "generator": "resnet_6blocks", "init_gain": 0.02, "init_type": "normal", "input_nc": 3, "ndf": 64, "ngf": 64, "norm": "instance", "output_nc": 3, "use_dropout": false}, "seed": 4253, "training": {"betas": [0.5, 0.999], "epochs": 10, "gan_mode": "lsgan", "gradient_log_interval": 100, "identity_loss": false, "image_pool": false, "lambda_A": 10.0, "lambda_B": 10.0, "lambda_identity": 0.0, "learning_rate": 0.0001, "lr_scheduler": "none", "optimizer": "Adam"}}
+[2026-10-04 02:10:41 PDT] Seed: 4253
+[2026-10-04 02:10:41 PDT] Device: cuda, CPU: Intel(R) Xeon(R) CPU @ 2.20GHz, GPU: NVIDIA A100-SXM4-40GB
+[2026-10-04 02:10:41 PDT] Python: 3.13.15, PyTorch: 2.11.0+cu130, CUDA: 13.0
+[2026-10-04 02:10:41 PDT] Environment file: reproducibility/manifests/task3_jiayi_cyclegan_environment_20261004_021039.txt
+[2026-10-04 02:10:41 PDT] Monet images: 300, Photo images: 7038, Training pairs/epoch: 7038
+[2026-10-04 02:10:41 PDT] Generator: resnet_6blocks, Discriminator: basic, NGF: 64, NDF: 64, Norm: instance, Dropout: False

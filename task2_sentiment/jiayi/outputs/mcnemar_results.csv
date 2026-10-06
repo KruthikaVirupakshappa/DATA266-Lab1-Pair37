@@ -1,0 +1,3 @@
+baseline_model,experimental_model,baseline_correct_exp_wrong,baseline_wrong_exp_correct,discordant_pairs,net_experimental_wins,p_value,significant_0.05
+baseline,experiment_1_mlp,538,581,1119,43,0.20925939951872097,False
+baseline,experiment_2_attention,784,745,1529,-39,0.3311482490194533,False

@@ -1,0 +1,29 @@
+{
+  "task": "task2_sentiment",
+  "model": "baseline_meanmax_embedding",
+  "member": "jiayi",
+  "run_id": "20261004_234803",
+  "architecture": "Embedding -> Masked Mean Pooling + Masked Max Pooling -> Concatenate -> Linear -> Sigmoid",
+  "config_file": "task2_sentiment/jiayi/config.json",
+  "config": {
+    "embedding_dim": 128,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "epochs": 5
+  },
+  "raw_log": "reproducibility/raw_logs/task2_jiayi_baseline_meanmax_train_20261004_234803.log",
+  "best_checkpoint": "task2_sentiment/jiayi/checkpoints/task2_baseline_meanmax_best_20261004_234803.pt",
+  "best_val_loss": 0.19524160891345568,
+  "loss_curve": "task2_sentiment/jiayi/outputs/baseline_meanmax_loss_curve_20261004_234803.png",
+  "cpu": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "python_version": "3.13.15",
+  "pytorch_version": "2.11.0+cu130",
+  "cuda_version": "13.0",
+  "parameter_count": 3840257,
+  "training_time_sec": 533.6522096809999,
+  "examples_per_sec": 4722.176642923253,
+  "peak_gpu_memory_mb": 89.90380859375,
+  "environment_file": "reproducibility/manifests/task2_jiayi_baseline_meanmax_environment_20261004_234803.txt",
+  "metrics_report": "task2_sentiment/jiayi/metrics_report.csv"
+}

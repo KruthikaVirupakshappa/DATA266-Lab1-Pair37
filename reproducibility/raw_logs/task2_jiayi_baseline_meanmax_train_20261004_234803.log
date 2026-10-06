@@ -1,0 +1,39 @@
+[2026-10-04 23:48:03 PDT] Task 2 Yelp Mean+Max Embedding Baseline Full Training
+[2026-10-04 23:48:03 PDT] Config file: task2_sentiment/jiayi/config.json
+[2026-10-04 23:48:03 PDT] Baseline config: {"batch_size": 64, "embedding_dim": 128, "epochs": 5, "learning_rate": 0.001}
+[2026-10-04 23:48:03 PDT] Seed: 4253
+[2026-10-04 23:48:03 PDT] Device: cuda
+[2026-10-04 23:48:03 PDT] CPU: Intel(R) Xeon(R) CPU @ 2.20GHz
+[2026-10-04 23:48:03 PDT] GPU: NVIDIA A100-SXM4-40GB
+[2026-10-04 23:48:03 PDT] Python version: 3.13.15
+[2026-10-04 23:48:03 PDT] PyTorch version: 2.11.0+cu130
+[2026-10-04 23:48:03 PDT] CUDA version: 13.0
+[2026-10-04 23:48:03 PDT] Train examples: 504000
+[2026-10-04 23:48:03 PDT] Validation examples: 56000
+[2026-10-04 23:48:03 PDT] Vocabulary size: 30000
+[2026-10-04 23:48:03 PDT] Sequence length: 185
+[2026-10-04 23:48:03 PDT] Embedding dimension: 128
+[2026-10-04 23:48:03 PDT] Pooling: Masked Mean + Masked Max
+[2026-10-04 23:48:03 PDT] Classifier: Linear(256, 1) -> Sigmoid
+[2026-10-04 23:48:03 PDT] Batch size: 64
+[2026-10-04 23:48:03 PDT] Epochs: 5
+[2026-10-04 23:48:03 PDT] Optimizer: Adam
+[2026-10-04 23:48:03 PDT] Learning rate: 0.001
+[2026-10-04 23:48:03 PDT] Loss: BCELoss
+[2026-10-04 23:48:03 PDT] Parameter count: 3840257
+[2026-10-04 23:50:17 PDT] Saved new best checkpoint: epoch=1, val_loss=0.2070, path=task2_sentiment/jiayi/checkpoints/task2_baseline_meanmax_best_20261004_234803.pt
+[2026-10-04 23:50:17 PDT] Epoch 1/5, Train Loss: 0.2424, Val Loss: 0.2070, Train Time: 110.80s, Examples/s: 4548.55
+[2026-10-04 23:52:14 PDT] Saved new best checkpoint: epoch=2, val_loss=0.2008, path=task2_sentiment/jiayi/checkpoints/task2_baseline_meanmax_best_20261004_234803.pt
+[2026-10-04 23:52:14 PDT] Epoch 2/5, Train Loss: 0.1905, Val Loss: 0.2008, Train Time: 105.71s, Examples/s: 4767.71
+[2026-10-04 23:54:10 PDT] Saved new best checkpoint: epoch=3, val_loss=0.2000, path=task2_sentiment/jiayi/checkpoints/task2_baseline_meanmax_best_20261004_234803.pt
+[2026-10-04 23:54:10 PDT] Epoch 3/5, Train Loss: 0.1777, Val Loss: 0.2000, Train Time: 105.61s, Examples/s: 4772.17
+[2026-10-04 23:56:06 PDT] Saved new best checkpoint: epoch=4, val_loss=0.1952, path=task2_sentiment/jiayi/checkpoints/task2_baseline_meanmax_best_20261004_234803.pt
+[2026-10-04 23:56:06 PDT] Epoch 4/5, Train Loss: 0.1682, Val Loss: 0.1952, Train Time: 105.39s, Examples/s: 4782.21
+[2026-10-04 23:58:02 PDT] Epoch 5/5, Train Loss: 0.1592, Val Loss: 0.2017, Train Time: 106.13s, Examples/s: 4748.73
+[2026-10-04 23:58:02 PDT] Total Training Time: 533.65 s
+[2026-10-04 23:58:02 PDT] Total Run Time: 586.00 s
+[2026-10-04 23:58:02 PDT] Overall Training Examples/s: 4722.18
+[2026-10-04 23:58:02 PDT] Peak GPU Memory: 89.90 MB
+[2026-10-04 23:58:02 PDT] Best Validation Loss: 0.1952
+[2026-10-04 23:58:02 PDT] Best Checkpoint: task2_sentiment/jiayi/checkpoints/task2_baseline_meanmax_best_20261004_234803.pt
+[2026-10-04 23:58:02 PDT] Training completed successfully.

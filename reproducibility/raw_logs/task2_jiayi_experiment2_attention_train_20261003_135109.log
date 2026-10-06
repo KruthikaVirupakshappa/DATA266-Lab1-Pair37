@@ -1,0 +1,44 @@
+[2026-10-03 13:51:11 PDT] Task 2 Yelp Experiment 2 Single-Head Self-Attention Full Training
+[2026-10-03 13:51:11 PDT] Config file: task2_sentiment/jiayi/config.json
+[2026-10-03 13:51:11 PDT] Experiment 2 config: {"attention_dim": 64, "batch_size": 64, "embedding_dim": 128, "epochs": 5, "learning_rate": 0.001}
+[2026-10-03 13:51:11 PDT] Architecture: Learned Token Embedding + Learned Positional Embedding -> Q/K/V -> Single-Head Self-Attention -> Wo -> Masked Mean Pooling -> Linear -> Sigmoid
+[2026-10-03 13:51:11 PDT] Embedding learned from scratch: True
+[2026-10-03 13:51:11 PDT] Attention type: Single-head scaled dot-product self-attention
+[2026-10-03 13:51:11 PDT] Causal mask: False
+[2026-10-03 13:51:11 PDT] Padding key mask: True
+[2026-10-03 13:51:11 PDT] Positional embedding: Learned
+[2026-10-03 13:51:11 PDT] Seed: 4253
+[2026-10-03 13:51:11 PDT] Device: cuda
+[2026-10-03 13:51:11 PDT] CPU: Intel(R) Xeon(R) CPU @ 2.20GHz
+[2026-10-03 13:51:11 PDT] GPU: NVIDIA A100-SXM4-40GB
+[2026-10-03 13:51:11 PDT] Python version: 3.13.15
+[2026-10-03 13:51:11 PDT] PyTorch version: 2.11.0+cu130
+[2026-10-03 13:51:11 PDT] CUDA version: 13.0
+[2026-10-03 13:51:11 PDT] Environment file: reproducibility/manifests/task2_jiayi_experiment2_attention_environment_20261003_135109.txt
+[2026-10-03 13:51:11 PDT] Train examples: 504000
+[2026-10-03 13:51:11 PDT] Validation examples: 56000
+[2026-10-03 13:51:11 PDT] Vocabulary size: 30000
+[2026-10-03 13:51:11 PDT] Sequence length: 185
+[2026-10-03 13:51:11 PDT] Embedding dimension: 128
+[2026-10-03 13:51:11 PDT] Attention dimension: 64
+[2026-10-03 13:51:11 PDT] Batch size: 64
+[2026-10-03 13:51:11 PDT] Epochs: 5
+[2026-10-03 13:51:11 PDT] Optimizer: Adam
+[2026-10-03 13:51:11 PDT] Learning rate: 0.001
+[2026-10-03 13:51:11 PDT] Loss: BCELoss
+[2026-10-03 13:51:11 PDT] Parameter count: 3892417
+[2026-10-03 13:53:34 PDT] Saved new best checkpoint: epoch=1, val_loss=0.1949, path=task2_sentiment/jiayi/checkpoints/task2_experiment2_attention_best_20261003_135109.pt
+[2026-10-03 13:53:34 PDT] Epoch 1/5, Train Loss: 0.2266, Val Loss: 0.1949, Train Time: 120.55s, Examples/s: 4180.99
+[2026-10-03 13:55:42 PDT] Epoch 2/5, Train Loss: 0.1835, Val Loss: 0.1968, Train Time: 117.55s, Examples/s: 4287.45
+[2026-10-03 13:57:50 PDT] Saved new best checkpoint: epoch=3, val_loss=0.1937, path=task2_sentiment/jiayi/checkpoints/task2_experiment2_attention_best_20261003_135109.pt
+[2026-10-03 13:57:50 PDT] Epoch 3/5, Train Loss: 0.1728, Val Loss: 0.1937, Train Time: 116.47s, Examples/s: 4327.26
+[2026-10-03 13:59:57 PDT] Epoch 4/5, Train Loss: 0.1634, Val Loss: 0.1979, Train Time: 116.14s, Examples/s: 4339.66
+[2026-10-03 14:02:03 PDT] Epoch 5/5, Train Loss: 0.1556, Val Loss: 0.2022, Train Time: 115.35s, Examples/s: 4369.29
+[2026-10-03 14:02:03 PDT] Total Training Time: 586.06 s
+[2026-10-03 14:02:03 PDT] Total Run Time: 640.58 s
+[2026-10-03 14:02:03 PDT] Overall Training Examples/s: 4299.92
+[2026-10-03 14:02:03 PDT] Peak GPU Memory: 110.75 MB
+[2026-10-03 14:02:03 PDT] Best Epoch: 3
+[2026-10-03 14:02:03 PDT] Best Validation Loss: 0.1937
+[2026-10-03 14:02:03 PDT] Best Checkpoint: task2_sentiment/jiayi/checkpoints/task2_experiment2_attention_best_20261003_135109.pt
+[2026-10-03 14:02:03 PDT] Training completed successfully.

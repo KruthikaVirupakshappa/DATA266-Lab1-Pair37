@@ -1,0 +1,43 @@
+[2026-10-02 21:16:29 PDT] Task 2 Yelp Experiment 1 Mean Embedding MLP Full Training
+[2026-10-02 21:16:29 PDT] Config file: task2_sentiment/jiayi/config.json
+[2026-10-02 21:16:29 PDT] Experiment 1 config: {"baseline": {"batch_size": 64, "embedding_dim": 128, "epochs": 5, "learning_rate": 0.001}, "data": {"data_dir": "task2_sentiment/data/yelp_polarity", "val_size": 0.1}, "experiment_1": {"batch_size": 64, "dropout": 0.3, "embedding_dim": 128, "epochs": 5, "hidden_dim_1": 64, "hidden_dim_2": 32, "learning_rate": 0.001}, "experiment_2": {"batch_size": 64, "embedding_dim": 128, "epochs": 5, "learning_rate": 0.001}, "preprocessing": {"length_percentile": 95, "lowercase": true, "max_len_cap": 256, "max_vocab_size": 30000, "min_freq": 2, "remove_punctuation": true, "remove_stopwords": true, "stemming": true}, "seed": 4253}
+[2026-10-02 21:16:29 PDT] Architecture: Embedding -> Masked Mean Pooling -> Linear(128,64) -> ReLU -> Dropout(0.3) -> Linear(64,32) -> ReLU -> Dropout(0.3) -> Linear(32,1) -> Sigmoid
+[2026-10-02 21:16:29 PDT] Embedding learned from scratch: True
+[2026-10-02 21:16:29 PDT] Seed: 4253
+[2026-10-02 21:16:29 PDT] Device: cuda
+[2026-10-02 21:16:29 PDT] CPU: Intel(R) Xeon(R) CPU @ 2.20GHz
+[2026-10-02 21:16:29 PDT] GPU: NVIDIA A100-SXM4-40GB
+[2026-10-02 21:16:29 PDT] Python version: 3.13.15
+[2026-10-02 21:16:29 PDT] PyTorch version: 2.11.0+cu130
+[2026-10-02 21:16:29 PDT] CUDA version: 13.0
+[2026-10-02 21:16:29 PDT] Environment file: reproducibility/manifests/task2_jiayi_experiment1_mlp_environment_20261002_211627.txt
+[2026-10-02 21:16:29 PDT] Train examples: 504000
+[2026-10-02 21:16:29 PDT] Validation examples: 56000
+[2026-10-02 21:16:29 PDT] Vocabulary size: 30000
+[2026-10-02 21:16:29 PDT] Sequence length: 185
+[2026-10-02 21:16:29 PDT] Embedding dimension: 128
+[2026-10-02 21:16:29 PDT] Hidden dimension 1: 64
+[2026-10-02 21:16:29 PDT] Hidden dimension 2: 32
+[2026-10-02 21:16:29 PDT] Dropout: 0.3
+[2026-10-02 21:16:29 PDT] Batch size: 64
+[2026-10-02 21:16:29 PDT] Epochs: 5
+[2026-10-02 21:16:29 PDT] Optimizer: Adam
+[2026-10-02 21:16:29 PDT] Learning rate: 0.001
+[2026-10-02 21:16:29 PDT] Loss: BCELoss
+[2026-10-02 21:16:29 PDT] Parameter count: 3850369
+[2026-10-02 21:18:55 PDT] Saved new best checkpoint: epoch=1, val_loss=0.1950, path=task2_sentiment/jiayi/checkpoints/task2_experiment1_mlp_best_20261002_211627.pt
+[2026-10-02 21:18:55 PDT] Epoch 1/5, Train Loss: 0.2325, Val Loss: 0.1950, Train Time: 125.30s, Examples/s: 4022.41
+[2026-10-02 21:21:08 PDT] Saved new best checkpoint: epoch=2, val_loss=0.1910, path=task2_sentiment/jiayi/checkpoints/task2_experiment1_mlp_best_20261002_211627.pt
+[2026-10-02 21:21:08 PDT] Epoch 2/5, Train Loss: 0.1879, Val Loss: 0.1910, Train Time: 121.90s, Examples/s: 4134.50
+[2026-10-02 21:23:21 PDT] Epoch 3/5, Train Loss: 0.1776, Val Loss: 0.1912, Train Time: 121.76s, Examples/s: 4139.26
+[2026-10-02 21:25:34 PDT] Saved new best checkpoint: epoch=4, val_loss=0.1899, path=task2_sentiment/jiayi/checkpoints/task2_experiment1_mlp_best_20261002_211627.pt
+[2026-10-02 21:25:34 PDT] Epoch 4/5, Train Loss: 0.1700, Val Loss: 0.1899, Train Time: 122.17s, Examples/s: 4125.29
+[2026-10-02 21:27:47 PDT] Epoch 5/5, Train Loss: 0.1628, Val Loss: 0.1985, Train Time: 121.45s, Examples/s: 4149.89
+[2026-10-02 21:27:47 PDT] Total Training Time: 612.58 s
+[2026-10-02 21:27:47 PDT] Total Run Time: 669.33 s
+[2026-10-02 21:27:47 PDT] Overall Training Examples/s: 4113.73
+[2026-10-02 21:27:47 PDT] Peak GPU Memory: 90.79 MB
+[2026-10-02 21:27:47 PDT] Best Epoch: 4
+[2026-10-02 21:27:47 PDT] Best Validation Loss: 0.1899
+[2026-10-02 21:27:47 PDT] Best Checkpoint: task2_sentiment/jiayi/checkpoints/task2_experiment1_mlp_best_20261002_211627.pt
+[2026-10-02 21:27:47 PDT] Training completed successfully.

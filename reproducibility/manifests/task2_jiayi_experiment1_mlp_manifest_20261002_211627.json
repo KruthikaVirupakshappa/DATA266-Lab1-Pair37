@@ -1,0 +1,63 @@
+{
+  "task": "task2_sentiment",
+  "model": "experiment1_mean_embedding_mlp",
+  "member": "jiayi",
+  "run_id": "20261002_211627",
+  "architecture": "Embedding -> Masked Mean Pooling -> Linear(128,64) -> ReLU -> Dropout(0.3) -> Linear(64,32) -> ReLU -> Dropout(0.3) -> Linear(32,1) -> Sigmoid",
+  "config_file": "task2_sentiment/jiayi/config.json",
+  "config": {
+    "seed": 4253,
+    "data": {
+      "data_dir": "task2_sentiment/data/yelp_polarity",
+      "val_size": 0.1
+    },
+    "preprocessing": {
+      "lowercase": true,
+      "remove_punctuation": true,
+      "remove_stopwords": true,
+      "stemming": true,
+      "max_vocab_size": 30000,
+      "min_freq": 2,
+      "length_percentile": 95,
+      "max_len_cap": 256
+    },
+    "baseline": {
+      "embedding_dim": 128,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "epochs": 5
+    },
+    "experiment_1": {
+      "embedding_dim": 128,
+      "hidden_dim_1": 64,
+      "hidden_dim_2": 32,
+      "dropout": 0.3,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "epochs": 5
+    },
+    "experiment_2": {
+      "embedding_dim": 128,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "epochs": 5
+    }
+  },
+  "raw_log": "reproducibility/raw_logs/task2_jiayi_experiment1_mlp_train_20261002_211627.log",
+  "best_checkpoint": "task2_sentiment/jiayi/checkpoints/task2_experiment1_mlp_best_20261002_211627.pt",
+  "best_epoch": 4,
+  "best_val_loss": 0.1898721590084689,
+  "loss_curve": "task2_sentiment/jiayi/outputs/experiment1_mlp_loss_curve_20261002_211627.png",
+  "cpu": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "python_version": "3.13.15",
+  "pytorch_version": "2.11.0+cu130",
+  "cuda_version": "13.0",
+  "parameter_count": 3850369,
+  "training_time_sec": 612.5822125779996,
+  "total_run_time_sec": 669.3302416839997,
+  "examples_per_sec": 4113.733549974944,
+  "peak_gpu_memory_mb": 90.7890625,
+  "environment_file": "reproducibility/manifests/task2_jiayi_experiment1_mlp_environment_20261002_211627.txt",
+  "metrics_report": "task2_sentiment/jiayi/metrics_report.csv"
+}

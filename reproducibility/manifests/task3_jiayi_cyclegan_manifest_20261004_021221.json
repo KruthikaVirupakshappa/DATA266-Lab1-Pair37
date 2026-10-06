@@ -1,0 +1,106 @@
+{
+  "task": "task3_gan",
+  "model": "cyclegan_resnet6_patchgan",
+  "member": "jiayi",
+  "run_id": "20261004_021221",
+  "pre_run_log": "reproducibility/raw_logs/task3_jiayi_cyclegan_train_20261004_021039.log",
+  "training_log": "reproducibility/raw_logs/task3_jiayi_cyclegan_train_20261004_021221.log",
+  "log_note": "The 021039 log records pre-training setup and environment metadata. The 021221 log records the actual 10-epoch training run and final checkpoint. Both belong to the same official CycleGAN run.",
+  "config_file": "task3_gan/jiayi/config.json",
+  "config": {
+    "seed": 4253,
+    "data": {
+      "data_dir": "task3_gan/data",
+      "resize": 286,
+      "crop_size": 256,
+      "random_horizontal_flip": true,
+      "normalize_mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "normalize_std": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "dataloader": {
+      "batch_size": 2,
+      "shuffle": true,
+      "num_workers": 2,
+      "pin_memory": true,
+      "persistent_workers": true
+    },
+    "model": {
+      "input_nc": 3,
+      "output_nc": 3,
+      "ngf": 64,
+      "ndf": 64,
+      "generator": "resnet_6blocks",
+      "discriminator": "basic",
+      "norm": "instance",
+      "use_dropout": false,
+      "init_type": "normal",
+      "init_gain": 0.02
+    },
+    "training": {
+      "epochs": 10,
+      "gan_mode": "lsgan",
+      "lambda_A": 10.0,
+      "lambda_B": 10.0,
+      "identity_loss": false,
+      "lambda_identity": 0.0,
+      "optimizer": "Adam",
+      "learning_rate": 0.0001,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "lr_scheduler": "none",
+      "image_pool": false,
+      "gradient_log_interval": 100
+    }
+  },
+  "raw_log": "reproducibility/raw_logs/task3_jiayi_cyclegan_train_20261004_021221.log",
+  "final_checkpoint": "task3_gan/jiayi/checkpoints/task3_cyclegan_final_20261004_021221.pt",
+  "checkpoint_result_mapping": {
+    "checkpoint": "task3_gan/jiayi/checkpoints/task3_cyclegan_final_20261004_021221.pt",
+    "training_results": [
+      "task3_gan/jiayi/outputs/cyclegan_generator_cycle_losses_20261004_021221.png",
+      "task3_gan/jiayi/outputs/cyclegan_discriminator_losses_20261004_021221.png"
+    ],
+    "downstream_evaluation": "Use this checkpoint for Task 3 evaluation metrics and generated outputs."
+  },
+  "loss_curves": {
+    "generator_cycle": "task3_gan/jiayi/outputs/cyclegan_generator_cycle_losses_20261004_021221.png",
+    "discriminator": "task3_gan/jiayi/outputs/cyclegan_discriminator_losses_20261004_021221.png"
+  },
+  "cpu": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "python_version": "3.13.15",
+  "pytorch_version": "2.11.0+cu130",
+  "cuda_version": "13.0",
+  "parameter_count": {
+    "generators": 15675398,
+    "discriminators": 5529474,
+    "total": 21204872
+  },
+  "training_time_sec": 2415.5495534600004,
+  "total_run_time_sec": 2415.564211013,
+  "pairs_per_sec": 29.13622695058714,
+  "images_per_sec": 58.27245390117428,
+  "peak_gpu_memory_mb": 2562.59521484375,
+  "gradient_norm_mean": {
+    "G": 39.63561956617566,
+    "D": 11.70168577167723
+  },
+  "loss_nan_count": 0,
+  "sampled_gradient_nan_count": 0,
+  "identity_loss": {
+    "used": false,
+    "lambda": 0.0
+  },
+  "environment_file": "reproducibility/manifests/task3_jiayi_cyclegan_environment_20261004_021221.txt",
+  "metrics_report": "task3_gan/jiayi/metrics_report.csv"
+}

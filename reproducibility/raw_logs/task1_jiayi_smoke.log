@@ -1,0 +1,14 @@
+Task 1 GPT Smoke Test
+Seed: 4253
+Device: cuda
+Base learning rate: 0.0003
+Train batches: 5
+Validation batches: 2
+Train batch 1: loss=5.1553, lr=0.00000005
+Train batch 2: loss=5.1757, lr=0.00000008
+Train batch 3: loss=5.1835, lr=0.00000011
+Train batch 4: loss=5.1608, lr=0.00000014
+Train batch 5: loss=5.1727, lr=0.00000016
+Validation batch 1: loss=5.1682
+Validation batch 2: loss=5.1825
+Smoke test passed.

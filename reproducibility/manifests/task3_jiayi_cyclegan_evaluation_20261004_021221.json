@@ -1,0 +1,17 @@
+{
+  "task": "task3_gan",
+  "member": "jiayi",
+  "run_id": "20261004_021221",
+  "checkpoint": "task3_gan/jiayi/checkpoints/task3_cyclegan_final_20261004_021221.pt",
+  "predictions": {
+    "A2B": "task3_gan/jiayi/outputs/pred_A2B",
+    "B2A": "task3_gan/jiayi/outputs/pred_B2A"
+  },
+  "evaluation_outputs": {
+    "full_metrics_report": "task3_gan/jiayi/full_metrics_report.csv",
+    "submission": "task3_gan/jiayi/submission.csv",
+    "human_audit_samples": "task3_gan/jiayi/outputs/human_audit_samples.csv",
+    "human_audit_ratings": "task3_gan/jiayi/outputs/human_audit_ratings.csv"
+  },
+  "training_manifest": "reproducibility/manifests/task3_jiayi_cyclegan_manifest_20261004_021221.json"
+}
