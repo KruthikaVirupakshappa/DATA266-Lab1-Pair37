@@ -89,9 +89,12 @@ def human_audit_sheet(photos, monets, fake_photo2monet, fake_monet2photo, photo_
 
 
 def audit_agreement():
-    """Cohen's kappa, exact agreement and within-1 agreement per criterion, plus mean scores."""
+    """Cohen's kappa (plain and quadratic-weighted), exact and within-1 agreement per criterion,
+    mean scores per rater, and mean scores per translation direction (both raters averaged)."""
+    from sklearn.metrics import cohen_kappa_score
     paths = [AUDIT_DIR / f"ratings_rater{r}.csv" for r in (1, 2)]
     rows = [list(csv.DictReader(open(p))) for p in paths]
+    key = {r["sample_id"]: r["direction"] for r in csv.DictReader(open(AUDIT_DIR / "audit_key_DO_NOT_SHOW_RATERS.csv"))}
     out = {}
     for c in CRITERIA:
         try:
@@ -101,9 +104,13 @@ def audit_agreement():
             print(f"ratings for '{c}' are incomplete - fill in both rating sheets first")
             return None
         out[f"audit_{c}_kappa"] = metrics.cohen_kappa(a, b)
+        out[f"audit_{c}_kappa_quadratic"] = float(cohen_kappa_score(a, b, labels=[1, 2, 3, 4, 5], weights="quadratic"))
         out[f"audit_{c}_agreement"] = float((a == b).mean())
         out[f"audit_{c}_agreement_within1"] = float((np.abs(a - b) <= 1).mean())
         out[f"audit_{c}_mean_rater1"], out[f"audit_{c}_mean_rater2"] = float(a.mean()), float(b.mean())
+        for d in sorted(set(key.values())):
+            vals = [int(r[c]) for rr in rows for r in rr if key[r["sample_id"]] == d]
+            out[f"audit_{c}_mean_{d.replace('->', '_to_')}"] = float(np.mean(vals))
     (AUDIT_DIR / "audit_results.json").write_text(json.dumps(out, indent=2))
     print(json.dumps(out, indent=2))
     return out
