@@ -99,6 +99,24 @@ Details:
 - [failure_analysis.md](task2_sentiment/kruthika/failure_analysis.md): review of 20 errors
 - [metrics_report.csv](task2_sentiment/kruthika/metrics_report.csv)
 - raw log and manifest in `reproducibility/`
+  
+## Task 2 sentiment classification (Jiayi)
+
+Trained on a Google Colab GPU with [Task2_Yelp_Sentiment.ipynb](task2_sentiment/jiayi/src/Task2_Yelp_Sentiment.ipynb). The notebook runs the full workflow sequentially, including preprocessing, training and evaluating all three models, metric computation, and error review.
+
+**Results** (official Yelp Polarity test set, 38,000 reviews; embeddings learned from scratch):
+
+| Model | Accuracy | Macro-F1 | MCC | ROC-AUC |
+|---|---|---|---|---|
+| Baseline: mean+max embedding | 0.9272 | 0.9272 | 0.8543 | 0.9789 |
+| Exp 1: mean embedding MLP | **0.9283** | **0.9283** | **0.8568** | **0.9796** |
+| Exp 2: single-head self-attention | 0.9261 | 0.9261 | 0.8523 | 0.9790 |
+
+Details:
+- [results.md](task2_sentiment/jiayi/results.md): preprocessing, models, all metrics, McNemar tests, and slices
+- [failure_analysis.md](task2_sentiment/jiayi/failure_analysis.md): review of 20 errors
+- [metrics_report.csv](task2_sentiment/jiayi/metrics_report.csv)
+- raw logs and manifests in `reproducibility/`
 
 ## Task 3 CycleGAN Monet ↔ Photo (kruthika)
 
@@ -116,6 +134,19 @@ python task3_gan/kruthika/evaluate_local.py --config task3_gan/kruthika/src/conf
 - [results.md](task3_gan/kruthika/results.md): architecture, training runs, convergence and stability, all metrics
 - [failure_analysis.md](task3_gan/kruthika/failure_analysis.md): visual quality and failure cases
 - [full_metrics_report.csv](task3_gan/kruthika/full_metrics_report.csv), [submission.csv](task3_gan/kruthika/submission.csv)
+- raw logs and manifests in `reproducibility/`
+
+## Task 3 CycleGAN Monet ↔ Photo (Jiayi)
+
+Trained on a Google Colab GPU with [Task3_CycleGAN.ipynb](task3_gan/jiayi/src/Task3_CycleGAN.ipynb). The notebook runs the full workflow sequentially, including CycleGAN training, image translation in both directions, Kaggle evaluation, additional metrics, and the human audit preparation.
+
+The model uses ResNet generators with 6 residual blocks and PatchGAN discriminators and was trained for 10 epochs.
+
+**Results**: Kaggle public score **−48.3416** (rank 19 on 2026-10-05); FID photo→Monet 108.71 and Monet→photo 107.58 (submitted average FID 108.14, MiFID 0.4168). Details:
+
+- [results.md](task3_gan/jiayi/results.md): architecture, training behavior, evaluation, and all metrics
+- [failure_analysis.md](task3_gan/jiayi/failure_analysis.md): visual quality and failure analysis
+- [full_metrics_report.csv](task3_gan/jiayi/full_metrics_report.csv), [submission.csv](task3_gan/jiayi/submission.csv)
 - raw logs and manifests in `reproducibility/`
 
 ## Data
