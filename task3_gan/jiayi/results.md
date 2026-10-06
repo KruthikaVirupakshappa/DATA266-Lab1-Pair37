@@ -153,8 +153,7 @@ Quadratic weighted Cohen's kappa:
 Agreement was strongest for style and lower for content and artifact judgments.
 
 Human-audit evidence:
-- task3_gan/jiayi/outputs/human_audit_ratings.csv
-- task3_gan/jiayi/outputs/human_audit_samples.csv
+- task3_gan/jiayi/outputs/human_audit_ratings_raw_20261004_021221.csv
 
 ## Efficiency and hardware
 
