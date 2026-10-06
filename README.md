@@ -54,6 +54,17 @@ Add `--epochs N` to change the number of epochs (default 10, set in `src/config.
 - [metrics_report.csv](task1_llm/kruthika/metrics_report.csv)
 - raw log and manifest in `reproducibility/`
 
+## Task 1 full training (Jiayi)
+
+Trained on a Google Colab GPU with [Task1_GPT.ipynb](task1_llm/jiayi/src/Task1_GPT.ipynb). The notebook runs the full workflow sequentially, including preprocessing, model training, evaluation, checkpoint loading, and text generation.
+
+**Results** (run `task1_gpt_best_20261001_000337`: 2 layers, 4 heads, 128 dims, 452K parameters, 10 epochs): validation loss 0.930, perplexity 2.53, 1.341 bits-per-character, 70.6% next-character accuracy. Details:
+
+- [results.md](task1_llm/jiayi/results.md): architecture, hyperparameters and all metrics
+- [failure_analysis.md](task1_llm/jiayi/failure_analysis.md): three failure cases
+- [metrics_report.csv](task1_llm/jiayi/metrics_report.csv)
+- raw log and manifest in `reproducibility/`
+
 ### Task 1 team comparison (shared test set)
 
 Both members' models are compared on a shared test set of 5,000 official-validation stories that neither model has seen:
