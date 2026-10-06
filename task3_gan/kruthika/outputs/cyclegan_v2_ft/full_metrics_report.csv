@@ -55,3 +55,27 @@ inference,images_per_s,570.881031680193
 inference,checkpoint,task3_gan/kruthika/checkpoints/cyclegan_v2_ft_best.pt
 inference,checkpoint_epoch,18
 inference,checkpoint_weights,raw
+human audit,audit_style_kappa,0.8770491803278689
+human audit,audit_style_kappa_quadratic,0.9261083743842364
+human audit,audit_style_agreement,0.9333333333333333
+human audit,audit_style_agreement_within1,1.0
+human audit,audit_style_mean_rater1,4.466666666666667
+human audit,audit_style_mean_rater2,4.533333333333333
+human audit,audit_style_mean_monet_to_photo,4.3
+human audit,audit_style_mean_photo_to_monet,4.7
+human audit,audit_content_kappa,0.5914396887159534
+human audit,audit_content_kappa_quadratic,0.6359223300970874
+human audit,audit_content_agreement,0.7666666666666667
+human audit,audit_content_agreement_within1,0.9666666666666667
+human audit,audit_content_mean_rater1,4.266666666666667
+human audit,audit_content_mean_rater2,4.533333333333333
+human audit,audit_content_mean_monet_to_photo,4.3
+human audit,audit_content_mean_photo_to_monet,4.5
+human audit,audit_artifacts_kappa,0.45750452079566
+human audit,audit_artifacts_kappa_quadratic,0.4571428571428572
+human audit,audit_artifacts_agreement,0.6666666666666666
+human audit,audit_artifacts_agreement_within1,0.9
+human audit,audit_artifacts_mean_rater1,4.2
+human audit,audit_artifacts_mean_rater2,4.5
+human audit,audit_artifacts_mean_monet_to_photo,4.2
+human audit,audit_artifacts_mean_photo_to_monet,4.5

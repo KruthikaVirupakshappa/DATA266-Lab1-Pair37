@@ -182,13 +182,28 @@ Details and evidence images are in **[`failure_analysis.md`](failure_analysis.md
 - **Two raters** independently score each sample from 1–5 on **style** (does it look like the target domain?), **content** (is the scene preserved?) and **artifacts** (5 = none). The direction key is hidden from the raters.
 - **Agreement:** `python task3_gan/kruthika/evaluate_local.py --audit` computes **Cohen's kappa**, exact agreement and within-1 agreement per criterion.
 
-**Results:** *pending. To be filled in once both rating sheets (`ratings_rater1.csv`, `ratings_rater2.csv`) are completed.*
+**Raters:** two friends (not team members), each rating all 30 samples independently on their own sheet. Neither saw the direction key or the other's scores.
 
-| Criterion | Mean (rater 1) | Mean (rater 2) | Cohen's κ | Exact agreement | Within ±1 |
-|---|---|---|---|---|---|
-| Style | – | – | – | – | – |
-| Content | – | – | – | – | – |
-| Artifacts | – | – | – | – | – |
+**Results** ([`outputs/human_audit/audit_results.json`](outputs/human_audit/audit_results.json)):
+
+| Criterion | Mean (rater 1) | Mean (rater 2) | Cohen's κ | κ (quadratic-weighted) | Exact agreement | Within ±1 |
+|---|---|---|---|---|---|---|
+| Style | 4.47 | 4.53 | 0.877 | 0.926 | 93% | 100% |
+| Content | 4.27 | 4.53 | 0.591 | 0.636 | 77% | 97% |
+| Artifacts | 4.20 | 4.50 | 0.458 | 0.457 | 67% | 90% |
+
+| Direction (both raters averaged) | Style | Content | Artifacts | Overall |
+|---|---|---|---|---|
+| Photo → Monet | 4.70 | 4.50 | 4.50 | **4.57** |
+| Monet → photo | 4.30 | 4.30 | 4.20 | **4.27** |
+
+**Interpretation:**
+- **Agreement is strong on style** (κ 0.88), **moderate on content** (0.59) and **weaker on artifacts** (0.46). The raters agree on *how Monet-like or photo-like* an output looks. Whether a small defect counts as an artifact is more subjective: most disagreements were one point apart (within-±1 agreement 90–100%).
+- **The raters scored photo→Monet higher than Monet→photo** on every criterion. FID points the other way (97.4 vs 95.1). People reward the painterly look, while FID also penalises the washed-out palette and the content mismatch measured in Section 5.
+- **Limitations:**
+  - The scores are high overall (4.2–4.7 out of 5) and come from two non-expert raters, so they reflect a layperson's impression rather than an expert judgement.
+  - Systematic defects found by measurement were rarely penalised: the corner blob appears in every photo→Monet output (see [`failure_analysis.md`](failure_analysis.md)).
+  - Jiayi's model was rated by different raters, so human scores **cannot be compared between the two members' models**. Only the automatic metrics in `task3_gan/shared_eval/` are comparable.
 
 ## 8. Discussion (Task 3.2.4)
 
