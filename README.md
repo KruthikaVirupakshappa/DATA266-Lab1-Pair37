@@ -186,10 +186,21 @@ This saves [fancyzhx/yelp_polarity](https://huggingface.co/datasets/fancyzhx/yel
 
 ```bash
 python task3_gan/scripts/download_kaggle_data.py     # Kaggle CLI token
-python task3_gan/scripts/download_cyclegan_data.py   # alternative: kagglehub (in Colab: %run task3_gan/scripts/download_cyclegan_data.py)
+python task3_gan/scripts/download_cyclegan_data.py  # alternative: kagglehub 
+%run task3_gan/scripts/download_cyclegan_data.py  # in Colab
 ```
 
 This saves the class competition data to `task3_gan/data/`: `monet_jpg/` (300 paintings) and `photo_jpg/` (7,038 photos).
+
+## Dataset Backups
+
+Read-only ZIP copies of the datasets used in this project are available on Google Drive as backups for the demo.
+
+- Task 1 — TinyStories: [Google Drive link](https://drive.google.com/file/d/1l0opB5cieyDoV_HPszzF0wG37KJMYVzy/view?usp=drive_link)
+- Task 2 — Yelp Polarity: [Google Drive link](https://drive.google.com/file/d/12zlzPeiSH_HJIwP310ARdR7tY86nJVwb/view?usp=drive_link)
+- Task 3 — CycleGAN Monet/Photo Dataset: [Google Drive link](https://drive.google.com/file/d/1cQCJ1q_aPbVsCAnt89h55eibZ3kr4f9N/view?usp=drive_link)
+
+These archives are available as a backup option for accessing the datasets. For the usual setup, please use the download command above.
 
 ## Layout
 
